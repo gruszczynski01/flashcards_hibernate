@@ -1,5 +1,6 @@
 
 import org.mindrot.jbcrypt.BCrypt;
+import users.User;
 
 import java.security.SecureRandom;
 
@@ -25,13 +26,23 @@ public class Main {
 //        System.out.println("Our random string: " + seed);
 
 
-         String passwordIntoDatabase = BCrypt.hashpw("mojeHaselko", BCrypt.gensalt());
-        System.out.println("password in DB: " + passwordIntoDatabase);
+//         String passwordIntoDatabase = BCrypt.hashpw("mojeHaselko", BCrypt.gensalt());
+//        System.out.println("password in DB: " + passwordIntoDatabase);
+//
+//        if(BCrypt.checkpw("mojeHaselko", passwordIntoDatabase))
+//            System.out.println("Good passwd");
+//        else
+//            System.out.println("Worong password");
 
-        if(BCrypt.checkpw("mojeHaselko", passwordIntoDatabase))
-            System.out.println("Good passwd");
-        else
-            System.out.println("Worong password");
+        String login = "NowyTestowy";
+        String password = "haslo";
+        User current = new User(login, password);
+        User.addUser(current);
+        current.addBigBox("Moje fiszki", "ogolne");
+        current.addFlashcard(0, "Dog", "pies");
+        current.addFlashcard(0, "Cat", "DUPA");
+
+
 
 
     }

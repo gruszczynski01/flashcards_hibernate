@@ -2,9 +2,8 @@
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.2"
              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
     <!-- Define persistence unit -->
-    <persistence-unit name="my-persistence-unit">
+    <persistence-unit name="myPersistenceUnit">
         <description>This is my first persistence unit</description>
-
 
         <properties>
             <!-- Define timeout for lock and query -->
@@ -14,11 +13,11 @@
             <!-- Driver -->
             <property name="hibernate.connection.driver_class" value="com.mysql.cj.jdbc.Driver"/>
             <!-- Database url -->
-            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/XXXXXXX"/>
+            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/flashcardDB"/>
             <!-- Autocommit -->
             <property name="hibernate.connection.autocommit" value="false"/>
             <!-- Username and password -->
-            <property name="hibernate.connection.username" value="tutorial"/>
+            <property name="hibernate.connection.username" value="root"/>
             <property name="hibernate.connection.password" value="password"/>
             <!-- Sth like a variant of a database language - for example: mySQL implementacion -->
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect"/>
@@ -28,6 +27,9 @@
             <property name="hibernate.connection.useUnicode" value="true"/>
             <!-- If we want to see database query and notification-->
             <property name="hibernate.show_sql" value="true"/>
+            <!-- This is create a schema if one doesn't exist, and attempt to modify an existing one to match the mapping you have defined.-->
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+
         </properties>
 
 
