@@ -14,7 +14,7 @@ public class Flashcard {
             @SequenceGenerator(name = "flashcards_seq", allocationSize = 1)
 
     private long flascardId;
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne()
     @JoinColumn(name = "fk_bigbox_mother")
     private BigBox bigBoxMother;
     @Column(name = "front_side")
@@ -23,6 +23,17 @@ public class Flashcard {
     private String backSide;
     @Column(name = "smallbox_number")
     private int smallBoxNumber;
+
+    @Override
+    public String toString() {
+        return "Flashcard{" +
+                "flascardId=" + flascardId +
+                ", bigBoxMother=" + bigBoxMother +
+                ", frontSide='" + frontSide + '\'' +
+                ", backSide='" + backSide + '\'' +
+                ", smallBoxNumber=" + smallBoxNumber +
+                '}';
+    }
 
     public Flashcard(BigBox bigBoxMother, String frontSide, String backSide){
         this.bigBoxMother = bigBoxMother;

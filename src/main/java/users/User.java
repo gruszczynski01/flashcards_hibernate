@@ -16,6 +16,8 @@ import java.util.List;
 public class User {
 
 
+
+
     @Id
             @GeneratedValue(strategy =GenerationType.SEQUENCE, generator = "user_seq")
             @SequenceGenerator(name = "user_seq", allocationSize = 1)
@@ -25,8 +27,8 @@ public class User {
     private String userName;
     @Column(name = "password")
     private String password;
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "fk_big_boxes")
+    @OneToMany(mappedBy = "user_id", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    //@JoinColumn(name = "fk_big_boxes")
     private List<BigBox> userBigBoxes = new ArrayList<BigBox>();
 
 

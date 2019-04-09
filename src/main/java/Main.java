@@ -1,7 +1,13 @@
 
+import boxes.BigBox;
+import database.DB;
+import flashcards.Flashcard;
 import org.mindrot.jbcrypt.BCrypt;
 import users.User;
 
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 import java.security.SecureRandom;
 
 public class Main {
@@ -33,8 +39,8 @@ public class Main {
 //            System.out.println("Good passwd");
 //        else
 //            System.out.println("Worong password");
-
-        String login = "NowyTestowy";
+//
+        String login = "Kinga";
         String password = "haslo";
         User current = new User(login, password);
         User.addUser(current);
@@ -42,6 +48,23 @@ public class Main {
         current.addFlashcard(0, "Dog", "pies");
         current.addFlashcard(0, "Cat", "DUPA");
 
+
+        EntityManager em =  DB.getInstance().getConnection();
+
+//
+//        em.getTransaction().begin();
+//        User tmp = em.find(User.class, 9);
+//        System.out.println("imie: " + tmp.getUserName());
+//        System.out.println("ILE MA BB: " + tmp.getUserBigBoxes().size());
+
+
+
+        //Query query = em.createQuery("delete FROM  User u where u.userId = 15");
+        //User user = query.getSingleResult();
+        //System.out.println(user.getPassword());
+        //query.executeUpdate();
+
+        em.getTransaction().commit();
 
 
 

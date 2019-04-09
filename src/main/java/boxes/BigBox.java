@@ -16,7 +16,7 @@ public class BigBox {
             @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "big_box_seq")
     @SequenceGenerator(name = "big_box_seq", allocationSize = 1)
     private long bigBoxId;
-    @ManyToOne(fetch =FetchType.EAGER)
+    @ManyToOne
     @JoinColumn(name = "owner_id")
     private User ownerId;
     @Column(name = "title")
@@ -28,17 +28,15 @@ public class BigBox {
         return flashcards;
     }
 
-    public void setFlashcards(List<Flashcard> flashcards) {
-        this.flashcards = flashcards;
-    }
-
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @JoinColumn(name = "fk_flashcards")
+    @OneToMany(mappedBy = "bigbox_id", cascade = CascadeType.ALL, orphanRemoval = true)
+    //@JoinColumn(name = "fk_flashcards")
     private List<Flashcard> flashcards = new ArrayList<Flashcard>();
 
     public BigBox() {
     }
-
+    public void setFlashcards(List<Flashcard> flashcards) {
+        this.flashcards = flashcards;
+    }
     public BigBox(User ownerId, String title, String category){
 
 
