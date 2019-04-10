@@ -6,16 +6,16 @@ import boxes.BigBox;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "fc_flascards")
+@Table(name = "fc_flashcards")
 public class Flashcard {
     @Id
-            @Column(name = "flashcard_id", updatable = false, nullable = false)
-            @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "flashcards_seq")
-            @SequenceGenerator(name = "flashcards_seq", allocationSize = 1)
+            @Column(name = "fc_flashcard_id", updatable = false, nullable = false)
+            @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "fc_flashcards_seq")
+            @SequenceGenerator(name = "fc_flashcards_seq", allocationSize = 1)
 
-    private long flascardId;
+    private long flashcardId;
     @ManyToOne()
-    @JoinColumn(name = "fk_bigbox_mother")
+    @JoinColumn(name = "bigBoxMother")
     private BigBox bigBoxMother;
     @Column(name = "front_side")
     private String frontSide;
@@ -27,7 +27,7 @@ public class Flashcard {
     @Override
     public String toString() {
         return "Flashcard{" +
-                "flascardId=" + flascardId +
+                "flascardId=" + flashcardId +
                 ", bigBoxMother=" + bigBoxMother +
                 ", frontSide='" + frontSide + '\'' +
                 ", backSide='" + backSide + '\'' +
@@ -45,11 +45,11 @@ public class Flashcard {
     public Flashcard() {}
 
     public long getFlascardId() {
-        return flascardId;
+        return flashcardId;
     }
 
     public void setFlascardId(long flascardId) {
-        this.flascardId = flascardId;
+        this.flashcardId = flascardId;
     }
 
     public BigBox getBigBoxMother() {

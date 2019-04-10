@@ -40,22 +40,22 @@ public class Main {
 //        else
 //            System.out.println("Worong password");
 //
-        String login = "Kinga";
-        String password = "haslo";
-        User current = new User(login, password);
-        User.addUser(current);
-        current.addBigBox("Moje fiszki", "ogolne");
-        current.addFlashcard(0, "Dog", "pies");
-        current.addFlashcard(0, "Cat", "DUPA");
+//        String login = "Kinaga1a";
+//        String password = "haslo";
+//        User current = new User(login, password);
+//        User.addUser(current);
+//        current.addBigBox("Moje fiszki", "ogolne");
+//        current.addFlashcard(0, "Dog", "pies");
+//        current.addFlashcard(0, "Cat", "DUPA");
 
 
         EntityManager em =  DB.getInstance().getConnection();
 
-//
-//        em.getTransaction().begin();
-//        User tmp = em.find(User.class, 9);
-//        System.out.println("imie: " + tmp.getUserName());
-//        System.out.println("ILE MA BB: " + tmp.getUserBigBoxes().size());
+
+        em.getTransaction().begin();
+        User tmp = em.find(User.class, 3);
+        System.out.println("imie: " + tmp.getUserName());
+        System.out.println("ILE MA BB: " + tmp.getUserBigBoxes().size());
 
 
 

@@ -19,15 +19,16 @@ public class User {
 
 
     @Id
-            @GeneratedValue(strategy =GenerationType.SEQUENCE, generator = "user_seq")
-            @SequenceGenerator(name = "user_seq", allocationSize = 1)
-            @Column(name = "user_id", updatable = false, nullable = false)
+            @Column(name = "fc_user_id", updatable = false, nullable = false)
+            @GeneratedValue(strategy =GenerationType.SEQUENCE, generator = "fc_users_seq")
+            @SequenceGenerator(name = "fc_users_seq", allocationSize = 1)
+
     private int userId;
     @Column(name = "user_name", unique = true)
     private String userName;
     @Column(name = "password")
     private String password;
-    @OneToMany(mappedBy = "user_id", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "ownerId", fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
     //@JoinColumn(name = "fk_big_boxes")
     private List<BigBox> userBigBoxes = new ArrayList<BigBox>();
 

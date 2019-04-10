@@ -12,12 +12,12 @@ import java.util.List;
 @Table(name = "fc_bigboxes")
 public class BigBox {
     @Id
-            @Column(name = "bigbox_id", updatable = false, nullable = false)
-            @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "big_box_seq")
-    @SequenceGenerator(name = "big_box_seq", allocationSize = 1)
+            @Column(name = "fc_bigbox_id", updatable = false, nullable = false)
+            @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "fc_big_boxes_seq")
+            @SequenceGenerator(name = "fc_big_boxes_seq", allocationSize = 1)
     private long bigBoxId;
     @ManyToOne
-    @JoinColumn(name = "owner_id")
+    @JoinColumn(name = "ownerId")
     private User ownerId;
     @Column(name = "title")
     private String title;
@@ -28,7 +28,7 @@ public class BigBox {
         return flashcards;
     }
 
-    @OneToMany(mappedBy = "bigbox_id", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "bigBoxMother", cascade = CascadeType.ALL, orphanRemoval = true)
     //@JoinColumn(name = "fk_flashcards")
     private List<Flashcard> flashcards = new ArrayList<Flashcard>();
 
