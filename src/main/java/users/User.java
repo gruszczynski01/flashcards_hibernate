@@ -64,7 +64,18 @@ public class User {
         em.persist(tmp);
         em.getTransaction().commit();
     }
+    public void addFlashCard(BigBox bigBox, String frontSide, String backSide)
+    {
+        //to do
+        ;
+    }
 
+    public void removeUser(long userId){
+        EntityManager em = DB.getInstance().getConnection();
+        em.getTransaction().begin();
+        em.remove(em.find(User.class, userId));
+        em.getTransaction().commit();
+    }
 
 
     public User() {}

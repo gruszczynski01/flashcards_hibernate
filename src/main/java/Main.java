@@ -41,19 +41,21 @@ public class Main {
 //        else
 //            System.out.println("Worong password");
 //
-        String login = "Franek";
-        String password = "haslo";
-        User current = new User(login, password);
-        User.addUser(current);
-        current.addBigBox("Maine fiszki", "mojmme");
-        current.addFlashcard(0, "AAAA", "aaaa");
-        current.addFlashcard(0, "BBBBB", "bbbbb");
+//        String login = "Franek";
+//        String password = "haslo";
+//        User current = new User(login, password);
+//        User.addUser(current);
+//        current.addBigBox("Maine fiszki", "mojmme");
+//        current.addFlashcard(0, "AAAA", "aaaa");
+//        current.addFlashcard(0, "BBBBB", "bbbbb");
 
 
-//        EntityManager em =  DB.getInstance().getConnection();
-//
-//        em.getTransaction().begin();
-//        em.remove(em.find(User.class, 3));
-//        em.getTransaction().commit();
+        EntityManager em =  DB.getInstance().getConnection();
+
+        em.getTransaction().begin();
+        //em.remove(em.find(User.class, 3));
+        User myUser = em.find(User.class, 6L);
+        myUser.addFlashcard(0, "CCCCCC", "ccccccc" );
+        em.getTransaction().commit();
     }
 }
