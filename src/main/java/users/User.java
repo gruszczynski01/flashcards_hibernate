@@ -16,24 +16,23 @@ import java.util.List;
 public class User {
 
 
-
-
     @Id
             @Column(name = "fc_user_id", updatable = false, nullable = false)
             @GeneratedValue(strategy =GenerationType.SEQUENCE, generator = "fc_users_seq")
             @SequenceGenerator(name = "fc_users_seq", allocationSize = 1)
+    private long userId;
 
-    private int userId;
     @Column(name = "user_name", unique = true)
     private String userName;
+
     @Column(name = "password")
     private String password;
+
     @OneToMany(mappedBy = "ownerId", fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
-    //@JoinColumn(name = "fk_big_boxes")
     private List<BigBox> userBigBoxes = new ArrayList<BigBox>();
 
+//***************************************************************
 
-    public User() {}
 
     public User(String userName, String password) {
         this.userName = userName;
@@ -66,6 +65,10 @@ public class User {
         em.getTransaction().commit();
     }
 
+
+
+    public User() {}
+
     public List<BigBox> getUserBigBoxes() {
         return userBigBoxes;
     }
@@ -74,11 +77,11 @@ public class User {
         this.userBigBoxes = userBigBoxes;
     }
 
-    public int getUserId() {
+    public long getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(long userId) {
         this.userId = userId;
     }
     public String getUserName() {

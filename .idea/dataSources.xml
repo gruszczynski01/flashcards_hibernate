@@ -1,32 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="flashcardDB@localhost" uuid="ca01f133-c88a-4b9f-9a87-f0ec6b0f60ac">
+    <data-source source="LOCAL" name="myPersistenceUnit/Hibernate" uuid="195d4032-905f-410b-b6d3-389d43f07e57">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+/Users/szymongruszczynski/Library/Mobile Documents/com~apple~CloudDocs/iCloud/SEMESTR 4/flashcards/src/main/resources/META-INF/persistence.xml</remarks>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/flashcardDB</jdbc-url>
       <driver-properties>
         <property name="autoReconnect" value="true" />
-        <property name="zeroDateTimeBehavior" value="CONVERT_TO_NULL" />
-        <property name="tinyInt1isBit" value="false" />
-        <property name="characterEncoding" value="utf8" />
-        <property name="characterSetResults" value="utf8" />
         <property name="yearIsDateType" value="false" />
-      </driver-properties>
-    </data-source>
-    <data-source source="LOCAL" name="flashcardDB@localhost [2]" uuid="aa34f268-29a6-4c27-80a5-9ee436fba816">
-      <driver-ref>mysql.8</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/flashcardDB</jdbc-url>
-      <driver-properties>
-        <property name="autoReconnect" value="true" />
-        <property name="zeroDateTimeBehavior" value="CONVERT_TO_NULL" />
-        <property name="tinyInt1isBit" value="false" />
         <property name="characterEncoding" value="utf8" />
+        <property name="zeroDateTimeBehavior" value="CONVERT_TO_NULL" />
         <property name="characterSetResults" value="utf8" />
-        <property name="yearIsDateType" value="false" />
+        <property name="tinyInt1isBit" value="false" />
       </driver-properties>
     </data-source>
   </component>

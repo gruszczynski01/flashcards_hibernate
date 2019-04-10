@@ -12,28 +12,22 @@ public class Flashcard {
             @Column(name = "fc_flashcard_id", updatable = false, nullable = false)
             @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "fc_flashcards_seq")
             @SequenceGenerator(name = "fc_flashcards_seq", allocationSize = 1)
-
     private long flashcardId;
+
     @ManyToOne()
     @JoinColumn(name = "bigBoxMother")
     private BigBox bigBoxMother;
+
     @Column(name = "front_side")
     private String frontSide;
+
     @Column(name = "back_side")
     private String backSide;
+
     @Column(name = "smallbox_number")
     private int smallBoxNumber;
 
-    @Override
-    public String toString() {
-        return "Flashcard{" +
-                "flascardId=" + flashcardId +
-                ", bigBoxMother=" + bigBoxMother +
-                ", frontSide='" + frontSide + '\'' +
-                ", backSide='" + backSide + '\'' +
-                ", smallBoxNumber=" + smallBoxNumber +
-                '}';
-    }
+//***************************************************************
 
     public Flashcard(BigBox bigBoxMother, String frontSide, String backSide){
         this.bigBoxMother = bigBoxMother;
@@ -84,5 +78,14 @@ public class Flashcard {
         this.smallBoxNumber = smallBoxNumber;
     }
 
-
+    @Override
+    public String toString() {
+        return "Flashcard{" +
+                "flascardId=" + flashcardId +
+                ", bigBoxMother=" + bigBoxMother +
+                ", frontSide='" + frontSide + '\'' +
+                ", backSide='" + backSide + '\'' +
+                ", smallBoxNumber=" + smallBoxNumber +
+                '}';
+    }
 }

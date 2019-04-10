@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b317588-d94b-4d51-b3dd-9e7cbebe9e3f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/64e3addc-2648-4368-a26e-50716629e540.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/64e3addc-2648-4368-a26e-50716629e540.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/64e3addc-2648-4368-a26e-50716629e540.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b6fe84e5-0248-43cc-8564-ecb8ac30401b.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e83e584d-3bb8-400d-9f92-17455d8cf7e0.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flashcards.iml" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
@@ -12,9 +13,6 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/flashcards/Flashcard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/flashcards/Flashcard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/users/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/users/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/boxes/BigBox.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boxes/BigBox.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/flashcards/Flashcard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/flashcards/Flashcard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/users/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/users/User.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -42,18 +40,17 @@
     <select />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="DockManager">
     <window id="1">
       <content type="file-editors">
         <state>
-          <leaf>
+          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
             <file pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/pom.xml">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="389">
+                  <state relative-caret-position="480">
                     <caret line="32" selection-start-line="32" selection-end-line="32" />
                   </state>
                 </provider>
@@ -62,8 +59,8 @@
             <file pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="60">
-                    <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+                  <state relative-caret-position="360">
+                    <caret line="24" column="72" lean-forward="true" selection-start-line="24" selection-start-column="72" selection-end-line="24" selection-end-column="72" />
                   </state>
                 </provider>
               </entry>
@@ -73,26 +70,6 @@
                 <provider selected="true" editor-type-id="text-editor">
                   <state>
                     <caret column="48" selection-start-column="48" selection-end-column="48" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file pinned="false" current-in-tab="false">
-              <entry file="uml://Persistence/JavaeeElement:/ac542654/myPersistenceUnit/flashcards/jpa/JPA/PersistenceModel">
-                <provider selected="true" editor-type-id="UmlEditorProvider">
-                  <state>
-                    <ID>Persistence</ID>
-                    <OriginalElement>JavaeeElement:/ac542654/myPersistenceUnit/flashcards/jpa/JPA/PersistenceModel</OriginalElement>
-                    <nodes />
-                    <notes />
-                    <edges />
-                    <settings layout="Hierarchic Group" zoom="1.0" x="-739.5" y="71.5" />
-                    <SelectedNodes />
-                    <Categories>
-                      <Category>Properties</Category>
-                      <Category>Embeddables</Category>
-                      <Category>Superclasses</Category>
-                    </Categories>
                   </state>
                 </provider>
               </entry>
@@ -119,30 +96,15 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/users/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-241">
-              <caret line="23" column="47" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+            <state relative-caret-position="-368">
+              <caret line="33" column="65" selection-start-line="33" selection-start-column="65" selection-end-line="33" selection-end-column="65" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#855#863#0" expanded="true" />
-                <element signature="e#2041#2042#0" expanded="true" />
-                <element signature="e#2076#2077#0" expanded="true" />
-                <element signature="e#2138#2139#0" expanded="true" />
-                <element signature="e#2186#2187#0" expanded="true" />
-                <element signature="e#2216#2217#0" expanded="true" />
-                <element signature="e#2245#2246#0" expanded="true" />
-                <element signature="e#2286#2287#0" expanded="true" />
                 <element signature="e#2322#2323#0" expanded="true" />
-                <element signature="e#2356#2357#0" expanded="true" />
-                <element signature="e#2387#2388#0" expanded="true" />
-                <element signature="e#2435#2436#0" expanded="true" />
-                <element signature="e#2475#2476#0" expanded="true" />
-                <element signature="e#2510#2511#0" expanded="true" />
-                <element signature="e#2541#2542#0" expanded="true" />
-                <element signature="e#2589#2590#0" expanded="true" />
-                <element signature="e#2629#2630#0" expanded="true" />
+                <element signature="e#2358#2359#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -151,14 +113,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/boxes/BigBox.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="21" column="27" lean-forward="true" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+            <state relative-caret-position="241">
+              <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1025#1026#0" expanded="true" />
-                <element signature="e#1069#1070#0" expanded="true" />
-                <element signature="e#1360#1361#0" expanded="true" />
-                <element signature="e#1398#1399#0" expanded="true" />
+                <element signature="e#852#863#0" expanded="true" />
+                <element signature="method#BigBox#1;class#BigBox#0" />
               </folding>
             </state>
           </provider>
@@ -167,20 +127,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/flashcards/Flashcard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+            <state relative-caret-position="435">
+              <caret line="29" column="65" selection-start-line="29" selection-start-column="65" selection-end-line="29" selection-end-column="65" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#toString#0;class#Flashcard#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
+            <state relative-caret-position="275">
+              <caret line="55" selection-start-line="55" selection-end-line="55" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -212,12 +173,12 @@
         <option value="$PROJECT_DIR$/src/main/java/boxes.java" />
         <option value="$PROJECT_DIR$/src/main/resources/persistence.xml" />
         <option value="$PROJECT_DIR$/src/main/java/database/DB.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/64e3addc-2648-4368-a26e-50716629e540/console.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/ca01f133-c88a-4b9f-9a87-f0ec6b0f60ac/console.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/flashcards/Flashcard.java" />
         <option value="$PROJECT_DIR$/src/main/java/users/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/flashcards/Flashcard.java" />
         <option value="$PROJECT_DIR$/src/main/java/boxes/BigBox.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
       </list>
     </option>
@@ -266,8 +227,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -330,11 +291,12 @@
       <updated>1553805451829</updated>
       <workItem from="1554742034893" duration="2357000" />
       <workItem from="1554747588992" duration="5026000" />
+      <workItem from="1554929101393" duration="2897000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24954000" />
+    <option name="totallyTimeSpent" value="28543000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -349,15 +311,14 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.36486486" visible="true" weight="0.13018598" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.3631757" visible="true" weight="0.13161659" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" sideWeight="0.50120485" side_tool="true" weight="0.2532189" />
-      <window_info id="Persistence" order="7" sideWeight="0.6351351" side_tool="true" visible="true" weight="0.13018598" />
-      <window_info anchor="bottom" id="Database Console" weight="0.32891566" />
+      <window_info id="Persistence" order="7" sideWeight="0.6368243" side_tool="true" visible="true" weight="0.13161659" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28674698" />
@@ -372,7 +333,7 @@
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32891566" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" weight="0.32891566" />
-      <window_info anchor="right" id="Coverage" side_tool="true" weight="0.3297568" />
+      <window_info anchor="bottom" id="Database Console" order="14" weight="0.32891566" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -383,6 +344,7 @@
       <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info anchor="right" id="Maven" order="8" weight="0.17453505" />
       <window_info anchor="right" id="Database" order="9" visible="true" weight="0.19456366" />
+      <window_info anchor="right" id="Coverage" order="10" side_tool="true" weight="0.3297568" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -413,13 +375,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -427,20 +382,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://64e3addc-2648-4368-a26e-50716629e540/schema/flashcardDB/table/user_seq">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://64e3addc-2648-4368-a26e-50716629e540/schema/flashcardDB/table/fc_flascards">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://64e3addc-2648-4368-a26e-50716629e540/schema/flashcardDB/table/user_seq" />
+    <entry file="das://64e3addc-2648-4368-a26e-50716629e540/schema/flashcardDB/table/fc_flascards" />
     <entry file="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/8.0.15/mysql-connector-java-8.0.15.jar!/com/mysql/cj/jdbc/exceptions/SQLError.class">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -468,13 +411,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/64e3addc-2648-4368-a26e-50716629e540/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="48" selection-start-column="48" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="uml://Persistence/JavaeeElement:/ac542654/myPersistenceUnit/flashcards/jpa/JPA/PersistenceModel">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -483,30 +419,14 @@
           <nodes />
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="-739.5" y="71.5" />
+          <settings layout="Hierarchic Group" zoom="1.0" x="-739.0" y="72.0" />
           <SelectedNodes />
           <Categories>
             <Category>Properties</Category>
             <Category>Embeddables</Category>
             <Category>Superclasses</Category>
           </Categories>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/database/DB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+          <SCOPE>All</SCOPE>
         </state>
       </provider>
     </entry>
@@ -520,64 +440,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/boxes/BigBox.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="21" column="27" lean-forward="true" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1025#1026#0" expanded="true" />
-            <element signature="e#1069#1070#0" expanded="true" />
-            <element signature="e#1360#1361#0" expanded="true" />
-            <element signature="e#1398#1399#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="480">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/64e3addc-2648-4368-a26e-50716629e540/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="48" selection-start-column="48" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/flashcards/Flashcard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+        <state relative-caret-position="435">
+          <caret line="29" column="65" selection-start-line="29" selection-start-column="65" selection-end-line="29" selection-end-column="65" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#toString#0;class#Flashcard#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/users/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-241">
-          <caret line="23" column="47" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+        <state relative-caret-position="-368">
+          <caret line="33" column="65" selection-start-line="33" selection-start-column="65" selection-end-line="33" selection-end-column="65" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#855#863#0" expanded="true" />
-            <element signature="e#2041#2042#0" expanded="true" />
-            <element signature="e#2076#2077#0" expanded="true" />
-            <element signature="e#2138#2139#0" expanded="true" />
-            <element signature="e#2186#2187#0" expanded="true" />
-            <element signature="e#2216#2217#0" expanded="true" />
-            <element signature="e#2245#2246#0" expanded="true" />
-            <element signature="e#2286#2287#0" expanded="true" />
             <element signature="e#2322#2323#0" expanded="true" />
-            <element signature="e#2356#2357#0" expanded="true" />
-            <element signature="e#2387#2388#0" expanded="true" />
-            <element signature="e#2435#2436#0" expanded="true" />
-            <element signature="e#2475#2476#0" expanded="true" />
-            <element signature="e#2510#2511#0" expanded="true" />
-            <element signature="e#2541#2542#0" expanded="true" />
-            <element signature="e#2589#2590#0" expanded="true" />
-            <element signature="e#2629#2630#0" expanded="true" />
+            <element signature="e#2358#2359#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/database/DB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/boxes/BigBox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#852#863#0" expanded="true" />
+            <element signature="method#BigBox#1;class#BigBox#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="72" lean-forward="true" selection-start-line="24" selection-start-column="72" selection-end-line="24" selection-end-column="72" />
         </state>
       </provider>
     </entry>

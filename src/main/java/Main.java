@@ -11,6 +11,7 @@ import javax.persistence.TypedQuery;
 import java.security.SecureRandom;
 
 public class Main {
+
     public static void main(String[] args) {
 //        SecureRandom random = new SecureRandom();
 //        String salt = random.generateSeed(20).toString();
@@ -40,33 +41,19 @@ public class Main {
 //        else
 //            System.out.println("Worong password");
 //
-//        String login = "Kinaga1a";
-//        String password = "haslo";
-//        User current = new User(login, password);
-//        User.addUser(current);
-//        current.addBigBox("Moje fiszki", "ogolne");
-//        current.addFlashcard(0, "Dog", "pies");
-//        current.addFlashcard(0, "Cat", "DUPA");
+        String login = "Franek";
+        String password = "haslo";
+        User current = new User(login, password);
+        User.addUser(current);
+        current.addBigBox("Maine fiszki", "mojmme");
+        current.addFlashcard(0, "AAAA", "aaaa");
+        current.addFlashcard(0, "BBBBB", "bbbbb");
 
 
-        EntityManager em =  DB.getInstance().getConnection();
-
-
-        em.getTransaction().begin();
-        User tmp = em.find(User.class, 3);
-        System.out.println("imie: " + tmp.getUserName());
-        System.out.println("ILE MA BB: " + tmp.getUserBigBoxes().size());
-
-
-
-        //Query query = em.createQuery("delete FROM  User u where u.userId = 15");
-        //User user = query.getSingleResult();
-        //System.out.println(user.getPassword());
-        //query.executeUpdate();
-
-        em.getTransaction().commit();
-
-
-
+//        EntityManager em =  DB.getInstance().getConnection();
+//
+//        em.getTransaction().begin();
+//        em.remove(em.find(User.class, 3));
+//        em.getTransaction().commit();
     }
 }

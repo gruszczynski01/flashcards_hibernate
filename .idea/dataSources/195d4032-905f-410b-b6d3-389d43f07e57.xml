@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataSource name="flashcardDB@localhost">
+<dataSource name="myPersistenceUnit/Hibernate">
   <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.15">
     <root id="1">
       <ServerVersion>8.0.15</ServerVersion>
@@ -1104,5 +1104,170 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
+    <table id="277" parent="2" name="fc_big_boxes_seq">
+      <Engine>MyISAM</Engine>
+    </table>
+    <table id="278" parent="2" name="fc_bigboxes">
+      <Engine>MyISAM</Engine>
+    </table>
+    <table id="279" parent="2" name="fc_flashcards">
+      <Engine>MyISAM</Engine>
+    </table>
+    <table id="280" parent="2" name="fc_flashcards_seq">
+      <Engine>MyISAM</Engine>
+    </table>
+    <table id="281" parent="2" name="fc_users">
+      <Engine>MyISAM</Engine>
+    </table>
+    <table id="282" parent="2" name="fc_users_fc_bigboxes">
+      <Engine>MyISAM</Engine>
+    </table>
+    <table id="283" parent="2" name="fc_users_seq">
+      <Engine>MyISAM</Engine>
+    </table>
+    <column id="284" parent="277" name="next_val">
+      <Position>1</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="285" parent="278" name="fc_bigbox_id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="286" parent="278" name="category">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="287" parent="278" name="title">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="288" parent="278" name="owner_id">
+      <Position>4</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="289" parent="278" name="ownerId">
+      <Position>5</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="290" parent="278" name="FK8grgnw26l5fidman4hb0yja0a">
+      <ColNames>owner_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="291" parent="278" name="FKgmrgwlsn739xubar1wx6wbxqt">
+      <ColNames>ownerId</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="292" parent="278" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>fc_bigbox_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="293" parent="279" name="fc_flashcard_id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="294" parent="279" name="back_side">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="295" parent="279" name="front_side">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="296" parent="279" name="smallbox_number">
+      <Position>4</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="297" parent="279" name="bigBoxMother">
+      <Position>5</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="298" parent="279" name="FKnkv05gsoebswgh73th0brmw1m">
+      <ColNames>bigBoxMother</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="299" parent="279" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>fc_flashcard_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="300" parent="280" name="next_val">
+      <Position>1</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="301" parent="281" name="fc_user_id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="302" parent="281" name="password">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="303" parent="281" name="user_name">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="304" parent="281" name="UK_g7s1rtj43e7rdsx7abo46xqjp">
+      <ColNames>user_name</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <key id="305" parent="281" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>fc_user_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="306" parent="281" name="UK_g7s1rtj43e7rdsx7abo46xqjp">
+      <ColNames>user_name</ColNames>
+      <UnderlyingIndexName>UK_g7s1rtj43e7rdsx7abo46xqjp</UnderlyingIndexName>
+    </key>
+    <column id="307" parent="282" name="User_fc_user_id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="308" parent="282" name="userBigBoxes_fc_bigbox_id">
+      <Position>2</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="309" parent="282" name="UK_905d3d8x89nyw6dydjrfpprja">
+      <ColNames>userBigBoxes_fc_bigbox_id</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <index id="310" parent="282" name="FK7r7shl51og8cm8rd57h83yjxk">
+      <ColNames>User_fc_user_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="311" parent="282" name="UK_905d3d8x89nyw6dydjrfpprja">
+      <ColNames>userBigBoxes_fc_bigbox_id</ColNames>
+      <UnderlyingIndexName>UK_905d3d8x89nyw6dydjrfpprja</UnderlyingIndexName>
+    </key>
+    <column id="312" parent="283" name="next_val">
+      <Position>1</Position>
+      <DataType>bigint(20)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
   </database-model>
 </dataSource>
