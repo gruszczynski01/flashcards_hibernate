@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="flashcards" />
+        <module name="flashcards_hibernate" />
       </profile>
     </annotationProcessing>
   </component>

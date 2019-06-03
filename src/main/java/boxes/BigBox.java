@@ -1,6 +1,7 @@
 package boxes;
 
 
+import database.DB;
 import flashcards.Flashcard;
 import users.User;
 
@@ -35,6 +36,25 @@ public class BigBox {
         return flashcards;
     }
 
+
+    public void addFlashcard(String frontSide, String backSide){
+        System.out.println("bede otwieral transakcje");
+        EntityManager em =  DB.getInstance().getConnection();
+        System.out.println("zrobilem get connection");
+        em.getTransaction().begin();
+        System.out.println("Rozpoczolem transakcje");
+        Flashcard tmp = new Flashcard(this, frontSide, backSide);
+        System.out.println("stworzylem fiszke");
+        flashcards.add(tmp);
+        System.out.println("dodalem fiszke do zbioru w danym big box");
+//        em.persist(this);
+        em.persist(tmp);
+        System.out.println("porobilem presist");
+        em.getTransaction().commit();
+        System.out.println("zrobilem commit");
+        em.close();
+        System.out.println("zamknalem tranfakcie");
+    }
 
     public BigBox() {}
 

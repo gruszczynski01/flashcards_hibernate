@@ -3,12 +3,10 @@
              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
     <!-- Define persistence unit -->
     <persistence-unit name="myPersistenceUnit">
-        <description>This is my first persistence unit</description>
-
         <properties>
             <!-- Define timeout for lock and query -->
-            <property name="javax.persistence.lock.timeout" value="100"/>
-            <property name="javax.persistence.query.timeout" value="100"/>
+<!--            <property name="javax.persistence.lock.timeout" value="100"/>-->
+<!--            <property name="javax.persistence.query.timeout" value="100"/>-->
             <!-- database connection -->
             <!-- Driver -->
             <property name="hibernate.connection.driver_class" value="com.mysql.cj.jdbc.Driver"/>

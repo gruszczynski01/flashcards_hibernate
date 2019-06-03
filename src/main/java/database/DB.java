@@ -5,6 +5,9 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 public class DB {
+    public DB() {
+    }
+
     public static DB getInstance(){
         return new DB();
     }
@@ -13,7 +16,5 @@ public class DB {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         //entityManagerFactory.close();
         return entityManager;
-
-
     }
 }

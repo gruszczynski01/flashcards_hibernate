@@ -53,9 +53,12 @@ public class Main {
         EntityManager em =  DB.getInstance().getConnection();
 
         em.getTransaction().begin();
-        //em.remove(em.find(User.class, 3));
         User myUser = em.find(User.class, 6L);
-        myUser.addFlashcard(0, "CCCCCC", "ccccccc" );
+        BigBox bigBox = myUser.getUserBigBoxes().get(0);
+        em.persist(myUser);
         em.getTransaction().commit();
+        bigBox.addFlashcard("Dupa", "dupa");
+
+        em.close();
     }
 }
