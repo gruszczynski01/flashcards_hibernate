@@ -1,45 +1,20 @@
 
-import boxes.BigBox;
-import database.DB;
-import flashcards.Flashcard;
+import javafx.animation.TranslateTransition;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
+import javafx.util.Duration;
 import org.mindrot.jbcrypt.BCrypt;
-import users.User;
 
-import javax.persistence.EntityManager;
-import javax.persistence.Query;
-import javax.persistence.TypedQuery;
-import java.security.SecureRandom;
-
-public class Main {
+public class Main extends Application {
 
     public static void main(String[] args) {
+        launch(args);
 //        SecureRandom random = new SecureRandom();
-//        String salt = random.generateSeed(20).toString();
-//        byte seed[] = random.generateSeed(20);
-//        System.out.println("Our random string: " + seed);
-//        seed = random.generateSeed(20);
-//        System.out.println("Our random string: " + seed);
-//        seed = random.generateSeed(20);
-//        System.out.println("Our random string: " + seed);
-//
-//        seed = random.generateSeed(20);
-//        System.out.println("Our random string: " + seed);
-//        seed = random.generateSeed(20);
-//        System.out.println("Our random string: " + seed);
-//
-//        seed = random.generateSeed(20);
-//        System.out.println("Our random string: " + seed);
-//        seed = random.generateSeed(20);
-//        System.out.println("Our random string: " + seed);
 
 
-//         String passwordIntoDatabase = BCrypt.hashpw("mojeHaselko", BCrypt.gensalt());
-//        System.out.println("password in DB: " + passwordIntoDatabase);
-//
-//        if(BCrypt.checkpw("mojeHaselko", passwordIntoDatabase))
-//            System.out.println("Good passwd");
-//        else
-//            System.out.println("Worong password");
 //
 //        String login = "Franek";
 //        String password = "haslo";
@@ -48,17 +23,40 @@ public class Main {
 //        current.addBigBox("Maine fiszki", "mojmme");
 //        current.addFlashcard(0, "AAAA", "aaaa");
 //        current.addFlashcard(0, "BBBBB", "bbbbb");
+//**************************************************************
+//
+//        EntityManager em =  DB.getInstance().getConnection();
+//
+//        em.getTransaction().begin();
+//        User myUser = em.find(User.class, 6L);
+//        BigBox bigBox = myUser.getUserBigBoxes().get(0);
+//        em.persist(myUser);
+//        em.getTransaction().commit();
+//        bigBox.addFlashcard("Dupa", "dupa");
+//
+        //**************************************************************
+//        em.close();
+    }
 
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        Pane root = FXMLLoader.load(this.getClass().getResource("/FXML/loginScreen.fxml"));
 
-        EntityManager em =  DB.getInstance().getConnection();
+        Scene scene = new Scene(root);
+        primaryStage.setScene(scene);
+        primaryStage.show();
 
-        em.getTransaction().begin();
-        User myUser = em.find(User.class, 6L);
-        BigBox bigBox = myUser.getUserBigBoxes().get(0);
-        em.persist(myUser);
-        em.getTransaction().commit();
-        bigBox.addFlashcard("Dupa", "dupa");
-
-        em.close();
+//        String passwordIntoDatabase = BCrypt.hashpw("mojeHaselko", BCrypt.gensalt());
+//        System.out.println("password in DB: " + passwordIntoDatabase);
+//
+//        if(BCrypt.checkpw("mojeHaselko", passwordIntoDatabase))
+//            System.out.println("Good passwd");
+//        else
+//            System.out.println("Worong password");
+//        TranslateTransition transition = new TranslateTransition();
+//        transition.setDuration(Duration.seconds(6));
+//        transition.setToX(800);
+//        transition.setNode(root);
+//        transition.play();
     }
 }

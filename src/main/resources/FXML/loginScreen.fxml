@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.loginScreenController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="800.0">
+         <image>
+            <Image url="@login_background.jpg" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+         <effect>
+            <Blend />
+         </effect>
+      </ImageView>
+      <Text fill="#f7ee42" layoutX="220.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Leitner System" textAlignment="CENTER" wrappingWidth="360.2060546875">
+         <font>
+            <Font name="Arial" size="39.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Text>
+      <TextField fx:id="loginField" layoutX="278.0" layoutY="188.0" prefHeight="27.0" prefWidth="245.0" />
+      <Text layoutX="199.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login:" wrappingWidth="52.2060546875" />
+      <Text layoutX="199.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" wrappingWidth="64.2060546875" />
+      <Button layoutX="368.0" layoutY="287.0" mnemonicParsing="false" onAction="#loginButtonAction" prefHeight="27.0" prefWidth="155.0" style="-fx-background-color: #f7ee42;" text="Zaloguj" />
+      <PasswordField fx:id="passwordField" layoutX="278.0" layoutY="242.0" prefHeight="27.0" prefWidth="245.0" />
+      <Text layoutX="580.0" layoutY="591.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Created by Szymon Gruszczyński" />
+   </children>
+</Pane>
