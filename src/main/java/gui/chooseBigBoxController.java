@@ -36,7 +36,7 @@ public class chooseBigBoxController implements Initializable {
     private ChoiceBox<String> categoryChoiceBox;
 
     @FXML
-    private ChoiceBox<?> bigBoxChoiceBox;
+    private ChoiceBox<String> bigBoxChoiceBox;
 
     @FXML
     void showFC(ActionEvent event) {
@@ -65,10 +65,14 @@ public class chooseBigBoxController implements Initializable {
             public void changed(ObservableValue<? extends String> observable, //
                                 String oldValue, String newValue) {
                 if (newValue != null && !newValue.equals("<Kategorie>")) {
+                    bigBoxChoiceBox.getItems().removeAll();
                     System.out.println("STARA: " + oldValue + ", NOWA: " + newValue);
-
+                    BigBox.getBigBoxes(newValue).forEach( BigBox -> {
+                        bigBoxChoiceBox.getItems().add(BigBox.getTitle());
+                    });
                     bigBoxChoiceBox.setOpacity(1);
                     bigBoxChoiceBox.show();
+
                 }
             }
         };

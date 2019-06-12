@@ -72,6 +72,20 @@ public class BigBox {
         em.getTransaction().commit();
         em.close();
     }
+    public static List<BigBox> getBigBoxes(String cat){
+        EntityManager em =  DB.getInstance().getConnection();
+        em.getTransaction().begin();
+        String hql = "select bb from BigBox bb where bb.category = :category";
+        Query query =em.createQuery(hql);
+        query.setParameter("category", cat);
+        List result = query.getResultList();
+        System.out.println("ILE ELEMENTOW: " + result.size());
+        em.getTransaction().commit();
+        em.close();
+
+
+        return result;
+    }
 
     public BigBox() {}
 
