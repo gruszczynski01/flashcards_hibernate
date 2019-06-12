@@ -25,7 +25,7 @@ public class BigBox {
     @JoinColumn(name = "owner_id")
     private User ownerId;
 
-    @Column(name = "title")
+    @Column(name = "title", unique = true)
     private String title;
 
     @Column(name = "category")

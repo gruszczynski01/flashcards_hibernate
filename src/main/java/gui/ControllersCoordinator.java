@@ -16,6 +16,7 @@ public class ControllersCoordinator {
     public static final String LOGINSCREEN = "/FXML/loginScreen.fxml";
     public static final String WELCOMESCREEN = "/FXML/welcomeScreen.fxml";
     public static final String EDITBIGBOX = "/FXML/editBigBox.fxml";
+    public static final String CHOOSEBB = "/FXML/chooseBigBox.fxml";
     public static void changeScreen(String FXMLpath){
         try {
             root = FXMLLoader.load(ControllersCoordinator.class.getResource(FXMLpath));

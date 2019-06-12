@@ -23,7 +23,7 @@ public class welcomeScreenController {
 
     @FXML
     void showIrregularVerbsBox(ActionEvent event) {
-
+        changeScreen(CHOOSEBB);
     }
 
     @FXML
