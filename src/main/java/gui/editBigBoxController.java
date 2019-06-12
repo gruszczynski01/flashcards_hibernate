@@ -28,7 +28,12 @@ public class editBigBoxController {
 
     @FXML
     void removeAllFlashcardsButton(ActionEvent event) {
-        //to do
+        EntityManager em =  DB.getInstance().getConnection();
+        em.getTransaction().begin();
+        BigBox bigBox = em.find(BigBox.class, bigBoxId);
+        em.getTransaction().commit();
+        em.close();
+        bigBox.deleteAllFlashcards();
     }
 
     @FXML

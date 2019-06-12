@@ -6,8 +6,11 @@ import flashcards.Flashcard;
 import users.User;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+
+import static users.MainCoordinator.loggedUser;
 
 @Entity
 @Table(name = "fc_bigboxes")
@@ -54,6 +57,20 @@ public class BigBox {
         System.out.println("zrobilem commit");
         em.close();
         System.out.println("zamknalem tranfakcie");
+    }
+    @SuppressWarnings("Duplicates")
+    public void deleteAllFlashcards(){
+        EntityManager em =  DB.getInstance().getConnection();
+        em.getTransaction().begin();
+        BigBox bigBox = em.find(BigBox.class, this.getBigBoxId());
+        String hql = "DELETE FROM Flashcard fc where fc.bigBoxMother = :bigMother";
+        Query query =em.createQuery(hql);
+        query.setParameter("bigMother", bigBox);
+        query.executeUpdate();
+        loggedUser = em.find(User.class, loggedUser.getUserId());
+        //em.persist(bigBox);
+        em.getTransaction().commit();
+        em.close();
     }
 
     public BigBox() {}

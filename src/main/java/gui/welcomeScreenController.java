@@ -34,7 +34,7 @@ public class welcomeScreenController {
     @FXML
     void buttonDown(ActionEvent event) {
         TranslateTransition transition = new TranslateTransition();
-        transition.setDuration(Duration.seconds(2));
+        transition.setDuration(Duration.seconds(1));
         transition.setToY(-600);
         transition.setNode(backgroundPane);
         transition.play();
@@ -43,7 +43,7 @@ public class welcomeScreenController {
     @FXML
     void buttonDownBack(ActionEvent event) {
         TranslateTransition transition = new TranslateTransition();
-        transition.setDuration(Duration.seconds(2));
+        transition.setDuration(Duration.seconds(1));
         transition.setToY(0);
         transition.setNode(backgroundPane);
         transition.play();
@@ -52,7 +52,7 @@ public class welcomeScreenController {
     @FXML
     void buttonLeft(ActionEvent event) {
         TranslateTransition transition = new TranslateTransition();
-        transition.setDuration(Duration.seconds(2));
+        transition.setDuration(Duration.seconds(1));
         transition.setToX(800);
         transition.setNode(backgroundPane);
         transition.play();
@@ -61,7 +61,7 @@ public class welcomeScreenController {
     @FXML
     void buttonLeftBack(ActionEvent event) {
         TranslateTransition transition = new TranslateTransition();
-        transition.setDuration(Duration.seconds(2));
+        transition.setDuration(Duration.seconds(1));
         transition.setToX(0);
         transition.setNode(backgroundPane);
         transition.play();
@@ -70,7 +70,7 @@ public class welcomeScreenController {
     @FXML
     void buttonRight(ActionEvent event) {
         TranslateTransition transition = new TranslateTransition();
-        transition.setDuration(Duration.seconds(2));
+        transition.setDuration(Duration.seconds(1));
         transition.setToX(-800);
         transition.setNode(backgroundPane);
         transition.play();
@@ -79,7 +79,7 @@ public class welcomeScreenController {
     @FXML
     void buttonRightBack(ActionEvent event) {
         TranslateTransition transition = new TranslateTransition();
-        transition.setDuration(Duration.seconds(2));
+        transition.setDuration(Duration.seconds(1));
         transition.setToX(0);
         transition.setNode(backgroundPane);
         transition.play();
@@ -88,7 +88,7 @@ public class welcomeScreenController {
     @FXML
     void buttonUp(ActionEvent event) {
         TranslateTransition transition = new TranslateTransition();
-        transition.setDuration(Duration.seconds(2));
+        transition.setDuration(Duration.seconds(1));
         transition.setToY(600);
         transition.setNode(backgroundPane);
         transition.play();
@@ -97,7 +97,7 @@ public class welcomeScreenController {
     @FXML
     void buttonUpBack(ActionEvent event) {
         TranslateTransition transition = new TranslateTransition();
-        transition.setDuration(Duration.seconds(2));
+        transition.setDuration(Duration.seconds(1));
         transition.setToY(0);
         transition.setNode(backgroundPane);
         transition.play();

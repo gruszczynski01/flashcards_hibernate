@@ -20,7 +20,6 @@ public class Flashcard {
 
     @Column(name = "front_side")
     private String frontSide;
-
     @Column(name = "back_side")
     private String backSide;
 

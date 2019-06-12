@@ -4,8 +4,11 @@
     -fx-background-size: 100% 100%;
 }
 .editBigBox {
-    -fx-background-image: url("editFCBG.pngg");
+    -fx-background-image: url("editFCBG.png");
     -fx-background-repeat: no-repeat;
     -fx-background-size: 100% 100%;
-
+}
+.myBBeditButton:default:hover:pressed{
+    -fx-background-color: green;
+/*    ni dziala*/
 }

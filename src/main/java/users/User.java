@@ -59,6 +59,7 @@ public class User {
         //em.close(); ??
 
     }
+    @SuppressWarnings("Duplicates")
     public void removeBigBox(long id){
         EntityManager em =  DB.getInstance().getConnection();
         em.getTransaction().begin();
@@ -79,18 +80,6 @@ public class User {
         em.getTransaction().commit();
         em.close();
     }
-//    public void addFlashcard(int bigBoxNumber, String frontSide, String backSide){
-//        EntityManager em =  DB.getInstance().getConnection();
-//        em.getTransaction().begin();
-//        Flashcard tmp = new Flashcard(userBigBoxes.get(bigBoxNumber), frontSide, backSide);
-//        userBigBoxes.get(bigBoxNumber).getFlashcards().add(tmp);
-//        em.persist(this);
-//        em.persist(userBigBoxes.get(bigBoxNumber));
-//        em.persist(tmp);
-//        em.getTransaction().commit();
-//        em.close();
-//    }
-
     public void removeUser(long userId){
         EntityManager em = DB.getInstance().getConnection();
         em.getTransaction().begin();
