@@ -1,4 +1,6 @@
 
+import database.DB;
+import gui.ControllersCoordinator;
 import javafx.animation.TranslateTransition;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -7,9 +9,14 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import org.mindrot.jbcrypt.BCrypt;
+import users.User;
+
+import javax.persistence.EntityManager;
+
+import static gui.ControllersCoordinator.*;
 
 public class Main extends Application {
-
+    public static User loginUser;
     public static void main(String[] args) {
         launch(args);
 //        SecureRandom random = new SecureRandom();
@@ -40,23 +47,10 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Pane root = FXMLLoader.load(this.getClass().getResource("/FXML/loginScreen.fxml"));
-
+        stage = primaryStage;
+        root = FXMLLoader.load(this.getClass().getResource("/FXML/loginScreen.fxml"));
         Scene scene = new Scene(root);
-        primaryStage.setScene(scene);
-        primaryStage.show();
-
-//        String passwordIntoDatabase = BCrypt.hashpw("mojeHaselko", BCrypt.gensalt());
-//        System.out.println("password in DB: " + passwordIntoDatabase);
-//
-//        if(BCrypt.checkpw("mojeHaselko", passwordIntoDatabase))
-//            System.out.println("Good passwd");
-//        else
-//            System.out.println("Worong password");
-//        TranslateTransition transition = new TranslateTransition();
-//        transition.setDuration(Duration.seconds(6));
-//        transition.setToX(800);
-//        transition.setNode(root);
-//        transition.play();
+        stage.setScene(scene);
+        stage.show();
     }
 }

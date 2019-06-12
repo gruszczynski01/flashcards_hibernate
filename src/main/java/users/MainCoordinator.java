@@ -1,5 +1,6 @@
-import users.User;
+package users;
+
 
 public class MainCoordinator {
-    public static User 
+    public static User loggedUser;
 }

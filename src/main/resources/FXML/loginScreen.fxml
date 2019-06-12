@@ -14,7 +14,7 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.loginScreenController">
    <children>
-      <ImageView fitHeight="600.0" fitWidth="800.0">
+      <ImageView fitHeight="600.0" fitWidth="810.0" layoutX="-4.0">
          <image>
             <Image url="@login_background.jpg" />
          </image>
@@ -25,19 +25,32 @@
             <Blend />
          </effect>
       </ImageView>
-      <Text fill="#f7ee42" layoutX="220.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Leitner System" textAlignment="CENTER" wrappingWidth="360.2060546875">
+      <Text fill="#f7ee42" layoutX="206.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Leitner System" textAlignment="CENTER" wrappingWidth="360.2060546875">
          <font>
-            <Font name="Arial" size="39.0" />
+            <Font name="Copperplate Bold" size="39.0" />
          </font>
          <effect>
             <DropShadow />
          </effect>
       </Text>
       <TextField fx:id="loginField" layoutX="278.0" layoutY="188.0" prefHeight="27.0" prefWidth="245.0" />
-      <Text layoutX="199.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login:" wrappingWidth="52.2060546875" />
-      <Text layoutX="199.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" wrappingWidth="64.2060546875" />
-      <Button layoutX="368.0" layoutY="287.0" mnemonicParsing="false" onAction="#loginButtonAction" prefHeight="27.0" prefWidth="155.0" style="-fx-background-color: #f7ee42;" text="Zaloguj" />
-      <PasswordField fx:id="passwordField" layoutX="278.0" layoutY="242.0" prefHeight="27.0" prefWidth="245.0" />
+      <Text layoutX="207.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login:" wrappingWidth="58.206047773361206">
+         <font>
+            <Font name="Copperplate Light" size="17.0" />
+         </font></Text>
+      <Button layoutX="368.0" layoutY="287.0" mnemonicParsing="false" onAction="#loginButtonAction" prefHeight="27.0" prefWidth="155.0" style="-fx-background-color: #f7ee42;" text="Zaloguj">
+         <font>
+            <Font name="Copperplate Bold" size="14.0" />
+         </font></Button>
+      <PasswordField fx:id="passwordField" layoutX="278.0" layoutY="242.0" prefHeight="27.0" prefWidth="245.0">
+         <font>
+            <Font name="Copperplate" size="13.0" />
+         </font></PasswordField>
       <Text layoutX="580.0" layoutY="591.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Created by Szymon Gruszczyński" />
+      <Text layoutX="207.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hasło:" wrappingWidth="58.206047773361206">
+         <font>
+            <Font name="Copperplate Light" size="17.0" />
+         </font>
+      </Text>
    </children>
 </Pane>

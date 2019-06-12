@@ -14,7 +14,7 @@ public class Flashcard {
             @SequenceGenerator(name = "fc_flashcards_seq", allocationSize = 1)
     private long flashcardId;
 
-    @ManyToOne()
+    @ManyToOne
     @JoinColumn(name = "bigBoxMother")
     private BigBox bigBoxMother;
 

@@ -9,6 +9,7 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import static users.MainCoordinator.loggedUser;
 
 
 @Entity
@@ -47,14 +48,36 @@ public class User {
        em.getTransaction().commit();
        return newUser;
     }
-    public void addBigBox(String title, String category){
+    public BigBox addBigBox(String title, String category){
         BigBox tmp =new BigBox(this, title, category);
         userBigBoxes.add(tmp);
         EntityManager em =  DB.getInstance().getConnection();
         em.getTransaction().begin();
         em.persist(tmp);
         em.getTransaction().commit();
+        return tmp;
+        //em.close(); ??
 
+    }
+    public void removeBigBox(long id){
+        EntityManager em =  DB.getInstance().getConnection();
+        em.getTransaction().begin();
+        String hql = "DELETE FROM Flashcard fc where fc.bigBoxMother = :bigMother";
+        Query query =em.createQuery(hql);
+        query.setParameter("bigMother", em.find(BigBox.class, id));
+        query.executeUpdate();
+        loggedUser = em.find(User.class, loggedUser.getUserId());
+        em.getTransaction().commit();
+        em.close();
+        em =  DB.getInstance().getConnection();
+        em.getTransaction().begin();
+        String hql2 = "DELETE FROM BigBox bb where bb.bigBoxId = :id";
+        Query query2 =em.createQuery(hql2);
+        query2.setParameter("id", id);
+        query2.executeUpdate();
+        loggedUser = em.find(User.class, loggedUser.getUserId());
+        em.getTransaction().commit();
+        em.close();
     }
 //    public void addFlashcard(int bigBoxNumber, String frontSide, String backSide){
 //        EntityManager em =  DB.getInstance().getConnection();

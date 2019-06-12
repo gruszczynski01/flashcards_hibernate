@@ -4,6 +4,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.welcomeScreenController">
    <children>
@@ -22,6 +23,20 @@
             <Button layoutX="-93.0" layoutY="291.0" mnemonicParsing="false" onAction="#buttonLeftBack" text="Button" />
             <Button layoutX="821.0" layoutY="291.0" mnemonicParsing="false" onAction="#buttonRightBack" text="Button" />
             <Button layoutX="379.0" layoutY="-47.0" mnemonicParsing="false" onAction="#buttonUpBack" text="Button" />
+            <Button fx:id="myBigBoxes" layoutX="-744.0" layoutY="82.0" lineSpacing="2.0" mnemonicParsing="false" onAction="#showMyBoxes" prefHeight="65.0" prefWidth="279.0" style="-fx-background-color: #f7ee42; -fx-background-radius: 40;" text="Moje&#10;pudełka" textAlignment="CENTER">
+               <font>
+                  <Font name="Copperplate Bold" size="17.0" />
+               </font></Button>
+            <Button fx:id="irregularVerbsBox" layoutX="-744.0" layoutY="231.0" lineSpacing="1.0" mnemonicParsing="false" onAction="#showIrregularVerbsBox" prefHeight="65.0" prefWidth="273.0" style="-fx-background-color: #f7ee42; -fx-background-radius: 40;" text="Czasowniki&#10;nieregularne" textAlignment="CENTER">
+               <font>
+                  <Font name="Copperplate Bold" size="17.0" />
+               </font>
+            </Button>
+            <Button fx:id="addBigBox" layoutX="-382.0" layoutY="83.0" lineSpacing="2.0" mnemonicParsing="false" onAction="#addBigBox" prefHeight="65.0" prefWidth="284.0" style="-fx-background-color: #f7ee42; -fx-background-radius: 40;" text="Dodaj&#10;pudełko" textAlignment="CENTER">
+               <font>
+                  <Font name="Copperplate Bold" size="17.0" />
+               </font>
+            </Button>
          </children></Pane>
    </children>
 </Pane>
