@@ -23,10 +23,11 @@ import java.util.ResourceBundle;
 
 public class FCfromBBController implements Initializable {
     ObservableList<FlashcardRowTableView> flashcardObservableList = FXCollections.observableArrayList();
-    public Long bigBoxId;
+    public static Long bigBoxId;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        System.out.println("DOSTAŁEM ID: " + bigBoxId);
         EntityManager em =  DB.getInstance().getConnection();
         em.getTransaction().begin();
         BigBox bigBox = em.find(BigBox.class, bigBoxId);

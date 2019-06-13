@@ -27,6 +27,7 @@ import java.util.Map;
 import java.util.ResourceBundle;
 import java.util.stream.Collectors;
 
+import static com.sun.javafx.scene.control.skin.Utils.getResource;
 import static gui.ControllersCoordinator.*;
 import static users.MainCoordinator.loggedUser;
 
@@ -51,7 +52,7 @@ public class chooseBigBoxController implements Initializable {
             System.out.println("KEY: " + x.getKey() + ", VAL: " + x.getValue());
         });
         System.out.println("ID to: " + uniqueCategory.get(bigBoxChoiceBox.getValue()));
-
+        System.out.println("Przekazuje id rowne: " + currentID);
         changeScreenFlashcardsFromBigBox(FCFROMBB, currentID);
     }
 
@@ -91,17 +92,20 @@ public class chooseBigBoxController implements Initializable {
         categoryChoiceBox.getSelectionModel().selectedItemProperty().addListener(changeListener);
     }
     public void changeScreenFlashcardsFromBigBox(String FXMLpath, long bigBoxId){
+        System.out.println("DOSTALEM ID DO PRZEKAZANIA: " + bigBoxId);
         System.out.println("START");
         try {
+            FCfromBBController.bigBoxId = bigBoxId;
             FXMLLoader loader = new FXMLLoader(getClass().getResource(FXMLpath));
             root = (Pane) loader.load();
-            FCfromBBController FCfromBBController = loader.getController();
-            FCfromBBController.bigBoxId = bigBoxId;
+            FCfromBBController fcfromBBController = loader.getController();
+            fcfromBBController.bigBoxId = bigBoxId;
             Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
         } catch (IOException e) {
-            System.out.println(e.getMessage());
+            System.out.println("exception: " + e.getMessage());
+            e.printStackTrace();
         }
     }
 

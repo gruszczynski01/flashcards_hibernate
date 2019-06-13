@@ -31,7 +31,7 @@ public class BigBox {
     @Column(name = "category")
     private String category; // enum?
 
-    @OneToMany(mappedBy = "bigBoxMother", orphanRemoval = true, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "bigBoxMother", orphanRemoval = true, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Flashcard> flashcards = new ArrayList<Flashcard>();
 
     //***************************************************************
