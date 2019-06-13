@@ -79,14 +79,18 @@ public class BigBox {
         Query query =em.createQuery(hql);
         query.setParameter("category", cat);
         List result = query.getResultList();
-        System.out.println("ILE ELEMENTOW: " + result.size());
         em.getTransaction().commit();
         em.close();
-
-
         return result;
     }
-
+    public static List<Flashcard> getMyFlashcards(Long bigBoxId){
+        EntityManager em =  DB.getInstance().getConnection();
+        em.getTransaction().begin();
+        List<Flashcard> result = em.find(BigBox.class, bigBoxId).flashcards;
+        em.getTransaction().commit();
+        em.close();
+        return result;
+    }
     public BigBox() {}
 
     public void setFlashcards(List<Flashcard> flashcards) {

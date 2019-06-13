@@ -10,36 +10,32 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
-import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Pane;
-import users.User;
 
 import javax.persistence.EntityManager;
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.ResourceBundle;
 
 import static gui.ControllersCoordinator.*;
 import static users.MainCoordinator.*;
 
 public class myBigBoxesController implements Initializable {
-    ObservableList<BigBoxRowTableView> bigBoxRowTableViews = FXCollections.observableArrayList();
+    ObservableList<BigBoxRowTableView> rowTableViewObservableList = FXCollections.observableArrayList();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         loggedUser.getUserBigBoxes().stream().forEach(BigBox -> {
             BigBoxRowTableView tmp = new BigBoxRowTableView(BigBox.getBigBoxId(), BigBox.getTitle(), BigBox.getCategory());
-            bigBoxRowTableViews.add(tmp);
+            rowTableViewObservableList.add(tmp);
         });
         nameColumn.setCellValueFactory(new PropertyValueFactory<BigBoxRowTableView, String>("title"));
         categoryColumn.setCellValueFactory(new PropertyValueFactory<BigBoxRowTableView, String>("category"));
-        boxesTable.setItems(bigBoxRowTableViews);
+        boxesTable.setItems(rowTableViewObservableList);
     }
     @FXML
     private TextField boxName;
@@ -62,7 +58,7 @@ public class myBigBoxesController implements Initializable {
         boxName.clear();
         boxCategory.clear();
         BigBox newBigBox = loggedUser.addBigBox(name, category);
-        bigBoxRowTableViews.add(new BigBoxRowTableView(newBigBox.getBigBoxId(),
+        rowTableViewObservableList.add(new BigBoxRowTableView(newBigBox.getBigBoxId(),
                 newBigBox.getTitle(), newBigBox.getCategory()));
         boxName.clear();
         boxCategory.clear();
