@@ -33,6 +33,7 @@ public class Flashcard {
         this.frontSide = frontSide;
         this.backSide = backSide;
         this.smallBoxNumber = 0;
+
     }
 
     public Flashcard() {}

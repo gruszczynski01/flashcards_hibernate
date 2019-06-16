@@ -60,8 +60,6 @@ public class myBigBoxesController implements Initializable {
         BigBox newBigBox = loggedUser.addBigBox(name, category);
         rowTableViewObservableList.add(new BigBoxRowTableView(newBigBox.getBigBoxId(),
                 newBigBox.getTitle(), newBigBox.getCategory()));
-        boxName.clear();
-        boxCategory.clear();
     }
 
     @FXML
@@ -88,10 +86,9 @@ public class myBigBoxesController implements Initializable {
 
     @FXML
     void editButton(ActionEvent event) {
-        System.out.println("KLIKNIETO EDIT");
-        long id;
+        //System.out.println("KLIKNIETO EDIT");
         ObservableList<BigBoxRowTableView> bigBoxSelected = boxesTable.getSelectionModel().getSelectedItems();
-        System.out.println("ROZMIAR: " + bigBoxSelected.size());
+        //System.out.println("ROZMIAR: " + bigBoxSelected.size());
         bigBoxSelected.stream().forEach( BigBox -> {
             changeScreenEditBigBox(EDITBIGBOX, BigBox.getTitle(), BigBox.getCategory(), BigBox.getBigBoxId());
         });

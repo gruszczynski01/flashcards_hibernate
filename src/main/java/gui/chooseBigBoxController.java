@@ -56,6 +56,7 @@ public class chooseBigBoxController implements Initializable {
         changeScreenFlashcardsFromBigBox(FCFROMBB, currentID);
     }
 
+    @SuppressWarnings("Duplicates")
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
@@ -64,6 +65,8 @@ public class chooseBigBoxController implements Initializable {
         bigBoxChoiceBox.setOpacity(0.4);
         categoryChoiceBox.getItems().add("<Kategorie>");
         categoryChoiceBox.getSelectionModel().select("<Kategorie>");
+        bigBoxChoiceBox.getItems().add("<Pudełka>");
+        bigBoxChoiceBox.getSelectionModel().select("<Pudełka>");
         //categoryChoiceBox.getItems().add("Kategorie");
         //tu byla mapa
         loggedUser.getUserBigBoxes().forEach( BigBox -> {

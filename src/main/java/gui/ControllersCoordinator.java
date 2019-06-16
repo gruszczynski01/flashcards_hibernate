@@ -18,6 +18,7 @@ public class ControllersCoordinator {
     public static final String EDITBIGBOX = "/FXML/editBigBox.fxml";
     public static final String CHOOSEBB = "/FXML/chooseBigBox.fxml";
     public static final String FCFROMBB = "/FXML/FFfromBB.fxml";
+    public static final String EDITFLASHCARD = "/FXML/editFlashcard.fxml";
     public static void changeScreen(String FXMLpath){
         try {
             root = FXMLLoader.load(ControllersCoordinator.class.getResource(FXMLpath));
@@ -28,6 +29,7 @@ public class ControllersCoordinator {
             System.out.println(e.getMessage());
         }
     }
+
 
 
 }

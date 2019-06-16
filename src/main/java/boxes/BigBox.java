@@ -40,23 +40,28 @@ public class BigBox {
     }
 
 
-    public void addFlashcard(String frontSide, String backSide){
-        System.out.println("bede otwieral transakcje");
-        EntityManager em =  DB.getInstance().getConnection();
-        System.out.println("zrobilem get connection");
-        em.getTransaction().begin();
-        System.out.println("Rozpoczolem transakcje");
+    public Flashcard addFlashcard(String frontSide, String backSide){
         Flashcard tmp = new Flashcard(this, frontSide, backSide);
-        System.out.println("stworzylem fiszke");
         flashcards.add(tmp);
-        System.out.println("dodalem fiszke do zbioru w danym big box");
-//        em.persist(this);
+        EntityManager em =  DB.getInstance().getConnection();
+        em.getTransaction().begin();
         em.persist(tmp);
-        System.out.println("porobilem presist");
         em.getTransaction().commit();
-        System.out.println("zrobilem commit");
         em.close();
-        System.out.println("zamknalem tranfakcie");
+        return tmp;
+    }
+
+    public void removeFlashcard(long id){
+        EntityManager em =  DB.getInstance().getConnection();
+        em.getTransaction().begin();
+        String hql = "DELETE FROM Flashcard fc where fc.flashcardId = :id";
+        Query query =em.createQuery(hql);
+        query.setParameter("id", id);
+        query.executeUpdate();
+        loggedUser = em.find(User.class, loggedUser.getUserId());
+        em.getTransaction().commit();
+        em.close();
+
     }
     @SuppressWarnings("Duplicates")
     public void deleteAllFlashcards(){
@@ -68,7 +73,6 @@ public class BigBox {
         query.setParameter("bigMother", bigBox);
         query.executeUpdate();
         loggedUser = em.find(User.class, loggedUser.getUserId());
-        //em.persist(bigBox);
         em.getTransaction().commit();
         em.close();
     }

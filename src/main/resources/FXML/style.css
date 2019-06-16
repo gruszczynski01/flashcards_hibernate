@@ -18,6 +18,11 @@
     -fx-background-repeat: no-repeat;
     -fx-background-size: 100% 100%;
 }
+.chooseBigBoxToLearn {
+    -fx-background-image: url("chooseBigBoxToLearn.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 100% 100%;
+}
 .myBBeditButton:default:hover:pressed{
     -fx-background-color: green;
 /*    ni dziala*/

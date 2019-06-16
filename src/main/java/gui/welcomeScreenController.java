@@ -31,6 +31,19 @@ public class welcomeScreenController {
         changeScreen(MYBIGBOXES);
     }
 
+
+
+    @FXML
+    void writeAndCheck(ActionEvent event) {
+
+    }
+
+    @FXML
+    void selfCheck(ActionEvent event) {
+
+    }
+
+
     @FXML
     void buttonDown(ActionEvent event) {
         TranslateTransition transition = new TranslateTransition();

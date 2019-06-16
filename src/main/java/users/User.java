@@ -55,8 +55,9 @@ public class User {
         em.getTransaction().begin();
         em.persist(tmp);
         em.getTransaction().commit();
+        em.close();
         return tmp;
-        //em.close(); ??
+
 
     }
     @SuppressWarnings("Duplicates")
