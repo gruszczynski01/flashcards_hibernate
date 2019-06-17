@@ -48,7 +48,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         stage = primaryStage;
-        root = FXMLLoader.load(this.getClass().getResource(LEARNINGSELFCONTROL));
+        root = FXMLLoader.load(this.getClass().getResource(LOGINSCREEN));
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();

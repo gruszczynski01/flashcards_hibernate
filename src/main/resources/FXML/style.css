@@ -23,8 +23,13 @@
     -fx-background-repeat: no-repeat;
     -fx-background-size: 100% 100%;
 }
-.leariningBG {
+.learningBG {
     -fx-background-image: url("learningBG.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 100% 100%;
+}
+.afterLearning {
+    -fx-background-image: url("afterLearningBG.png");
     -fx-background-repeat: no-repeat;
     -fx-background-size: 100% 100%;
 }

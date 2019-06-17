@@ -7,7 +7,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "fc_flashcards")
-public class Flashcard {
+public class Flashcard implements Comparable{
     @Id
             @Column(name = "fc_flashcard_id", updatable = false, nullable = false)
             @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "fc_flashcards_seq")
@@ -87,5 +87,16 @@ public class Flashcard {
                 ", backSide='" + backSide + '\'' +
                 ", smallBoxNumber=" + smallBoxNumber +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        Flashcard secondFlashcard = (Flashcard) o;
+        if(this.getSmallBoxNumber() < secondFlashcard.getSmallBoxNumber())
+            return -1;
+        else if (this.getSmallBoxNumber() == secondFlashcard.getSmallBoxNumber())
+            return 0;
+        else
+            return 1;
     }
 }

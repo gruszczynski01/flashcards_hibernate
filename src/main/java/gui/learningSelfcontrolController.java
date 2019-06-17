@@ -1,5 +1,8 @@
 package gui;
 
+import boxes.BigBox;
+import database.DB;
+import flashcards.Flashcard;
 import javafx.animation.FadeTransition;
 import javafx.animation.PauseTransition;
 import javafx.animation.RotateTransition;
@@ -17,10 +20,17 @@ import javafx.scene.shape.Box;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
 
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
+import static gui.ControllersCoordinator.*;
+
 public class learningSelfcontrolController implements Initializable {
+    public static Long chosenBigBoxId;
     RotateTransition rtAnimation;
     FadeTransition fadeAnimationOFF;
     FadeTransition fadeAnimationON;
@@ -34,63 +44,17 @@ public class learningSelfcontrolController implements Initializable {
     FadeTransition wrongButtonOFF;
     SequentialTransition showChoiceButtons;
     SequentialTransition showCheckButton;
-
-    @FXML
-    private StackPane flashcardStackPane;
-
-    @FXML
-    private Box flashcardBox;
-
-    @FXML
-    private Text flashcardText;
-
-    @FXML
-    private Button checkButton;
-
-    @FXML
-    private ImageView goodAnswerButton;
-
-    @FXML
-    private ImageView wrongAnswerButton;
-
-    @FXML
-    void check(ActionEvent event) {
-        rtAnimation.play();
-        sequentialTransitionON_OFF.play();
-        checkButtonOFF.play();
-        goodAnswerButton.setDisable(false);
-        wrongAnswerButton.setDisable(false);
-        checkButton.setDisable(true);
-    }
-
-
-
-
-    @FXML
-    void goodAnswerAction(MouseEvent event) {
-        goodAnswerButton.setDisable(true);
-        wrongAnswerButton.setDisable(true);
-        checkButton.setDisable(false);
-        goodButtonOFF.play();
-        wrongButtonOFF.play();
-
-    }
-
-    @FXML
-    void wrongAnswerAction(MouseEvent event) {
-        goodAnswerButton.setDisable(true);
-        wrongAnswerButton.setDisable(true);
-        checkButton.setDisable(false);
-        goodButtonOFF.play();
-        wrongButtonOFF.play();
-
-
-    }
-
-
+    List<Flashcard> allFlashcards = new ArrayList<>();
+    List<Flashcard> goodAnsweredList = new ArrayList<>();
+    List<Flashcard> wrongAnsweredList = new ArrayList<>();
+    Flashcard currentFlashcard;
+    String textToInsert;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+//        System.out.println("ZMIENIC ID BO JEST NA SZTYWNO **********");
+//        System.out.println("ZMIENIC ID BO JEST NA SZTYWNO **********");
+//        System.out.println("ZMIENIC ID BO JEST NA SZTYWNO **********");
+        System.out.println("new id: " + chosenBigBoxId);
 
         Color myYellow = Color.web("0xf2e830");
         yellowMaterial = new PhongMaterial();
@@ -115,7 +79,7 @@ public class learningSelfcontrolController implements Initializable {
 
 
         fadeAnimationOFF.setOnFinished( (x) -> {
-            flashcardText.setText("NOWY :D");
+            flashcardText.setText(textToInsert);
             //fadeAnimationON.play();
         });
         sequentialTransitionON_OFF = new SequentialTransition(
@@ -135,8 +99,8 @@ public class learningSelfcontrolController implements Initializable {
         wrongButtonON.setFromValue(0);
         wrongButtonON.setToValue(1);
         checkButtonOFF.setOnFinished( x -> {
-                    goodButtonON.play();
-                    wrongButtonON.play();
+            goodButtonON.play();
+            wrongButtonON.play();
         });
         checkButtonON = new FadeTransition(Duration.seconds(0.7), checkButton);
         checkButtonON.setFromValue(0);
@@ -150,11 +114,146 @@ public class learningSelfcontrolController implements Initializable {
         goodButtonOFF.setOnFinished( x -> {
             checkButtonON.play();
         });
-//        wrongButtonOFF.setOnFinished( x -> {
-//            checkButtonON.play();
-//        });
+        EntityManager em =  DB.getInstance().getConnection();
+        em.getTransaction().begin();
+        BigBox chosenBigBox = em.find(BigBox.class, chosenBigBoxId);
 
-
-        //rtAnimation.play();
+        chosenBigBox.getFlashcards().stream().forEach(Flashcard -> {
+            allFlashcards.add(Flashcard);
+        });
+        allFlashcards.sort(Flashcard::compareTo);
+        em.getTransaction().commit();
+        em.close();
+        currentFlashcard = allFlashcards.get(0);
+        flashcardText.setText(currentFlashcard.getFrontSide());
     }
+
+    @FXML
+    private StackPane flashcardStackPane;
+
+    @FXML
+    private Box flashcardBox;
+
+    @FXML
+    private Text flashcardText;
+
+    @FXML
+    private Button checkButton;
+
+    @FXML
+    private ImageView goodAnswerButton;
+
+    @FXML
+    private ImageView wrongAnswerButton;
+
+    @FXML
+    private Text smallBoxNumberField;
+
+    @FXML
+    void check(ActionEvent event) {
+        rtAnimation.play();
+        sequentialTransitionON_OFF.play();
+        checkButtonOFF.play();
+        textToInsert = currentFlashcard.getBackSide();
+        goodAnswerButton.setDisable(false);
+        wrongAnswerButton.setDisable(false);
+        checkButton.setDisable(true);
+
+    }
+
+
+
+
+    @SuppressWarnings("Duplicates")
+    @FXML
+    void goodAnswerAction(MouseEvent event) {
+        goodAnsweredList.add(currentFlashcard);
+        allFlashcards.remove(currentFlashcard);
+        if(allFlashcards.size() == 0){
+            updateBigbox();
+            changeScreen(AFTERLEARNING);
+        }else{
+            currentFlashcard = allFlashcards.get(0);
+            textToInsert = currentFlashcard.getFrontSide();
+            rtAnimation.play();
+            sequentialTransitionON_OFF.play();
+            goodAnswerButton.setDisable(true);
+            wrongAnswerButton.setDisable(true);
+            checkButton.setDisable(false);
+            goodButtonOFF.play();
+            wrongButtonOFF.play();
+            smallBoxNumberField.setText(Integer.toString(currentFlashcard.getSmallBoxNumber()));
+        }
+
+
+    }
+
+    @SuppressWarnings("Duplicates")
+    @FXML
+    void wrongAnswerAction(MouseEvent event) {
+        wrongAnsweredList.add(currentFlashcard);
+        allFlashcards.remove(currentFlashcard);
+        if(allFlashcards.size() == 0){
+            updateBigbox();
+            changeScreen(AFTERLEARNING);
+        }else {
+
+            currentFlashcard = allFlashcards.get(0);
+            textToInsert = currentFlashcard.getFrontSide();
+            rtAnimation.play();
+            sequentialTransitionON_OFF.play();
+            goodAnswerButton.setDisable(true);
+            wrongAnswerButton.setDisable(true);
+            checkButton.setDisable(false);
+            goodButtonOFF.play();
+            wrongButtonOFF.play();
+            smallBoxNumberField.setText(Integer.toString(currentFlashcard.getSmallBoxNumber()));
+        }
+
+    }
+
+
+
+    public void updateBigbox(){
+        System.out.println("GOOD SIZE: " + goodAnsweredList.size());
+        System.out.println("wrong SIZE: " + wrongAnsweredList.size());
+        goodAnsweredList.stream().forEach( Flashcard -> {
+            if(Flashcard.getSmallBoxNumber() < 4) {
+                EntityManager em = DB.getInstance().getConnection();
+                em.getTransaction().begin();
+                String hql = "UPDATE Flashcard fc set fc.smallBoxNumber = :newNumber where fc.flashcardId = :FCID";
+                Query query = em.createQuery(hql);
+                query.setParameter("newNumber", Flashcard.getSmallBoxNumber()+1);
+                query.setParameter("FCID", Flashcard.getFlascardId());
+                query.executeUpdate();
+                //System.out.println("HQL: " + query.executeUpdate());
+                em.getTransaction().commit();
+                em.close();
+            }
+            else{
+                EntityManager em = DB.getInstance().getConnection();
+                em.getTransaction().begin();
+                String hql = "DELETE from Flashcard fc where fc.flashcardId  = :FCID";
+
+                Query query = em.createQuery(hql);
+                query.setParameter("FCID", Flashcard.getFlascardId());
+                query.executeUpdate();
+                em.getTransaction().commit();
+                em.close();
+            }
+        });
+        wrongAnsweredList.stream().forEach( Flashcard -> {
+            EntityManager em = DB.getInstance().getConnection();
+            em.getTransaction().begin();
+            String hql = "UPDATE Flashcard fc set fc.smallBoxNumber = 0 where fc.flashcardId = :FCID";
+            Query query = em.createQuery(hql);
+            query.setParameter("FCID", Flashcard.getFlascardId());
+            query.executeUpdate();
+            em.getTransaction().commit();
+            em.close();
+        });
+
+
+    }
+
 }

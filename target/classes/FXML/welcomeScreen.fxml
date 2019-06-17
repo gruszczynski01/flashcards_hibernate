@@ -14,17 +14,11 @@
          <children>
             <ImageView fx:id="backgroundImage" fitHeight="3000.0" fitWidth="3000.0" pickOnBounds="true" preserveRatio="true" x="-800.0" y="-600.0">
                <image>
-                  <Image url="@backgroundImage.JPG" />
+                  <Image url="@newBG-big.jpg" />
                </image>
             </ImageView>
-            <Button layoutX="13.0" layoutY="291.0" mnemonicParsing="false" onAction="#buttonLeft" text="Button" />
             <Button layoutX="372.0" layoutY="555.0" mnemonicParsing="false" onAction="#buttonDown" text="Button" />
-            <Button layoutX="717.0" layoutY="284.0" mnemonicParsing="false" onAction="#buttonRight" text="Button" />
-            <Button layoutX="379.0" layoutY="20.0" mnemonicParsing="false" onAction="#buttonUp" text="Button" />
             <Button layoutX="372.0" layoutY="620.0" mnemonicParsing="false" onAction="#buttonDownBack" text="Button" />
-            <Button layoutX="-93.0" layoutY="291.0" mnemonicParsing="false" onAction="#buttonLeftBack" text="Button" />
-            <Button layoutX="821.0" layoutY="291.0" mnemonicParsing="false" onAction="#buttonRightBack" text="Button" />
-            <Button layoutX="379.0" layoutY="-47.0" mnemonicParsing="false" onAction="#buttonUpBack" text="Button" />
             <Button fx:id="myBigBoxes" layoutX="-744.0" layoutY="82.0" lineSpacing="2.0" mnemonicParsing="false" onAction="#showMyBoxes" prefHeight="65.0" prefWidth="279.0" style="-fx-background-color: #f7ee42; -fx-background-radius: 40;" text="Moje&#10;pudełka" textAlignment="CENTER">
                <font>
                   <Font name="Copperplate Bold" size="17.0" />
@@ -57,6 +51,108 @@
                   <DropShadow />
                </effect>
             </Text>
+            <Text fill="WHITE" layoutX="14.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&quot;Na naukę za późno robi się dopiero wtedy, gdy ktoś przestaje się uczyć.&quot;" textAlignment="CENTER" wrappingWidth="806.9999952316284">
+               <font>
+                  <Font name="Copperplate Bold" size="36.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#eb9b10af" height="74.65" radius="28.027500000000003" spread="0.89" width="39.46" />
+               </effect>
+            </Text>
+            <Text fill="WHITE" layoutX="257.0" layoutY="375.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- Sebastian Leitner" textAlignment="CENTER" wrappingWidth="459.9999952316284">
+               <font>
+                  <Font name="Copperplate Bold" size="36.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#eb9b10af" height="74.65" radius="28.027500000000003" spread="0.89" width="39.46" />
+               </effect>
+            </Text>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="-62.0" layoutY="405.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@books.png" />
+               </image>
+               <effect>
+                  <DropShadow spread="0.42" />
+               </effect>
+            </ImageView>
+            <Text fill="WHITE" layoutX="89.0" layoutY="406.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TEKA" textAlignment="CENTER" wrappingWidth="17.999995231628418">
+               <font>
+                  <Font name="Copperplate Bold" size="23.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#eb9b10af" height="74.65" radius="28.027500000000003" spread="0.89" width="39.46" />
+               </effect>
+            </Text>
+            <Text fill="WHITE" layoutY="406.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BIBLIO" textAlignment="CENTER" wrappingWidth="97.99999523162842">
+               <font>
+                  <Font name="Copperplate Bold" size="23.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#eb9b10af" height="74.65" radius="28.027500000000003" spread="0.89" width="39.46" />
+               </effect>
+            </Text>
+            <Button layoutY="395.0" mnemonicParsing="false" onAction="#buttonLeft" opacity="0.0" prefHeight="160.0" prefWidth="91.0" text="Button" />
+            <Text fill="WHITE" layoutX="-82.0" layoutY="424.0" strokeType="OUTSIDE" strokeWidth="0.0" text="powrót" textAlignment="CENTER" wrappingWidth="17.999995231628418">
+               <font>
+                  <Font name="Copperplate Bold" size="23.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#eb9b10af" height="74.65" radius="28.027500000000003" spread="0.89" width="39.46" />
+               </effect>
+            </Text>
+            <Button layoutX="-98.0" layoutY="412.0" mnemonicParsing="false" onAction="#buttonLeftBack" opacity="0.0" prefHeight="139.0" prefWidth="91.0" text="Button" />
+            <Text fill="WHITE" layoutX="732.0" layoutY="418.0" strokeType="OUTSIDE" strokeWidth="0.0" text="KONTO" textAlignment="CENTER" wrappingWidth="28.999995231628418">
+               <font>
+                  <Font name="Copperplate Bold" size="22.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#eb9b10af" height="74.65" radius="28.027500000000003" spread="0.89" width="39.46" />
+               </effect>
+            </Text>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="725.0" layoutY="400.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@student.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+            <Button layoutX="735.0" layoutY="399.0" mnemonicParsing="false" onAction="#buttonRight" opacity="0.0" prefHeight="150.0" prefWidth="65.0" text="Button" />
+            <Text fill="WHITE" layoutX="862.0" layoutY="421.0" strokeType="OUTSIDE" strokeWidth="0.0" text="powrót" textAlignment="CENTER" wrappingWidth="17.999995231628418">
+               <font>
+                  <Font name="Copperplate Bold" size="23.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#eb9b10af" height="74.65" radius="28.027500000000003" spread="0.89" width="39.46" />
+               </effect>
+            </Text>
+            <Button layoutX="800.0" layoutY="393.0" mnemonicParsing="false" onAction="#buttonRightBack" opacity="0.0" prefHeight="160.0" prefWidth="91.0" text="Button" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="231.0" layoutY="-55.0" pickOnBounds="true" preserveRatio="true" rotate="60.3">
+               <image>
+                  <Image url="@think.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+            <Text fill="WHITE" layoutX="191.0" layoutY="89.0" rotate="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NAUKA" textAlignment="CENTER" wrappingWidth="119.84712934494019">
+               <font>
+                  <Font name="Copperplate Bold" size="23.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#eb9b10af" height="74.65" radius="28.027500000000003" spread="0.89" width="39.46" />
+               </effect>
+            </Text>
+            <Button layoutX="203.0" layoutY="1.0" mnemonicParsing="false" onAction="#buttonUp" opacity="0.0" prefHeight="113.0" prefWidth="183.0" text="Button" />
+            <Text fill="WHITE" layoutX="236.0" layoutY="-50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="powrót" textAlignment="CENTER" wrappingWidth="150.00003576278687">
+               <font>
+                  <Font name="Copperplate Bold" size="23.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#eb9b10af" height="74.65" radius="28.027500000000003" spread="0.89" width="39.46" />
+               </effect>
+            </Text>
+            <Button layoutX="236.0" layoutY="-61.0" mnemonicParsing="false" onAction="#buttonUpBack" opacity="0.0" prefHeight="54.0" prefWidth="150.0" text="Button" />
          </children></Pane>
    </children>
 </Pane>

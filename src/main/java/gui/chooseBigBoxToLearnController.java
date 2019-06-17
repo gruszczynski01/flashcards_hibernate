@@ -7,19 +7,25 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.layout.Pane;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.ResourceBundle;
 
+import static gui.ControllersCoordinator.*;
 import static users.MainCoordinator.loggedUser;
 
 public class chooseBigBoxToLearnController implements Initializable {
     Map<String, Long> uniqueCategory = new HashMap<>();
     long currentID;
+
 
     @SuppressWarnings("Duplicates")
     @Override
@@ -66,8 +72,25 @@ public class chooseBigBoxToLearnController implements Initializable {
 
     @FXML
     void play(ActionEvent event) {
-
+        System.out.println("przekazuje id: " + currentID);
+        changeScreenToLearn(LEARNINGSELFCONTROL, currentID);
     }
-
+    public void changeScreenToLearn(String FXMLpath, long bigBoxId){
+        System.out.println("START");
+        try {
+            learningSelfcontrolController.chosenBigBoxId = bigBoxId;
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(FXMLpath));
+            root = (Pane) loader.load();
+            learningSelfcontrolController selfcontrolController = loader.getController();
+            selfcontrolController.chosenBigBoxId = bigBoxId;
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("cos nie tak ze zmiana sceny");
+            System.out.println(e.getMessage());
+        }
+    }
 
 }

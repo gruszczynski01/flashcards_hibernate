@@ -40,7 +40,7 @@ public class welcomeScreenController {
 
     @FXML
     void selfCheck(ActionEvent event) {
-
+        changeScreen(CHOOSEBBTOLEARN);
     }
 
 
