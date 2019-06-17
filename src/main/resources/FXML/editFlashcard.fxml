@@ -23,13 +23,13 @@
             <Font name="Copperplate Bold" size="27.0" />
          </font>
       </Text>
-      <TextField fx:id="frontsideField" layoutX="257.0" layoutY="178.0" />
+      <TextField fx:id="frontsideField" layoutX="257.0" layoutY="178.0" style="-fx-background-radius: 40;" />
       <Text fill="#c93636" layoutX="257.0" layoutY="257.0" stroke="#6f3434" strokeType="OUTSIDE" strokeWidth="2.0" text="Rewers:" wrappingWidth="189.76200103759766">
          <font>
             <Font name="Copperplate Bold" size="27.0" />
          </font>
       </Text>
-      <TextField fx:id="backsideField" layoutX="257.0" layoutY="273.0" />
+      <TextField fx:id="backsideField" layoutX="257.0" layoutY="273.0" style="-fx-background-radius: 40;" />
       <Button layoutX="594.0" layoutY="370.0" mnemonicParsing="false" onAction="#cancelButton" style="-fx-background-radius: 40; -fx-background-color: #c93636; -fx-border-color: #6f3434; -fx-border-radius: 40; -fx-border-width: 2;" text="Odrzuć zmiany">
          <font>
             <Font name="Copperplate Bold" size="19.0" />

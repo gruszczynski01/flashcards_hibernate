@@ -37,6 +37,7 @@ public class FCfromBBController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
         System.out.println("DOSTAŁEM ID: " + bigBoxId);
         EntityManager em =  DB.getInstance().getConnection();
         em.getTransaction().begin();

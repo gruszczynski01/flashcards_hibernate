@@ -153,6 +153,28 @@
                </effect>
             </Text>
             <Button layoutX="236.0" layoutY="-61.0" mnemonicParsing="false" onAction="#buttonUpBack" opacity="0.0" prefHeight="54.0" prefWidth="150.0" text="Button" />
+            <Button layoutX="1298.0" layoutY="301.0" lineSpacing="2.0" mnemonicParsing="false" onAction="#modifyAccount" prefHeight="65.0" prefWidth="284.0" style="-fx-background-color: #f7ee42; -fx-background-radius: 40;" text="modyfikuj konto" textAlignment="CENTER">
+               <font>
+                  <Font name="Copperplate Bold" size="17.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="987.0" layoutY="249.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@exit.png" />
+               </image>
+               <effect>
+                  <DropShadow spread="0.42" />
+               </effect>
+            </ImageView>
+            <Text fill="WHITE" layoutX="987.0" layoutY="423.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wyloguj się" textAlignment="CENTER" wrappingWidth="149.9999463558197">
+               <font>
+                  <Font name="Copperplate Bold" size="22.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#eb9b10af" height="74.65" radius="28.027500000000003" spread="0.89" width="39.46" />
+               </effect>
+            </Text>
+            <Button layoutX="984.0" layoutY="245.0" mnemonicParsing="false" onAction="#logOutButton" opacity="0.0" prefHeight="205.0" prefWidth="157.0" text="Button" />
          </children></Pane>
    </children>
 </Pane>

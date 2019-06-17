@@ -53,6 +53,8 @@ public class loginScreenController {
                     System.out.println("Można logować");
                     loggedUser = user;
                     changeScreen(WELCOMESCREEN);
+                    loginField.clear();
+                    passwordField.clear();
 
                 }else{
                     System.out.println("Błędne hasełko");

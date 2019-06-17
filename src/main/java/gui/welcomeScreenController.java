@@ -6,8 +6,10 @@ import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.util.Duration;
+import users.MainCoordinator;
 
 import static gui.ControllersCoordinator.*;
+import static users.MainCoordinator.*;
 
 public class welcomeScreenController {
 
@@ -15,6 +17,19 @@ public class welcomeScreenController {
     private ImageView backgroundImage;
     @FXML
     private Pane backgroundPane;
+
+    @FXML
+    void logOutButton(ActionEvent event) {
+        changeScreen(LOGINSCREEN);
+    }
+
+    @FXML
+    void modifyAccount(ActionEvent event) {
+        System.out.println("login: " + loggedUser.getUserName());
+        //editUserController.loginField.setText(loggedUser.getUserName());
+        changeScreen(EDITUSER);
+    }
+
 
     @FXML
     void addBigBox(ActionEvent event) {
@@ -35,12 +50,15 @@ public class welcomeScreenController {
 
     @FXML
     void writeAndCheck(ActionEvent event) {
-
+        chooseBigBoxToLearnController.learnMode = true;
+        changeScreen(CHOOSEBBTOLEARN);
     }
 
     @FXML
     void selfCheck(ActionEvent event) {
+        chooseBigBoxToLearnController.learnMode = false;
         changeScreen(CHOOSEBBTOLEARN);
+
     }
 
 

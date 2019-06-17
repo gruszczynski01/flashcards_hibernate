@@ -21,7 +21,10 @@ public class ControllersCoordinator {
     public static final String FCFROMBB = "/FXML/FFfromBB.fxml";
     public static final String EDITFLASHCARD = "/FXML/editFlashcard.fxml";
     public static final String LEARNINGSELFCONTROL = "/FXML/learningSelfcontrol.fxml";
+    public static final String LEARNINGWRITEANDCHECK = "/FXML/learningWriteAndCheck.fxml";
     public static final String AFTERLEARNING = "/FXML/afterLearning.fxml";
+    public static final String EDITUSER = "/FXML/editUser.fxml";
+
     public static void changeScreen(String FXMLpath){
         try {
             root = FXMLLoader.load(ControllersCoordinator.class.getResource(FXMLpath));

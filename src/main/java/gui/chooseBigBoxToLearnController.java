@@ -25,7 +25,7 @@ import static users.MainCoordinator.loggedUser;
 public class chooseBigBoxToLearnController implements Initializable {
     Map<String, Long> uniqueCategory = new HashMap<>();
     long currentID;
-
+    public static boolean learnMode; //if false - selfcontrol | if true - write and check
 
     @SuppressWarnings("Duplicates")
     @Override
@@ -72,8 +72,12 @@ public class chooseBigBoxToLearnController implements Initializable {
 
     @FXML
     void play(ActionEvent event) {
-        System.out.println("przekazuje id: " + currentID);
-        changeScreenToLearn(LEARNINGSELFCONTROL, currentID);
+        if(learnMode == false){
+            changeScreenToLearn(LEARNINGSELFCONTROL, currentID);
+        }else{
+            learningWriteAndCheck.chosenBigBoxId = currentID;
+            changeScreen(LEARNINGWRITEANDCHECK);
+        }
     }
     public void changeScreenToLearn(String FXMLpath, long bigBoxId){
         System.out.println("START");
