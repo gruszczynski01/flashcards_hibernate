@@ -6,7 +6,6 @@ import users.MainCoordinator;
 import static org.junit.jupiter.api.Assertions.*;
 
 class MainCoordinatorTest {
-
     @Test
     void wordPatternNormal() {
         assertEquals(true, MainCoordinator.wordPattern("szymek"));
@@ -45,12 +44,10 @@ class MainCoordinatorTest {
     void passwordPatternNoDigitAndUpperCase() {
         assertEquals(false, MainCoordinator.passwordPattern("szymon-SG"));
     }
-
     @Test
     void passwordPatternWrongSpecialCharacter() {
         assertEquals(false, MainCoordinator.passwordPattern("abcdFg45*"));
     }
-
     @Test
     void passwordPatternNoDigit() {
         assertEquals(false, MainCoordinator.passwordPattern("n!koabcD#AX"));
@@ -58,9 +55,9 @@ class MainCoordinatorTest {
     @Test
     void passwordPatternTooLong() {
         assertEquals(false, MainCoordinator.passwordPattern("szymongruszczynski1998sg"));
-    }@Test
+    }
+    @Test
     void passwordPatternGood() {
         assertEquals(true, MainCoordinator.passwordPattern("Szymon2@"));
     }
-
 }

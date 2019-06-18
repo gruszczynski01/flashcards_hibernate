@@ -26,8 +26,6 @@ public class Flashcard implements Comparable{
     @Column(name = "smallbox_number")
     private int smallBoxNumber;
 
-//***************************************************************
-
     public Flashcard(BigBox bigBoxMother, String frontSide, String backSide){
         this.bigBoxMother = bigBoxMother;
         this.frontSide = frontSide;

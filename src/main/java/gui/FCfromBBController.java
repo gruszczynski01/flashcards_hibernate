@@ -1,7 +1,6 @@
 package gui;
 
 import boxes.BigBox;
-import boxes.BigBoxRowTableView;
 import database.DB;
 import flashcards.Flashcard;
 import flashcards.FlashcardRowTableView;
@@ -12,7 +11,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
-import javafx.scene.control.Tab;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -27,35 +25,12 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 import static gui.ControllersCoordinator.*;
-import static gui.ControllersCoordinator.stage;
-import static users.MainCoordinator.loggedUser;
 import static users.MainCoordinator.wordPattern;
 
 public class FCfromBBController implements Initializable {
     ObservableList<FlashcardRowTableView> flashcardObservableList = FXCollections.observableArrayList();
     public static Long bigBoxId;
     BigBox bigBox;
-
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-
-        System.out.println("DOSTAŁEM ID: " + bigBoxId);
-        EntityManager em =  DB.getInstance().getConnection();
-        em.getTransaction().begin();
-        bigBox = em.find(BigBox.class, bigBoxId);
-        List<Flashcard> result = bigBox.getFlashcards();
-        em.persist(bigBox);
-        em.getTransaction().commit();
-        em.close();
-        bigBoxTitleText.setText(bigBox.getTitle());
-        result.forEach(Flashcard -> {
-            flashcardObservableList.add(new FlashcardRowTableView(Flashcard.getFlascardId(), Flashcard.getFrontSide(), Flashcard.getBackSide(), Long.toString(Flashcard.getSmallBoxNumber())));
-        });
-        frontsideColumn.setCellValueFactory(new PropertyValueFactory<>("frontSide"));
-        backsideColumn.setCellValueFactory(new PropertyValueFactory<>("backSide"));
-        smallboxNumberColumn.setCellValueFactory(new PropertyValueFactory<>("smallBoxNumber"));
-        flashcardTable.setItems(flashcardObservableList);
-    }
 
     @FXML
     private Text bigBoxTitleText;
@@ -81,6 +56,34 @@ public class FCfromBBController implements Initializable {
     @FXML
     private Text errorMessage;
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
+        //System.out.println("DOSTAŁEM ID: " + bigBoxId);
+        EntityManager em =  DB.getInstance().getConnection();
+        em.getTransaction().begin();
+        bigBox = em.find(BigBox.class, bigBoxId);
+        List<Flashcard> result = bigBox.getFlashcards();
+        em.persist(bigBox);
+        em.getTransaction().commit();
+        em.close();
+
+        bigBoxTitleText.setText(bigBox.getTitle());
+
+        //DODANIE DO LISTY WIERSZY
+        result.forEach(Flashcard -> {
+            flashcardObservableList.add(new FlashcardRowTableView(Flashcard.getFlascardId(), Flashcard.getFrontSide(), Flashcard.getBackSide(), Long.toString(Flashcard.getSmallBoxNumber())));
+        });
+
+        //MAPOWANIE TABELI
+        frontsideColumn.setCellValueFactory(new PropertyValueFactory<>("frontSide"));
+        backsideColumn.setCellValueFactory(new PropertyValueFactory<>("backSide"));
+        smallboxNumberColumn.setCellValueFactory(new PropertyValueFactory<>("smallBoxNumber"));
+
+        //DODANIE LISTY WIERSZY DO TABELI
+        flashcardTable.setItems(flashcardObservableList);
+    }
+
     @FXML
     void addFlashcard(ActionEvent event) {
         errorMessage.setVisible(false);
@@ -99,7 +102,7 @@ public class FCfromBBController implements Initializable {
 
     @FXML
     void backButton(ActionEvent event) {
-        changeScreen(WELCOMESCREEN);
+        changeScreen(WELCOME_SCREEN_FXML);
     }
 
     @FXML
@@ -112,8 +115,11 @@ public class FCfromBBController implements Initializable {
             EntityManager em =  DB.getInstance().getConnection();
             em.getTransaction().begin();
             flashcardSelected.stream().forEach( Flashcard -> {
+                //USUWAM FISZKĘ Z PRZEGLĄDANEGO PUDEŁKA
                 bigBox.removeFlashcard(Flashcard.getFlashcardId());
             });
+
+            //USUWAM Z LISTY WSZYSTKICH FISZEK TĘ KTORA BYŁA ZAZNACZONA
             flashcardSelected.forEach(allFlashcards::remove);
             em.getTransaction().commit();
             em.close();
@@ -130,8 +136,10 @@ public class FCfromBBController implements Initializable {
         ObservableList<FlashcardRowTableView> flashcardSelected = flashcardTable.getSelectionModel().getSelectedItems();
 
         if (flashcardSelected.size() != 0) {
-            flashcardSelected.stream().forEach(Flashcard ->
-                    changeScreenEditBigBox(EDITFLASHCARD, Flashcard.getFrontSide(), Flashcard.getBackSide(), Flashcard.getFlashcardId())
+            flashcardSelected.stream().forEach(Flashcard -> {
+                        editFlashcardController.flashcardId = Flashcard.getFlashcardId();
+                        changeScreen(EDIT_FLASHCARD_FXML);
+                    }
             );
         }else{
             errorMessage.setText("Nie wybrano fiszki");
@@ -139,22 +147,4 @@ public class FCfromBBController implements Initializable {
         }
 
     }
-    public void changeScreenEditBigBox(String FXMLpath, String frontSideOLD, String backSideOLD, long flashcardId){
-        System.out.println("START");
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource(FXMLpath));
-            root = (Pane) loader.load();
-            editFlashcardController editFlashcardController = loader.getController();
-            editFlashcardController.frontsideField.setText(frontSideOLD);
-            editFlashcardController.backsideField.setText(backSideOLD);
-            editFlashcardController.flashcardId = flashcardId;
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-        }
-    }
-
-
 }

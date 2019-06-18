@@ -1,12 +1,9 @@
 package gui;
 
-import boxes.BigBox;
 import database.DB;
 import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -14,13 +11,11 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
 import org.mindrot.jbcrypt.BCrypt;
-import users.MainCoordinator;
 import users.User;
 
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
-import java.io.IOException;
 import java.util.List;
 
 
@@ -57,14 +52,7 @@ public class loginScreenController {
     @FXML
     private Button registerButton;
 
-    @FXML
-    void hideRegisterPanel(ActionEvent event) {
-        TranslateTransition transition = new TranslateTransition();
-        transition.setDuration(Duration.seconds(1));
-        transition.setToX(620);
-        transition.setNode(registerPane);
-        transition.play();
-    }
+
 
     @SuppressWarnings("Duplicates")
     @FXML
@@ -113,15 +101,6 @@ public class loginScreenController {
     }
 
     @FXML
-    void showRegisterPanel(ActionEvent event) {
-        TranslateTransition transition = new TranslateTransition();
-        transition.setDuration(Duration.seconds(1));
-        transition.setToX(-620);
-        transition.setNode(registerPane);
-        transition.play();
-    }
-
-    @FXML
     void loginButtonAction(ActionEvent event) {
         System.out.println(loginField.getText());
         System.out.println(passwordField.getText());
@@ -145,7 +124,7 @@ public class loginScreenController {
                     System.out.println("Można logować");
                     wrongLoginOrPassword.setVisible(false);
                     loggedUser = user;
-                    changeScreen(WELCOMESCREEN);
+                    changeScreen(WELCOME_SCREEN_FXML);
                     loginField.clear();
                     passwordField.clear();
                 }else{
@@ -153,5 +132,24 @@ public class loginScreenController {
                     wrongLoginOrPassword.setVisible(true);
                 }
         });
+    }
+
+    @FXML
+    void hideRegisterPanel(ActionEvent event) {
+        TranslateTransition transition = new TranslateTransition();
+        transition.setDuration(Duration.seconds(1));
+        transition.setToX(620);
+        transition.setNode(registerPane);
+        transition.play();
+    }
+
+
+    @FXML
+    void showRegisterPanel(ActionEvent event) {
+        TranslateTransition transition = new TranslateTransition();
+        transition.setDuration(Duration.seconds(1));
+        transition.setToX(-620);
+        transition.setNode(registerPane);
+        transition.play();
     }
 }

@@ -29,10 +29,16 @@ import static users.MainCoordinator.loggedUser;
 
 public class chooseBigBoxToLearnController implements Initializable {
     Map<String, Long> uniqueCategory = new HashMap<>();
-    long currentID;
     public static boolean learnMode; //if false - selfcontrol | if true - write and check
 
-    @SuppressWarnings("Duplicates")
+    @FXML
+    private ChoiceBox<String> categoryChoiceBox;
+
+    @FXML
+    private ChoiceBox<String> bigBoxChoiceBox;
+    @FXML
+    private Text errorMessage;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         ObservableList<String> categoriesOL = FXCollections.observableArrayList();
@@ -57,85 +63,50 @@ public class chooseBigBoxToLearnController implements Initializable {
                     bigBoxChoiceBox.getItems().remove(0, bigBoxChoiceBox.getItems().size());
                     BigBox.getBigBoxes(newValue).forEach(BigBox -> {
                         bigBoxChoiceBox.getItems().add(BigBox.getTitle());
-                        currentID  = BigBox.getBigBoxId();
                     });
                     bigBoxChoiceBox.setOpacity(1);
                     bigBoxChoiceBox.show();
-
                 }
             }
         };
         categoryChoiceBox.getSelectionModel().selectedItemProperty().addListener(changeListener);
-
     }
 
     @FXML
-    private ChoiceBox<String> categoryChoiceBox;
+    void play(ActionEvent event) {
+        try{
+            EntityManager em =  DB.getInstance().getConnection();
+            em.getTransaction().begin();
+            String hql = "select bb from BigBox bb where bb.title = :title";
+            Query query =em.createQuery(hql);
+            query.setParameter("title", bigBoxChoiceBox.getValue());
+            List<BigBox> result = query.getResultList();
+            em.getTransaction().commit();
+            em.close();
 
-    @FXML
-    private ChoiceBox<String> bigBoxChoiceBox;
-    @FXML
-    private Text errorMessage;
+            //System.out.println("Przekazuje id rowne: " + result.get(0).getBigBoxId());
+            if (result.get(0).getFlashcards().size() == 0){
+                errorMessage.setText("W tym pudełku nie ma fiszek!");
+                errorMessage.setVisible(true);
+            }else{
+                if(learnMode == false){
+                    learningSelfcontrolController.chosenBigBoxId = result.get(0).getBigBoxId();
+                    changeScreen(LEARNING_SELFCONTROL_FXML);
+                }else{
+                    learningWriteAndCheck.chosenBigBoxId = result.get(0).getBigBoxId();
+                    changeScreen(LEARNING_WRITE_AND_CHECK_FXML);
+                }
+            }
+        }catch (Exception ex){
+            System.out.println("wyjatek - nic nie wybrano");
+            errorMessage.setText("Nie wybrano pudełka");
+            errorMessage.setVisible(true);
+        }
+    }
 
     @FXML
     void back(ActionEvent event) {
-        changeScreen(WELCOMESCREEN);
-    }
-
-    @SuppressWarnings("Duplicates")
-    @FXML
-    void play(ActionEvent event) {
-        if (currentID == -1L){
-            errorMessage.setVisible(true);
-        }else{
-            try{
-                EntityManager em =  DB.getInstance().getConnection();
-                em.getTransaction().begin();
-                String hql = "select bb from BigBox bb where bb.title = :title";
-                Query query =em.createQuery(hql);
-                query.setParameter("title", bigBoxChoiceBox.getValue());
-                List<BigBox> result = query.getResultList();
-                em.getTransaction().commit();
-                em.close();
-                System.out.println("Przekazuje id rowne: " + result.get(0).getBigBoxId());
-                if (result.get(0).getFlashcards().size() == 0){
-                    errorMessage.setText("W tym pudełku nie ma fiszek!");
-                    errorMessage.setVisible(true);
-                }else{
-                    if(learnMode == false){
-                        changeScreenToLearn(LEARNINGSELFCONTROL, result.get(0).getBigBoxId());
-                    }else{
-                        learningWriteAndCheck.chosenBigBoxId = result.get(0).getBigBoxId();
-                        changeScreen(LEARNINGWRITEANDCHECK);
-                    }
-                }
-            }catch (Exception ex){
-                System.out.println("wyjatek - nic nie wybrano");
-                errorMessage.setText("Nie wybrano pudełka");
-                errorMessage.setVisible(true);
-            }
-
-        }
-
-
-
-    }
-    public void changeScreenToLearn(String FXMLpath, long bigBoxId){
-        System.out.println("START");
-        try {
-            learningSelfcontrolController.chosenBigBoxId = bigBoxId;
-            FXMLLoader loader = new FXMLLoader(getClass().getResource(FXMLpath));
-            root = (Pane) loader.load();
-            learningSelfcontrolController selfcontrolController = loader.getController();
-            selfcontrolController.chosenBigBoxId = bigBoxId;
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-            System.out.println("cos nie tak ze zmiana sceny");
-            System.out.println(e.getMessage());
-        }
+        changeScreen(WELCOME_SCREEN_FXML);
     }
 
 }

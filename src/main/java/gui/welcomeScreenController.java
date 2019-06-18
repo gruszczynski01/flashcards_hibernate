@@ -1,90 +1,65 @@
 package gui;
 
-import boxes.BigBox;
 import database.DB;
-import flashcards.Flashcard;
 import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.util.Duration;
-import users.MainCoordinator;
 import users.User;
-
 import javax.persistence.EntityManager;
-import javax.persistence.Query;
-
 import static gui.ControllersCoordinator.*;
 import static users.MainCoordinator.*;
 
 public class welcomeScreenController {
 
     @FXML
-    private ImageView backgroundImage;
-    @FXML
     private Pane backgroundPane;
 
     @FXML
     void logOutButton(ActionEvent event) {
-        changeScreen(LOGINSCREEN);
+        changeScreen(LOGIN_SCREEN_FXML);
     }
 
     @FXML
     void modifyAccount(ActionEvent event) {
-        System.out.println("login: " + loggedUser.getUserName());
-        //editUserController.loginField.setText(loggedUser.getUserName());
-        changeScreen(EDITUSER);
+        changeScreen(EDIT_USER_FXML);
     }
-
 
     @FXML
     void deleteAccount(ActionEvent event) {
-
+        //USUWAM PROFIL UZYTKOWNIKA WRAZ Z JEGO PUDEŁKAMI I FISZKAMI
         EntityManager em =  DB.getInstance().getConnection();
         em.getTransaction().begin();
         em.remove(em.find(User.class, loggedUser.getUserId()));
         em.getTransaction().commit();
         em.close();
-        changeScreen(LOGINSCREEN);
-
+        changeScreen(LOGIN_SCREEN_FXML);
     }
-//        EntityManager em =  DB.getInstance().getConnection();
-//        em.getTransaction().begin();
-//        String hql = "DELETE FROM User user where user.userId = :userID";
-//        Query query =em.createQuery(hql);
-//        query.setParameter("userID", loggedUser.getUserId());
-//        query.executeUpdate();
-//        loggedUser = null;
-//        em.getTransaction().commit();
-//        em.close();
 
     @FXML
-    void showIrregularVerbsBox(ActionEvent event) {
-        changeScreen(CHOOSEBB);
+    void showMyFlashcards(ActionEvent event) {
+        changeScreen(CHOOSE_BIG_BOX_FXML);
     }
 
     @FXML
     void showMyBoxes(ActionEvent event) {
-        changeScreen(MYBIGBOXES);
+        changeScreen(MY_BIG_BOXES_FXML);
     }
-
-
 
     @FXML
     void writeAndCheck(ActionEvent event) {
         chooseBigBoxToLearnController.learnMode = true;
-        changeScreen(CHOOSEBBTOLEARN);
+        changeScreen(CHOOSE_BIG_BOX_TO_LEARN_FXML);
     }
 
     @FXML
     void selfCheck(ActionEvent event) {
         chooseBigBoxToLearnController.learnMode = false;
-        changeScreen(CHOOSEBBTOLEARN);
-
+        changeScreen(CHOOSE_BIG_BOX_TO_LEARN_FXML);
     }
 
-
+    //PORUSZANIE SIĘ PO MENU GŁÓWNYM
     @FXML
     void buttonDown(ActionEvent event) {
         TranslateTransition transition = new TranslateTransition();

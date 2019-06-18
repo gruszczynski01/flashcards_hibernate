@@ -5,7 +5,6 @@ import java.util.regex.Pattern;
 
 public class MainCoordinator {
     public static User loggedUser;
-
     public static boolean wordPattern(String toCheck){
         System.out.println("wordPattern: \""+toCheck+"\"");
         //Pattern pattern = Pattern.compile("[^\\s][a-zA-Z0-9_ ]{1,20}");

@@ -36,12 +36,6 @@ public class BigBox {
 
     //***************************************************************
 
-
-    public List<Flashcard> getFlashcards() {
-        return flashcards;
-    }
-
-
     public Flashcard addFlashcard(String frontSide, String backSide){
         Flashcard tmp = new Flashcard(this, frontSide, backSide);
         flashcards.add(tmp);
@@ -65,7 +59,7 @@ public class BigBox {
         em.close();
 
     }
-    @SuppressWarnings("Duplicates")
+
     public void deleteAllFlashcards(){
         EntityManager em =  DB.getInstance().getConnection();
         em.getTransaction().begin();
@@ -78,6 +72,7 @@ public class BigBox {
         em.getTransaction().commit();
         em.close();
     }
+
     public static List<BigBox> getBigBoxes(String cat){
         EntityManager em =  DB.getInstance().getConnection();
         em.getTransaction().begin();
@@ -89,19 +84,6 @@ public class BigBox {
         em.close();
         return result;
     }
-    public static List<Flashcard> getMyFlashcards(Long bigBoxId){
-        EntityManager em =  DB.getInstance().getConnection();
-        em.getTransaction().begin();
-        List<Flashcard> result = em.find(BigBox.class, bigBoxId).flashcards;
-        em.getTransaction().commit();
-        em.close();
-        return result;
-    }
-    public BigBox() {}
-
-    public void setFlashcards(List<Flashcard> flashcards) {
-        this.flashcards = flashcards;
-    }
 
     public BigBox(User ownerId, String title, String category){
 
@@ -109,6 +91,25 @@ public class BigBox {
         this.setOwnerId(ownerId);
         this.title = title;
         this.category = category;
+    }
+
+    public BigBox() {}
+
+    public void setFlashcards(List<Flashcard> flashcards) {
+        this.flashcards = flashcards;
+    }
+
+    public List<Flashcard> getFlashcards() {
+        return flashcards;
+    }
+
+    public static List<Flashcard> getMyFlashcards(Long bigBoxId){
+        EntityManager em =  DB.getInstance().getConnection();
+        em.getTransaction().begin();
+        List<Flashcard> result = em.find(BigBox.class, bigBoxId).flashcards;
+        em.getTransaction().commit();
+        em.close();
+        return result;
     }
 
     public User getOwnerId() {

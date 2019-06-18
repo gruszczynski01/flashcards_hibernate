@@ -43,7 +43,40 @@ public class learningWriteAndCheck implements Initializable {
     Flashcard currentFlashcard;
     String textToInsert;
 
-    @SuppressWarnings("Duplicates")
+
+    @FXML
+    private StackPane flashcardStackPane;
+
+    @FXML
+    private Box flashcardBox;
+
+    @FXML
+    private Text flashcardText;
+
+    @FXML
+    private Button nextButton;
+
+    @FXML
+    private Button checkButton;
+
+    @FXML
+    private Text smallBoxNumberField;
+
+    @FXML
+    private TextField answerField;
+
+    @FXML
+    private ImageView wrongAnswerIcon;
+
+    @FXML
+    private ImageView goodAnswerIcon;
+
+    @FXML
+    private Rectangle goodAnswerBG;
+
+    @FXML
+    private Rectangle wrongAnwerBG;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         Color myYellow = Color.web("0xf2e830");
@@ -92,46 +125,9 @@ public class learningWriteAndCheck implements Initializable {
     }
 
     @FXML
-    private StackPane flashcardStackPane;
-
-    @FXML
-    private Box flashcardBox;
-
-    @FXML
-    private Text flashcardText;
-
-    @FXML
-    private Button nextButton;
-
-    @FXML
-    private Button checkButton;
-
-    @FXML
-    private Text smallBoxNumberField;
-
-    @FXML
-    private TextField answerField;
-    @FXML
-    private ImageView wrongAnswerIcon;
-
-    @FXML
-    private ImageView goodAnswerIcon;
-
-    @FXML
-    private Rectangle goodAnswerBG;
-
-    @FXML
-    private Rectangle wrongAnwerBG;
-
-    @FXML
-    void back(ActionEvent event) {
-        changeScreen(WELCOMESCREEN);
-    }
-
-    @FXML
     void check(ActionEvent event) {
         if (answerField.getText().equals(currentFlashcard.getBackSide())){
-            System.out.println("DOBRA ODP: 1-" + currentFlashcard.getBackSide() + " 2-" + answerField.getText());
+            //System.out.println("DOBRA ODP: 1-" + currentFlashcard.getBackSide() + " 2-" + answerField.getText());
             textToInsert = currentFlashcard.getBackSide();
             answerField.clear();
             checkButton.setDisable(true);
@@ -148,7 +144,7 @@ public class learningWriteAndCheck implements Initializable {
             allFlashcards.remove(currentFlashcard);
 
         }else {
-            System.out.println("ZŁA ODP: 1-" + currentFlashcard.getBackSide() + " 2-" + answerField.getText());
+            //System.out.println("ZŁA ODP: 1-" + currentFlashcard.getBackSide() + " 2-" + answerField.getText());
 
             textToInsert = currentFlashcard.getBackSide();
             answerField.clear();
@@ -181,7 +177,7 @@ public class learningWriteAndCheck implements Initializable {
         wrongAnwerBG.setVisible(false);
         if(allFlashcards.size() == 0){
             updateBigbox();
-            changeScreen(AFTERLEARNING);
+            changeScreen(AFTER_LEARNING_FXML);
         }else {
             currentFlashcard = allFlashcards.get(0);
             textToInsert = currentFlashcard.getFrontSide();
@@ -195,12 +191,13 @@ public class learningWriteAndCheck implements Initializable {
         smallBoxNumberField.setText(Integer.toString(currentFlashcard.getSmallBoxNumber()));
 
     }
-    @SuppressWarnings("Duplicates")
+
     public void updateBigbox() {
-        System.out.println("GOOD SIZE: " + goodAnsweredList.size());
-        System.out.println("wrong SIZE: " + wrongAnsweredList.size());
+//        System.out.println("GOOD SIZE: " + goodAnsweredList.size());
+//        System.out.println("wrong SIZE: " + wrongAnsweredList.size());
         goodAnsweredList.stream().forEach(Flashcard -> {
             if (Flashcard.getSmallBoxNumber() < 4) {
+
                 EntityManager em = DB.getInstance().getConnection();
                 em.getTransaction().begin();
                 String hql = "UPDATE Flashcard fc set fc.smallBoxNumber = :newNumber where fc.flashcardId = :FCID";
@@ -211,11 +208,12 @@ public class learningWriteAndCheck implements Initializable {
                 //System.out.println("HQL: " + query.executeUpdate());
                 em.getTransaction().commit();
                 em.close();
+
             } else {
+
                 EntityManager em = DB.getInstance().getConnection();
                 em.getTransaction().begin();
                 String hql = "DELETE from Flashcard fc where fc.flashcardId  = :FCID";
-
                 Query query = em.createQuery(hql);
                 query.setParameter("FCID", Flashcard.getFlascardId());
                 query.executeUpdate();
@@ -223,6 +221,7 @@ public class learningWriteAndCheck implements Initializable {
                 em.close();
             }
         });
+
         wrongAnsweredList.stream().forEach(Flashcard -> {
             EntityManager em = DB.getInstance().getConnection();
             em.getTransaction().begin();
@@ -236,4 +235,10 @@ public class learningWriteAndCheck implements Initializable {
 
 
     }
+
+    @FXML
+    void back(ActionEvent event) {
+        changeScreen(WELCOME_SCREEN_FXML);
+    }
+
 }

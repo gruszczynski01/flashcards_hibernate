@@ -19,11 +19,11 @@
             </ImageView>
             <Button disable="true" layoutX="372.0" layoutY="555.0" mnemonicParsing="false" onAction="#buttonDown" text="Button" visible="false" />
             <Button layoutX="372.0" layoutY="620.0" mnemonicParsing="false" onAction="#buttonDownBack" text="Button" />
-            <Button fx:id="myBigBoxes" layoutX="-744.0" layoutY="82.0" lineSpacing="2.0" mnemonicParsing="false" onAction="#showMyBoxes" prefHeight="65.0" prefWidth="279.0" style="-fx-background-color: #f7ee42; -fx-background-radius: 40;" text="Moje&#10;pudełka" textAlignment="CENTER">
+            <Button fx:id="myBigBoxes" layoutX="-680.0" layoutY="98.0" lineSpacing="2.0" mnemonicParsing="false" onAction="#showMyBoxes" prefHeight="65.0" prefWidth="279.0" style="-fx-background-color: #f7ee42; -fx-background-radius: 40;" text="Moje&#10;pudełka" textAlignment="CENTER">
                <font>
                   <Font name="Copperplate Bold" size="17.0" />
                </font></Button>
-            <Button fx:id="irregularVerbsBox" layoutX="-744.0" layoutY="231.0" lineSpacing="1.0" mnemonicParsing="false" onAction="#showIrregularVerbsBox" prefHeight="65.0" prefWidth="273.0" style="-fx-background-color: #f7ee42; -fx-background-radius: 40;" text="Moje&#10;fiszki" textAlignment="CENTER">
+            <Button layoutX="-674.0" layoutY="282.0" lineSpacing="1.0" mnemonicParsing="false" onAction="#showMyFlashcards" prefHeight="65.0" prefWidth="273.0" style="-fx-background-color: #f7ee42; -fx-background-radius: 40;" text="Moje&#10;fiszki" textAlignment="CENTER">
                <font>
                   <Font name="Copperplate Bold" size="17.0" />
                </font>

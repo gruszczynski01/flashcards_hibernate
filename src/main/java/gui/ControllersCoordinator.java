@@ -8,22 +8,21 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class ControllersCoordinator {
-    public static final int HEIGHT = 600;
-    public static final int WIDTH = 800;
     public static Stage stage;
     public static Pane root;
-    public static final String MYBIGBOXES = "/FXML/myBigBoxes.fxml";
-    public static final String LOGINSCREEN = "/FXML/loginScreen.fxml";
-    public static final String WELCOMESCREEN = "/FXML/welcomeScreen.fxml";
-    public static final String EDITBIGBOX = "/FXML/editBigBox.fxml";
-    public static final String CHOOSEBB = "/FXML/chooseBigBox.fxml";
-    public static final String CHOOSEBBTOLEARN = "/FXML/chooseBigBoxToLearn.fxml";
-    public static final String FCFROMBB = "/FXML/FFfromBB.fxml";
-    public static final String EDITFLASHCARD = "/FXML/editFlashcard.fxml";
-    public static final String LEARNINGSELFCONTROL = "/FXML/learningSelfcontrol.fxml";
-    public static final String LEARNINGWRITEANDCHECK = "/FXML/learningWriteAndCheck.fxml";
-    public static final String AFTERLEARNING = "/FXML/afterLearning.fxml";
-    public static final String EDITUSER = "/FXML/editUser.fxml";
+
+    public static final String LOGIN_SCREEN_FXML = "/FXML/loginScreen.fxml";
+    public static final String WELCOME_SCREEN_FXML = "/FXML/welcomeScreen.fxml";
+    public static final String MY_BIG_BOXES_FXML = "/FXML/myBigBoxes.fxml";
+    public static final String FLASHCARDS_FROM_BIGBOX_FXML = "/FXML/FFfromBB.fxml";
+    public static final String EDIT_BIG_BOX_FXML = "/FXML/editBigBox.fxml";
+    public static final String EDIT_FLASHCARD_FXML = "/FXML/editFlashcard.fxml";
+    public static final String EDIT_USER_FXML = "/FXML/editUser.fxml";
+    public static final String CHOOSE_BIG_BOX_FXML = "/FXML/chooseBigBox.fxml";
+    public static final String CHOOSE_BIG_BOX_TO_LEARN_FXML = "/FXML/chooseBigBoxToLearn.fxml";
+    public static final String LEARNING_SELFCONTROL_FXML = "/FXML/learningSelfcontrol.fxml";
+    public static final String LEARNING_WRITE_AND_CHECK_FXML = "/FXML/learningWriteAndCheck.fxml";
+    public static final String AFTER_LEARNING_FXML = "/FXML/afterLearning.fxml";
 
     public static void changeScreen(String FXMLpath){
         try {

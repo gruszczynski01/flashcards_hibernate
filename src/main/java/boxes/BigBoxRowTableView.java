@@ -4,10 +4,6 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class BigBoxRowTableView {
-    public long getBigBoxId() {
-        return bigBoxId;
-    }
-
     private long bigBoxId;
     private SimpleStringProperty title;
     private SimpleStringProperty category;
@@ -17,6 +13,11 @@ public class BigBoxRowTableView {
         this.title = new SimpleStringProperty(title);
         this.category = new SimpleStringProperty(category);
     }
+
+    public long getBigBoxId() {
+        return bigBoxId;
+    }
+
 
     public String getTitle() {
         return title.get();
