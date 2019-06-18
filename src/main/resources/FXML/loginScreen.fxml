@@ -1,30 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.effect.Blend?>
 <?import javafx.scene.effect.DropShadow?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.loginScreenController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="loginPage" stylesheets="@../image/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.loginScreenController">
    <children>
-      <ImageView fitHeight="600.0" fitWidth="810.0" layoutX="-4.0">
-         <image>
-            <Image url="@login_background.jpg" />
-         </image>
-         <cursor>
-            <Cursor fx:constant="CLOSED_HAND" />
-         </cursor>
-         <effect>
-            <Blend />
-         </effect>
-      </ImageView>
       <Text fill="#f7ee42" layoutX="206.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Leitner System" textAlignment="CENTER" wrappingWidth="360.2060546875">
          <font>
             <Font name="Copperplate Bold" size="39.0" />
@@ -34,23 +21,124 @@
          </effect>
       </Text>
       <TextField fx:id="loginField" layoutX="278.0" layoutY="188.0" prefHeight="27.0" prefWidth="245.0" style="-fx-background-radius: 40;" />
-      <Text layoutX="207.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login:" wrappingWidth="58.206047773361206">
+      <Text layoutX="207.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login:" wrappingWidth="58.206047773361206">
          <font>
             <Font name="Copperplate Light" size="17.0" />
          </font></Text>
-      <Button layoutX="368.0" layoutY="287.0" mnemonicParsing="false" onAction="#loginButtonAction" prefHeight="27.0" prefWidth="155.0" style="-fx-background-color: #f7ee42; -fx-background-radius: 40;" text="Zaloguj">
+      <Button layoutX="368.0" layoutY="300.0" mnemonicParsing="false" onAction="#loginButtonAction" prefHeight="27.0" prefWidth="155.0" style="-fx-background-color: #f7ee42; -fx-background-radius: 40;" text="Zaloguj">
          <font>
             <Font name="Copperplate Bold" size="14.0" />
          </font></Button>
-      <PasswordField fx:id="passwordField" layoutX="278.0" layoutY="242.0" prefHeight="27.0" prefWidth="245.0" style="-fx-background-radius: 40;">
+      <PasswordField fx:id="passwordField" layoutX="278.0" layoutY="232.0" prefHeight="27.0" prefWidth="245.0" style="-fx-background-radius: 40;">
          <font>
             <Font name="Copperplate" size="13.0" />
          </font></PasswordField>
       <Text layoutX="580.0" layoutY="591.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Created by Szymon Gruszczyński" />
-      <Text layoutX="207.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hasło:" wrappingWidth="58.206047773361206">
+      <Text layoutX="207.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hasło:" wrappingWidth="58.206047773361206">
          <font>
             <Font name="Copperplate Light" size="17.0" />
          </font>
       </Text>
+      <Text fx:id="wrongLoginOrPassword" fill="#d00d0d" layoutX="278.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Błędny login lub hasło" visible="false" wrappingWidth="244.9999988079071">
+         <font>
+            <Font name="Copperplate Light" size="17.0" />
+         </font>
+      </Text>
+      <Button layoutX="658.0" layoutY="34.0" mnemonicParsing="false" onAction="#showRegisterPanel" prefHeight="27.0" prefWidth="155.0" style="-fx-background-color: #f7ee42; -fx-background-radius: 40;" text="Nie masz konta?">
+         <font>
+            <Font name="Copperplate Bold" size="14.0" />
+         </font>
+      </Button>
+      <AnchorPane fx:id="registerPane" layoutX="806.0" layoutY="21.0">
+         <children>
+            <Rectangle arcHeight="40.0" arcWidth="40.0" fill="#f7ee42" height="544.0" stroke="BLACK" strokeType="INSIDE" width="649.0" />
+            <Pane layoutX="12.0" layoutY="10.0" prefHeight="522.0" prefWidth="611.0" style="-fx-border-radius: 40;" styleClass="learningBG" stylesheets="@style.css">
+               <children>
+                  <Text fill="#f7ee42" layoutX="14.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nie masz jeszcze konta?" textAlignment="CENTER" wrappingWidth="540.2060546875">
+                     <font>
+                        <Font name="Copperplate Bold" size="39.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Text>
+                  <Text fill="#f7ee42" layoutX="40.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zarejestruj się!" wrappingWidth="344.2060546875">
+                     <font>
+                        <Font name="Copperplate Bold" size="39.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Text>
+                  <TextField fx:id="registerLogin" layoutX="131.0" layoutY="148.0" prefHeight="27.0" prefWidth="245.0" style="-fx-background-radius: 40;" />
+                  <PasswordField fx:id="registerPassword" layoutX="131.0" layoutY="198.0" prefHeight="27.0" prefWidth="245.0" style="-fx-background-radius: 40;">
+                     <font>
+                        <Font name="Copperplate" size="13.0" />
+                     </font>
+                  </PasswordField>
+                  <PasswordField fx:id="registerPasswordRepeat" layoutX="131.0" layoutY="248.0" prefHeight="27.0" prefWidth="245.0" style="-fx-background-radius: 40;">
+                     <font>
+                        <Font name="Copperplate" size="13.0" />
+                     </font>
+                  </PasswordField>
+                  <Text layoutX="62.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login:" wrappingWidth="58.206047773361206">
+                     <font>
+                        <Font name="Copperplate Light" size="17.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Text>
+                  <Text layoutX="34.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Powtórz hasło:" textAlignment="RIGHT" wrappingWidth="83.2060477733612">
+                     <font>
+                        <Font name="Copperplate Light" size="17.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Text>
+                  <Text layoutX="62.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hasło:" wrappingWidth="58.206047773361206">
+                     <font>
+                        <Font name="Copperplate Light" size="17.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Text>
+                  <Text fill="#f7ee42" layoutX="393.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login musi zawierać od 2 do 20 znaków, może składać sie z dużych i małych liter oraz znkau '_'" textAlignment="CENTER" wrappingWidth="206.0195343196392">
+                     <font>
+                        <Font name="Copperplate Bold" size="12.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Text>
+                  <Text fill="#f7ee42" layoutX="396.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hasło musi zawierać od 2 do 20 znaków, musi zawierać conajmniej jedną małą i dużą literę oraz znak specjalny. dozwolone znaki specjalne: @#$%!_ " textAlignment="CENTER" wrappingWidth="200.0195343196392">
+                     <font>
+                        <Font name="Copperplate Bold" size="12.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Text>
+                  <Button fx:id="registerButton" layoutX="221.0" layoutY="309.0" mnemonicParsing="false" onAction="#register" prefHeight="27.0" prefWidth="155.0" style="-fx-background-color: #f7ee42; -fx-background-radius: 40;" text="Zarejestruj!">
+                     <font>
+                        <Font name="Copperplate Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="40.0" layoutY="462.0" mnemonicParsing="false" onAction="#hideRegisterPanel" prefHeight="27.0" prefWidth="72.0" style="-fx-background-color: #f7ee42; -fx-background-radius: 40;" text="Cofnij">
+                     <font>
+                        <Font name="Copperplate Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Text fx:id="wrongLoginOrPasswordRegister" fill="#d00d0d" layoutX="131.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Błędny login lub hasło" visible="false" wrappingWidth="244.9999988079071">
+                     <font>
+                        <Font name="Copperplate Light" size="17.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
    </children>
 </Pane>

@@ -14,7 +14,7 @@
          <children>
             <ImageView fx:id="backgroundImage" fitHeight="3000.0" fitWidth="3000.0" pickOnBounds="true" preserveRatio="true" x="-800.0" y="-600.0">
                <image>
-                  <Image url="@newBG-big.jpg" />
+                  <Image url="@../image/welcomeBG.jpg" />
                </image>
             </ImageView>
             <Button layoutX="372.0" layoutY="555.0" mnemonicParsing="false" onAction="#buttonDown" text="Button" />
@@ -69,7 +69,7 @@
             </Text>
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="-62.0" layoutY="405.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@books.png" />
+                  <Image url="@../image/books.png" />
                </image>
                <effect>
                   <DropShadow spread="0.42" />
@@ -111,7 +111,7 @@
             </Text>
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="725.0" layoutY="400.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@student.png" />
+                  <Image url="@../image/student.png" />
                </image>
                <effect>
                   <DropShadow />
@@ -129,7 +129,7 @@
             <Button layoutX="800.0" layoutY="393.0" mnemonicParsing="false" onAction="#buttonRightBack" opacity="0.0" prefHeight="160.0" prefWidth="91.0" text="Button" />
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="231.0" layoutY="-55.0" pickOnBounds="true" preserveRatio="true" rotate="60.3">
                <image>
-                  <Image url="@think.png" />
+                  <Image url="@../image/think.png" />
                </image>
                <effect>
                   <DropShadow />
@@ -160,7 +160,7 @@
             </Button>
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="987.0" layoutY="249.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@exit.png" />
+                  <Image url="@../image/exit.png" />
                </image>
                <effect>
                   <DropShadow spread="0.42" />

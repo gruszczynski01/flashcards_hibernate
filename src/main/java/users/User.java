@@ -46,6 +46,7 @@ public class User {
        em.getTransaction().begin();
        em.persist(newUser);
        em.getTransaction().commit();
+       em.close();
        return newUser;
     }
     public BigBox addBigBox(String title, String category){

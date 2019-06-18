@@ -2,13 +2,14 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="chooseBigBox" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.chooseBigBoxController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="chooseBigBox" stylesheets="@../image/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.chooseBigBoxController">
    <children>
-      <Button fx:id="showFCButton" layoutX="328.0" layoutY="430.0" mnemonicParsing="false" onAction="#showFC" style="-fx-background-color: #c93636; -fx-background-radius: 40; -fx-border-radius: 40; -fx-border-color: #6f3434; -fx-border-width: 2;" styleClass="myBBeditButton" stylesheets="@style.css" text="Przeglądaj">
+      <Button fx:id="showFCButton" layoutX="328.0" layoutY="430.0" mnemonicParsing="false" onAction="#showFC" style="-fx-background-color: #c93636; -fx-background-radius: 40; -fx-border-radius: 40; -fx-border-color: #6f3434; -fx-border-width: 2;" styleClass="myBBeditButton" stylesheets="@../image/style.css" text="Przeglądaj">
          <font>
             <Font name="Copperplate Bold" size="19.0" />
          </font>
@@ -19,6 +20,19 @@
          <font>
             <Font name="Copperplate Bold" size="59.0" />
          </font>
+      </Text>
+      <Button layoutX="63.0" layoutY="511.0" mnemonicParsing="false" onAction="#backButton" prefHeight="38.0" prefWidth="108.0" style="-fx-background-color: #c93636; -fx-background-radius: 40; -fx-border-radius: 40; -fx-border-color: #6f3434; -fx-border-width: 2;" text="cofnij">
+         <font>
+            <Font name="Copperplate Bold" size="19.0" />
+         </font>
+      </Button>
+      <Text fx:id="errorMessage" fill="#d00d0d" layoutX="370.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nie wybrano pudełka" visible="false" wrappingWidth="204.9999918937683">
+         <font>
+            <Font name="Copperplate" size="24.0" />
+         </font>
+         <effect>
+            <DropShadow color="#e1d7d7" />
+         </effect>
       </Text>
    </children>
 </Pane>

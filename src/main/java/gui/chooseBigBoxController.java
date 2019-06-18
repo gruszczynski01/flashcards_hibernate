@@ -2,6 +2,7 @@ package gui;
 
 import boxes.BigBox;
 import boxes.BigBoxRowTableView;
+import database.DB;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -18,11 +19,15 @@ import javafx.scene.control.MenuItem;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
+import javafx.scene.text.Text;
 import users.MainCoordinator;
 
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
 import java.io.IOException;
 import java.net.URL;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.ResourceBundle;
 import java.util.stream.Collectors;
@@ -33,7 +38,7 @@ import static users.MainCoordinator.loggedUser;
 
 public class chooseBigBoxController implements Initializable {
     Map<String, Long> uniqueCategory = new HashMap<>();
-    long currentID;
+    long currentID = -1L;
 
     @FXML
     private Button showFCButton;
@@ -43,17 +48,36 @@ public class chooseBigBoxController implements Initializable {
 
     @FXML
     private ChoiceBox<String> bigBoxChoiceBox;
+    @FXML
+    private Text errorMessage;
 
     @FXML
     void showFC(ActionEvent event) {
-        System.out.println("BEDE Szukał dla: " + bigBoxChoiceBox.getValue());
-        System.out.println("DLUGOSC MAPY: " + uniqueCategory.size());
-        uniqueCategory.entrySet().forEach( x -> {
-            System.out.println("KEY: " + x.getKey() + ", VAL: " + x.getValue());
-        });
-        System.out.println("ID to: " + uniqueCategory.get(bigBoxChoiceBox.getValue()));
-        System.out.println("Przekazuje id rowne: " + currentID);
-        changeScreenFlashcardsFromBigBox(FCFROMBB, currentID);
+        if (currentID == -1L){
+            errorMessage.setVisible(true);
+        }else{
+            try{
+                EntityManager em =  DB.getInstance().getConnection();
+                em.getTransaction().begin();
+                String hql = "select bb from BigBox bb where bb.title = :title";
+                Query query =em.createQuery(hql);
+                query.setParameter("title", bigBoxChoiceBox.getValue());
+                List<BigBox> result = query.getResultList();
+                em.getTransaction().commit();
+                em.close();
+                System.out.println("Przekazuje id rowne: " + result.get(0).getBigBoxId());
+                changeScreenFlashcardsFromBigBox(FCFROMBB, result.get(0).getBigBoxId());
+            }catch (Exception ex){
+                System.out.println("wyjatek - nic nie wybrano");
+                errorMessage.setVisible(true);
+            }
+
+        }
+
+    }
+    @FXML
+    void backButton(ActionEvent event) {
+        changeScreen(WELCOMESCREEN);
     }
 
     @SuppressWarnings("Duplicates")

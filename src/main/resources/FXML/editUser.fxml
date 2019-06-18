@@ -3,11 +3,12 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="editBigBox" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.editUserController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="editBigBox" stylesheets="@../image/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.editUserController">
    <children>
       <Text fill="#c93636" layoutX="244.0" layoutY="83.0" stroke="#6f3434" strokeType="OUTSIDE" strokeWidth="2.0" text="Modyfikuj&#10;użytkownika" wrappingWidth="725.9950561523438">
          <font>
@@ -42,5 +43,26 @@
       </Text>
       <PasswordField fx:id="passwordField" layoutX="257.0" layoutY="289.0" prefHeight="27.0" prefWidth="252.0" style="-fx-background-radius: 40;" />
       <PasswordField fx:id="repeatPasswordField" layoutX="257.0" layoutY="365.0" prefHeight="27.0" prefWidth="252.0" style="-fx-background-radius: 40;" />
+      <Text fx:id="wrongLoginOrPassword" fill="#d00d0d" layoutX="257.0" layoutY="428.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Błędny login lub hasło" visible="false" wrappingWidth="244.9999988079071">
+         <font>
+            <Font name="Copperplate Light" size="17.0" />
+         </font>
+      </Text>
+      <Text fill="#f7ee42" layoutX="540.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login musi zawierać od 2 do 20 znaków, może składać sie z dużych i małych liter oraz znkau '_'" textAlignment="CENTER" wrappingWidth="206.0195343196392">
+         <font>
+            <Font name="Copperplate Bold" size="12.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Text>
+      <Text fill="#f7ee42" layoutX="540.0" layoutY="298.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hasło musi zawierać od 2 do 20 znaków, musi zawierać conajmniej jedną małą i dużą literę oraz znak specjalny. dozwolone znaki specjalne: @#$%!_ " textAlignment="CENTER" wrappingWidth="200.0195343196392">
+         <font>
+            <Font name="Copperplate Bold" size="12.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Text>
    </children>
 </Pane>

@@ -150,6 +150,11 @@ public class learningSelfcontrolController implements Initializable {
     private Text smallBoxNumberField;
 
     @FXML
+    void back(ActionEvent event) {
+        changeScreen(WELCOMESCREEN);
+    }
+
+    @FXML
     void check(ActionEvent event) {
         rtAnimation.play();
         sequentialTransitionON_OFF.play();

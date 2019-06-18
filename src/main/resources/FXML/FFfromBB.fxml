@@ -8,9 +8,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="fcfrombb" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.FCfromBBController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="fcfrombb" stylesheets="@../image/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.FCfromBBController">
    <children>
-      <Button layoutX="491.0" layoutY="519.0" mnemonicParsing="false" onAction="#addFlashcard" style="-fx-background-color: #c93636; -fx-background-radius: 40; -fx-border-radius: 40; -fx-border-color: #6f3434; -fx-border-width: 2;" styleClass="myBBeditButton" stylesheets="@style.css" text="Dodaj fiszkę">
+      <Button layoutX="491.0" layoutY="519.0" mnemonicParsing="false" onAction="#addFlashcard" style="-fx-background-color: #c93636; -fx-background-radius: 40; -fx-border-radius: 40; -fx-border-color: #6f3434; -fx-border-width: 2;" styleClass="myBBeditButton" stylesheets="@../image/style.css" text="Dodaj fiszkę">
          <font>
             <Font name="Copperplate Bold" size="19.0" />
          </font>
@@ -44,7 +44,7 @@
             <Font name="Copperplate Bold" size="19.0" />
          </font>
       </Button>
-      <Button layoutX="540.0" layoutY="292.0" mnemonicParsing="false" onAction="#editButton" style="-fx-background-color: #c93636; -fx-background-radius: 40; -fx-border-radius: 40; -fx-border-color: #6f3434; -fx-border-width: 2;" styleClass="myBBeditButton" stylesheets="@style.css" text="Edytuj zaznaczone">
+      <Button layoutX="540.0" layoutY="292.0" mnemonicParsing="false" onAction="#editButton" style="-fx-background-color: #c93636; -fx-background-radius: 40; -fx-border-radius: 40; -fx-border-color: #6f3434; -fx-border-width: 2;" styleClass="myBBeditButton" stylesheets="@../image/style.css" text="Edytuj zaznaczone">
          <font>
             <Font name="Copperplate Bold" size="19.0" />
          </font>

@@ -1,6 +1,7 @@
 package gui;
 
 import boxes.BigBox;
+import database.DB;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -12,10 +13,14 @@ import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.layout.Pane;
+import javafx.scene.text.Text;
 
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
 import java.io.IOException;
 import java.net.URL;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.ResourceBundle;
 
@@ -69,15 +74,51 @@ public class chooseBigBoxToLearnController implements Initializable {
 
     @FXML
     private ChoiceBox<String> bigBoxChoiceBox;
+    @FXML
+    private Text errorMessage;
 
     @FXML
+    void back(ActionEvent event) {
+        changeScreen(WELCOMESCREEN);
+    }
+
+    @SuppressWarnings("Duplicates")
+    @FXML
     void play(ActionEvent event) {
-        if(learnMode == false){
-            changeScreenToLearn(LEARNINGSELFCONTROL, currentID);
+        if (currentID == -1L){
+            errorMessage.setVisible(true);
         }else{
-            learningWriteAndCheck.chosenBigBoxId = currentID;
-            changeScreen(LEARNINGWRITEANDCHECK);
+            try{
+                EntityManager em =  DB.getInstance().getConnection();
+                em.getTransaction().begin();
+                String hql = "select bb from BigBox bb where bb.title = :title";
+                Query query =em.createQuery(hql);
+                query.setParameter("title", bigBoxChoiceBox.getValue());
+                List<BigBox> result = query.getResultList();
+                em.getTransaction().commit();
+                em.close();
+                System.out.println("Przekazuje id rowne: " + result.get(0).getBigBoxId());
+                if (result.get(0).getFlashcards().size() == 0){
+                    errorMessage.setText("W tym pudełku nie ma fiszek!");
+                    errorMessage.setVisible(true);
+                }else{
+                    if(learnMode == false){
+                        changeScreenToLearn(LEARNINGSELFCONTROL, result.get(0).getBigBoxId());
+                    }else{
+                        learningWriteAndCheck.chosenBigBoxId = result.get(0).getBigBoxId();
+                        changeScreen(LEARNINGWRITEANDCHECK);
+                    }
+                }
+            }catch (Exception ex){
+                System.out.println("wyjatek - nic nie wybrano");
+                errorMessage.setText("Nie wybrano pudełka");
+                errorMessage.setVisible(true);
+            }
+
         }
+
+
+
     }
     public void changeScreenToLearn(String FXMLpath, long bigBoxId){
         System.out.println("START");

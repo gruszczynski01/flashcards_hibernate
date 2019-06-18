@@ -9,7 +9,7 @@ class MainCoordinatorTest {
 
     @Test
     void wordPatternNormal() {
-        assertEquals(true, MainCoordinator.wordPattern("lalal"));
+        assertEquals(true, MainCoordinator.wordPattern("szymek"));
 
     }
     @Test

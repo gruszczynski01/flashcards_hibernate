@@ -14,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="learningBG" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.learningWriteAndCheck">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="learningBG" stylesheets="@../image/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.learningWriteAndCheck">
    <children>
       <Rectangle fx:id="goodAnswerBG" arcHeight="5.0" arcWidth="5.0" fill="#54c640" height="221.0" layoutX="138.0" layoutY="64.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-arc-height: 30; -fx-arc-width: 30;" visible="false" width="523.0" />
       <Rectangle fx:id="wrongAnwerBG" arcHeight="5.0" arcWidth="5.0" fill="#ff4f1fe5" height="221.0" layoutX="138.0" layoutY="64.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-arc-width: 30; -fx-arc-height: 30;" visible="false" width="523.0" />
@@ -67,13 +67,18 @@
       <TextField fx:id="answerField" layoutX="169.0" layoutY="309.0" prefHeight="20.0" prefWidth="457.0" style="-fx-background-radius: 40;" />
       <ImageView fx:id="wrongAnswerIcon" disable="true" fitHeight="80.0" fitWidth="100.0" layoutX="77.0" layoutY="64.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@badAnswer.png" />
+            <Image url="@../image/badAnswer.png" />
          </image>
       </ImageView>
       <ImageView fx:id="goodAnswerIcon" disable="true" fitHeight="80.0" fitWidth="100.0" layoutX="668.0" layoutY="64.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@goodAnswer.png" />
+            <Image url="@../image/goodAnswer.png" />
          </image>
       </ImageView>
+      <Button layoutX="48.0" layoutY="495.0" mnemonicParsing="false" onAction="#back" prefHeight="46.0" prefWidth="380.0" style="-fx-background-color: #f7ee42; -fx-background-radius: 40;" text="cofnij bez zapisywania">
+         <font>
+            <Font name="Copperplate Bold" size="27.0" />
+         </font>
+      </Button>
    </children>
 </Pane>

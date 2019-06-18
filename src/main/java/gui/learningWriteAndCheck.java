@@ -28,8 +28,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
-import static gui.ControllersCoordinator.AFTERLEARNING;
-import static gui.ControllersCoordinator.changeScreen;
+import static gui.ControllersCoordinator.*;
 
 public class learningWriteAndCheck implements Initializable {
     public static Long chosenBigBoxId;
@@ -123,6 +122,11 @@ public class learningWriteAndCheck implements Initializable {
 
     @FXML
     private Rectangle wrongAnwerBG;
+
+    @FXML
+    void back(ActionEvent event) {
+        changeScreen(WELCOMESCREEN);
+    }
 
     @FXML
     void check(ActionEvent event) {
