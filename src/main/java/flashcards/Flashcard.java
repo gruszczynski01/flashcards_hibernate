@@ -4,7 +4,9 @@ package flashcards;
 import boxes.BigBox;
 
 import javax.persistence.*;
-
+/**
+ * Klasa definiujaca fiszke, ktora znajduje sie w zadanym pudelku, a pudelko jest przypisane do danego uzytkownika
+ */
 @Entity
 @Table(name = "fc_flashcards")
 public class Flashcard implements Comparable{
@@ -25,7 +27,12 @@ public class Flashcard implements Comparable{
 
     @Column(name = "smallbox_number")
     private int smallBoxNumber;
-
+    /**
+     * Konstruktor klasy Flashcard
+     * @param bigBoxMother obiekt klasy BigBox, ktory zawiera w swojej liscie dana fiszke.
+     * @param frontSide frontalna strona fiszki
+     * @param backSide druga strona fiszki
+     */
     public Flashcard(BigBox bigBoxMother, String frontSide, String backSide){
         this.bigBoxMother = bigBoxMother;
         this.frontSide = frontSide;
@@ -33,7 +40,9 @@ public class Flashcard implements Comparable{
         this.smallBoxNumber = 0;
 
     }
-
+    /**
+     * Konstruktor domyslny klasy Flashcard
+     */
     public Flashcard() {}
 
     public long getFlascardId() {

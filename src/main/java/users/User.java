@@ -11,7 +11,9 @@ import java.util.List;
 
 import static users.MainCoordinator.loggedUser;
 
-
+/**
+ * Klasa definiujaca uzytkownika, uzytkownik posiada pudelka, w ktorych znajduja sie fiszki.
+ */
 @Entity
 @Table(name = "fc_users")
 public class User {
@@ -32,14 +34,20 @@ public class User {
     @OneToMany(mappedBy = "ownerId", fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
     private List<BigBox> userBigBoxes = new ArrayList<BigBox>();
 
-//***************************************************************
 
-
+    /**
+     * Konstruktor tworzacy nowego uzytkownika, podane haslo jest odrazu hashowane motoda hashpw z klasy BCrypt
+     */
     public User(String userName, String password) {
         this.userName = userName;
         this.password = BCrypt.hashpw(password, BCrypt.gensalt());
 
     }
+    /**
+     * Metoda zapisujaca uzytkownika podanego w argumencie do bazy danych
+     * @param newUser obiekt klasy User, ktorego chcemy zapisac do bazy danych
+     * @return zwraca obiekt klasy User, ktory zapisalismy do bazy danych
+     */
     public static User addUser(User newUser){
 
        EntityManager em =  DB.getInstance().getConnection();
@@ -49,6 +57,14 @@ public class User {
        em.close();
        return newUser;
     }
+
+
+    /**
+     * Metoda dodajace pudelko do uzytkownika
+     * @param title tytul pudelka, ktore stowrzymy i dodamy do listy pudelek uzytkownika
+     * @param category kategoria pudelka, ktore stowrzymy i dodamy do listy pudelek uzytkownika
+     * @return zwraca pudelko, ktore dodalismy bo listy pudelek uzytkownika
+     */
     public BigBox addBigBox(String title, String category){
         BigBox tmp =new BigBox(this, title, category);
         userBigBoxes.add(tmp);
@@ -61,6 +77,10 @@ public class User {
 
 
     }
+    /**
+     * Metoda usuwajaca pudelko wraz z wszystkimi fiszkami z listy pudelek uzytkownika
+     * @param id id pudelka, ktore chcemy usunac z listy pudelek uzytkownika
+     */
     @SuppressWarnings("Duplicates")
     public void removeBigBox(long id){
         EntityManager em =  DB.getInstance().getConnection();
@@ -89,7 +109,9 @@ public class User {
         em.getTransaction().commit();
     }
 
-
+    /**
+     * Konstruktor domyslny klasy User
+     */
     public User() {}
 
     public List<BigBox> getUserBigBoxes() {

@@ -19,7 +19,9 @@ import java.util.ResourceBundle;
 import static gui.ControllersCoordinator.*;
 import static users.MainCoordinator.loggedUser;
 import static users.MainCoordinator.wordPattern;
-
+/**
+ * Kontroler sceny, na ktorej edytujemy wlasciwosci Pudelka
+ */
 public class editBigBoxController implements Initializable {
     public static long bigBoxId;
 

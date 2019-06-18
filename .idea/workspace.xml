@@ -2,13 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b317588-d94b-4d51-b3dd-9e7cbebe9e3f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Test/MainCoordinatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test/MainCoordinatorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/boxes/BigBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boxes/BigBox.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/boxes/BigBoxRowTableView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/boxes/BigBoxRowTableView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/database/DB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/DB.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/flashcards/Flashcard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/flashcards/Flashcard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/flashcards/FlashcardRowTableView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/flashcards/FlashcardRowTableView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/gui/ControllersCoordinator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/ControllersCoordinator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/gui/FCfromBBController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/FCfromBBController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/gui/afterLearningController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/afterLearningController.java" afterDir="false" />
@@ -23,7 +25,15 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/gui/myBigBoxesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/myBigBoxesController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/gui/welcomeScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/welcomeScreenController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/users/MainCoordinator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/users/MainCoordinator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/welcomeScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/welcomeScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/users/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/users/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Test/MainCoordinatorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Test/MainCoordinatorTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/boxes/BigBoxRowTableView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/boxes/BigBoxRowTableView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/database/DB.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/database/DB.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/flashcards/Flashcard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/flashcards/Flashcard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/learningSelfcontrolController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/learningSelfcontrolController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/learningWriteAndCheck.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/learningWriteAndCheck.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/users/MainCoordinator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/users/MainCoordinator.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -64,48 +74,42 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/boxes/BigBox.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/flashcards/FlashcardRowTableView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
+            <state relative-caret-position="210">
+              <caret line="14" column="47" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
               <folding>
-                <element signature="method#addFlashcard#0;class#BigBox#0" />
-                <element signature="method#removeFlashcard#0;class#BigBox#0" />
-                <element signature="e#0#51#1" expanded="true" />
-                <element signature="method#deleteAllFlashcards#0;class#BigBox#0" />
+                <element signature="method#FlashcardRowTableView#0;class#FlashcardRowTableView#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/users/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="115" lean-forward="true" selection-start-line="115" selection-end-line="115" />
+              <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="e#0#59#1" expanded="true" />
-                <element signature="method#getBigBoxes#0;class#BigBox#0" />
-                <element signature="e#0#54#1" expanded="true" />
-                <element signature="method#BigBox#0;class#BigBox#0" />
-                <element signature="method#getMyFlashcards#0;class#BigBox#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/boxes/BigBoxRowTableView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#BigBoxRowTableView#0;class#BigBoxRowTableView#0" />
-                <element signature="e#530#531#0" expanded="true" />
-                <element signature="e#561#562#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/database/DB.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#getConnection#0;class#DB#0" />
+                <element signature="e#0#45#1" expanded="true" />
+                <element signature="e#3871#3872#0" expanded="true" />
+                <element signature="e#3906#3907#0" expanded="true" />
+                <element signature="e#3968#3969#0" expanded="true" />
+                <element signature="e#4016#4017#0" expanded="true" />
+                <element signature="e#4047#4048#0" expanded="true" />
+                <element signature="e#4076#4077#0" expanded="true" />
+                <element signature="e#4118#4119#0" expanded="true" />
+                <element signature="e#4154#4155#0" expanded="true" />
+                <element signature="e#4188#4189#0" expanded="true" />
+                <element signature="e#4219#4220#0" expanded="true" />
+                <element signature="e#4267#4268#0" expanded="true" />
+                <element signature="e#4307#4308#0" expanded="true" />
+                <element signature="e#4342#4343#0" expanded="true" />
+                <element signature="e#4373#4374#0" expanded="true" />
+                <element signature="e#4421#4422#0" expanded="true" />
+                <element signature="e#4461#4462#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -114,8 +118,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/flashcards/Flashcard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="609">
+              <caret line="97" lean-forward="true" selection-start-line="97" selection-end-line="97" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#Flashcard#0;class#Flashcard#0" />
@@ -127,28 +131,95 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/flashcards/FlashcardRowTableView.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/boxes/BigBoxRowTableView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="60" column="1" lean-forward="true" selection-start-line="60" selection-start-column="1" selection-end-line="60" selection-end-column="1" />
+            <state relative-caret-position="255">
+              <caret line="17" column="7" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="17" selection-end-column="7" />
               <folding>
-                <element signature="method#FlashcardRowTableView#0;class#FlashcardRowTableView#0" />
+                <element signature="imports" expanded="true" />
+                <element signature="method#BigBoxRowTableView#0;class#BigBoxRowTableView#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/gui/learningSelfcontrolController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-27">
+              <caret line="221" column="90" selection-start-line="221" selection-start-column="90" selection-end-line="221" selection-end-column="90" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#initialize#0;class#learningSelfcontrolController#0" />
+                <element signature="method#check#0;class#learningSelfcontrolController#0" />
+                <element signature="method#goodAnswerAction#0;class#learningSelfcontrolController#0" />
+                <element signature="method#wrongAnswerAction#0;class#learningSelfcontrolController#0" />
+                <element signature="e#0#83#1" expanded="true" />
+                <element signature="e#0#54#1" expanded="true" />
+                <element signature="e#0#74#1" expanded="true" />
+                <element signature="e#9076#9077#0" expanded="true" />
+                <element signature="e#9125#9126#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/gui/learningWriteAndCheck.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="233">
+              <caret line="23" column="39" lean-forward="true" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+              <folding>
+                <element signature="method#initialize#0;class#learningWriteAndCheck#0" />
+                <element signature="method#check#0;class#learningWriteAndCheck#0" />
+                <element signature="method#next#0;class#learningWriteAndCheck#0" />
+                <element signature="e#0#83#1" expanded="true" />
+                <element signature="e#0#54#1" expanded="true" />
+                <element signature="e#0#74#1" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="23" column="21" lean-forward="true" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/users/MainCoordinator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Test/MainCoordinatorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="54" column="9" lean-forward="true" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
+            <state relative-caret-position="105">
+              <caret line="7" column="73" selection-start-line="7" selection-start-column="73" selection-end-line="7" selection-end-column="73" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#wordPatternNormal#0;class#MainCoordinatorTest#0" />
                 <element signature="method#wordPatternWithSpecialCharacter#0;class#MainCoordinatorTest#0" />
-                <element signature="method#passwordPatternTooLong#0;class#MainCoordinatorTest#0" />
-                <element signature="e#1678#1679#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -170,6 +241,8 @@
     <findStrings>
       <find>Bcry</find>
       <find>\n</find>
+      <find>/</find>
+      <find>//</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -184,40 +257,40 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/ca01f133-c88a-4b9f-9a87-f0ec6b0f60ac/console.sql" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/main/java/gui/wolcomeScreen.fxml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/gui/welcomeScreen.fxml" />
         <option value="$PROJECT_DIR$/src/main/resources/FXML/welcomeScreen.fxml" />
         <option value="$PROJECT_DIR$/src/main/resources/FXML/login_screen.fxml" />
         <option value="$PROJECT_DIR$/src/main/resources/FXML/loginScreen.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/MainCoordinator.java" />
         <option value="$PROJECT_DIR$/src/main/resources/FXML/chooseBigBox.fxml" />
-        <option value="$PROJECT_DIR$/src/main/java/flashcards/FlashcardRowTableView.java" />
         <option value="$PROJECT_DIR$/src/main/java/gui/editFLashcardController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/FXML/learningSelfcontrol.fxml" />
-        <option value="$PROJECT_DIR$/src/main/java/gui/afterLearningController.java" />
         <option value="$PROJECT_DIR$/src/main/java/users/MainCoordinatorTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/users/User.java" />
         <option value="$PROJECT_DIR$/src/main/resources/FXML/style.css" />
         <option value="$PROJECT_DIR$/src/main/resources/image/style.css" />
-        <option value="$PROJECT_DIR$/src/main/java/gui/loginScreenController.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/gui/editUserController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/users/MainCoordinator.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/Test/MainCoordinatorTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gui/afterLearningController.java" />
         <option value="$PROJECT_DIR$/src/main/java/gui/ControllersCoordinator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/gui/chooseBigBoxController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/boxes/BigBox.java" />
-        <option value="$PROJECT_DIR$/src/main/java/gui/editFlashcardController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/gui/FCfromBBController.java" />
         <option value="$PROJECT_DIR$/src/main/java/gui/editBigBoxController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/gui/myBigBoxesController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gui/editFlashcardController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gui/loginScreenController.java" />
         <option value="$PROJECT_DIR$/src/main/java/gui/welcomeScreenController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/gui/chooseBigBoxToLearnController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/gui/learningSelfcontrolController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gui/myBigBoxesController.java" />
         <option value="$PROJECT_DIR$/src/main/java/gui/learningWriteAndCheck.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gui/FCfromBBController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gui/editUserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gui/chooseBigBoxController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gui/chooseBigBoxToLearnController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/boxes/BigBox.java" />
         <option value="$PROJECT_DIR$/src/main/java/boxes/BigBoxRowTableView.java" />
         <option value="$PROJECT_DIR$/src/main/java/database/DB.java" />
         <option value="$PROJECT_DIR$/src/main/java/flashcards/Flashcard.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Test/MainCoordinatorTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/flashcards/FlashcardRowTableView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/users/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/users/MainCoordinator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gui/learningSelfcontrolController.java" />
       </list>
     </option>
   </component>
@@ -360,6 +433,14 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="META-INF" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="flashcards_hibernate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="flashcards_hibernate" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -381,7 +462,7 @@
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -417,6 +498,7 @@
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="1.8.0_201" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="flashcards_hibernate" />
       <method v="2">
@@ -454,6 +536,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.MainCoordinatorTest" />
+      <item itemvalue="JUnit.MainCoordinatorTest.wordPattern" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
@@ -483,7 +570,7 @@
       <workItem from="1560081352348" duration="31577000" />
       <workItem from="1560354717864" duration="25601000" />
       <workItem from="1560610457378" duration="36481000" />
-      <workItem from="1560796775811" duration="40633000" />
+      <workItem from="1560796775811" duration="47882000" />
     </task>
     <servers />
   </component>
@@ -520,7 +607,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="183986000" />
+    <option name="totallyTimeSpent" value="191235000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -535,7 +622,7 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8201439" visible="true" weight="0.29613733" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8201439" visible="true" weight="0.29613733" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -547,7 +634,7 @@
       <window_info anchor="bottom" id="Hibernate Console" order="1" sideWeight="0.49928468" weight="0.32891566" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Find" order="3" sideWeight="0.4985694" weight="0.32891566" />
-      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.6638054" visible="true" weight="0.22650602" />
+      <window_info active="true" anchor="bottom" id="Run" order="4" sideWeight="0.6638054" visible="true" weight="0.18072289" />
       <window_info anchor="bottom" id="Debug" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
@@ -751,67 +838,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/gui/loginScreenController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="63" column="37" selection-start-line="63" selection-start-column="37" selection-end-line="63" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#register#0;class#loginScreenController#0" />
-            <element signature="e#0#58#1" expanded="true" />
-            <element signature="method#loginButtonAction#0;class#loginScreenController#0" />
-            <element signature="e#0#58#1" expanded="true" />
-            <element signature="method#hideRegisterPanel#0;class#loginScreenController#0" />
-            <element signature="method#showRegisterPanel#0;class#loginScreenController#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#545#546#0" expanded="true" />
-            <element signature="e#573#574#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/users/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="48" column="18" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#0#59#1" expanded="true" />
-            <element signature="e#0#45#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="35" column="33" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/gui/chooseBigBoxController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#986#1017#0" expanded="true" />
-            <element signature="method#initialize#0;class#chooseBigBoxController#0" />
-            <element signature="method#showFC#0;class#chooseBigBoxController#0" />
-            <element signature="e#0#48#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home/src.zip!/java/util/List.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
@@ -826,111 +852,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/users/MainCoordinator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/gui/editFlashcardController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="65" column="12" selection-start-line="65" selection-start-column="12" selection-end-line="65" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#initialize#0;class#editFlashcardController#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/gui/FCfromBBController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="method#initialize#0;class#FCfromBBController#0" />
-            <element signature="method#addFlashcard#0;class#FCfromBBController#0" />
-            <element signature="e#3412#3456#1" />
-            <element signature="e#3627#3628#0" expanded="true" />
-            <element signature="method#deleteButton#0;class#FCfromBBController#0" />
-            <element signature="method#editButton#0;class#FCfromBBController#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/gui/ControllersCoordinator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="16" column="83" selection-start-line="16" selection-start-column="83" selection-end-line="16" selection-end-column="83" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/gui/editUserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#cancelButton#0;class#editUserController#0" />
-            <element signature="method#saveButton#0;class#editUserController#0" />
-            <element signature="e#0#58#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/gui/editBigBoxController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="61" column="39" selection-start-line="61" selection-start-column="39" selection-end-line="61" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#initialize#0;class#editBigBoxController#0" />
-            <element signature="method#removeAllFlashcardsButton#0;class#editBigBoxController#0" />
-            <element signature="method#saveButton#0;class#editBigBoxController#0" />
-            <element signature="e#0#76#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/gui/myBigBoxesController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="127" column="39" selection-start-line="127" selection-start-column="39" selection-end-line="127" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#initialize#0;class#myBigBoxesController#0" />
-            <element signature="method#addButton#0;class#myBigBoxesController#0" />
-            <element signature="e#0#76#1" expanded="true" />
-            <element signature="method#backButton#0;class#myBigBoxesController#0" />
-            <element signature="method#editButton#0;class#myBigBoxesController#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/gui/chooseBigBoxToLearnController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="106" column="9" lean-forward="true" selection-start-line="106" selection-start-column="9" selection-end-line="106" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#initialize#0;class#chooseBigBoxToLearnController#0" />
-            <element signature="method#play#0;class#chooseBigBoxToLearnController#0" />
-            <element signature="e#0#48#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/gui/welcomeScreenController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="58" column="51" selection-start-line="58" selection-start-column="51" selection-end-line="58" selection-end-column="51" />
+        <state relative-caret-position="318">
+          <caret line="62" selection-start-line="62" selection-end-line="62" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#deleteAccount#0;class#welcomeScreenController#0" />
             <element signature="method#buttonDown#0;class#welcomeScreenController#0" />
             <element signature="method#buttonDownBack#0;class#welcomeScreenController#0" />
             <element signature="method#buttonLeft#0;class#welcomeScreenController#0" />
@@ -943,55 +870,143 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gui/loginScreenController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="25" column="59" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#register#0;class#loginScreenController#0" />
+            <element signature="e#0#58#1" expanded="true" />
+            <element signature="method#loginButtonAction#0;class#loginScreenController#0" />
+            <element signature="e#0#58#1" expanded="true" />
+            <element signature="method#hideRegisterPanel#0;class#loginScreenController#0" />
+            <element signature="method#showRegisterPanel#0;class#loginScreenController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gui/myBigBoxesController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="131" selection-start-line="131" selection-end-line="131" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#initialize#0;class#myBigBoxesController#0" />
+            <element signature="method#addButton#0;class#myBigBoxesController#0" />
+            <element signature="e#0#76#1" expanded="true" />
+            <element signature="method#backButton#0;class#myBigBoxesController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gui/FCfromBBController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="498">
+          <caret line="118" selection-start-line="118" selection-end-line="118" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#initialize#0;class#FCfromBBController#0" />
+            <element signature="method#addFlashcard#0;class#FCfromBBController#0" />
+            <element signature="method#editButton#0;class#FCfromBBController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gui/editUserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="84" selection-start-line="84" selection-end-line="84" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#cancelButton#0;class#editUserController#0" />
+            <element signature="e#0#58#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gui/editFlashcardController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="25" column="58" selection-start-line="25" selection-start-column="58" selection-end-line="25" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#initialize#0;class#editFlashcardController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gui/editBigBoxController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="21" column="1" selection-start-line="21" selection-end-line="21" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#initialize#0;class#editBigBoxController#0" />
+            <element signature="method#removeAllFlashcardsButton#0;class#editBigBoxController#0" />
+            <element signature="method#saveButton#0;class#editBigBoxController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gui/chooseBigBoxController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="91" selection-start-line="91" selection-end-line="91" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#initialize#0;class#chooseBigBoxController#0" />
+            <element signature="e#0#48#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/gui/afterLearningController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <caret line="9" column="48" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/gui/learningWriteAndCheck.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/gui/ControllersCoordinator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="124" column="5" selection-start-line="124" selection-start-column="5" selection-end-line="124" selection-end-column="5" />
+        <state relative-caret-position="570">
+          <caret line="38" column="47" lean-forward="true" selection-start-line="38" selection-start-column="47" selection-end-line="38" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#initialize#0;class#learningWriteAndCheck#0" />
-            <element signature="method#check#0;class#learningWriteAndCheck#0" />
-            <element signature="method#next#0;class#learningWriteAndCheck#0" />
-            <element signature="method#updateBigbox#0;class#learningWriteAndCheck#0" />
-            <element signature="e#0#83#1" expanded="true" />
-            <element signature="e#0#54#1" expanded="true" />
-            <element signature="e#0#74#1" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/gui/learningSelfcontrolController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/gui/chooseBigBoxToLearnController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="156" column="5" lean-forward="true" selection-start-line="156" selection-start-column="5" selection-end-line="156" selection-end-column="5" />
+        <state relative-caret-position="327">
+          <caret line="80" column="39" selection-start-line="80" selection-start-column="39" selection-end-line="80" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#initialize#0;class#learningSelfcontrolController#0" />
-            <element signature="method#check#0;class#learningSelfcontrolController#0" />
-            <element signature="method#goodAnswerAction#0;class#learningSelfcontrolController#0" />
-            <element signature="method#wrongAnswerAction#0;class#learningSelfcontrolController#0" />
-            <element signature="method#updateBigbox#0;class#learningSelfcontrolController#0" />
-            <element signature="e#0#83#1" expanded="true" />
-            <element signature="e#0#54#1" expanded="true" />
-            <element signature="e#0#74#1" expanded="true" />
+            <element signature="method#initialize#0;class#chooseBigBoxToLearnController#0" />
+            <element signature="e#0#48#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/database/DB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="23" column="120" selection-start-line="23" selection-start-column="120" selection-end-line="23" selection-end-column="120" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/boxes/BigBox.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
+        <state relative-caret-position="55">
+          <caret line="98" selection-start-line="98" selection-end-line="103" selection-end-column="7" />
           <folding>
             <element signature="method#addFlashcard#0;class#BigBox#0" />
             <element signature="method#removeFlashcard#0;class#BigBox#0" />
@@ -1006,34 +1021,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/boxes/BigBoxRowTableView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#BigBoxRowTableView#0;class#BigBoxRowTableView#0" />
-            <element signature="e#530#531#0" expanded="true" />
-            <element signature="e#561#562#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/database/DB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getConnection#0;class#DB#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/flashcards/Flashcard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="609">
+          <caret line="97" lean-forward="true" selection-start-line="97" selection-end-line="97" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#Flashcard#0;class#Flashcard#0" />
@@ -1043,26 +1034,121 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/boxes/BigBoxRowTableView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="7" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="17" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#BigBoxRowTableView#0;class#BigBoxRowTableView#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/flashcards/FlashcardRowTableView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="60" column="1" lean-forward="true" selection-start-line="60" selection-start-column="1" selection-end-line="60" selection-end-column="1" />
+        <state relative-caret-position="210">
+          <caret line="14" column="47" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
           <folding>
             <element signature="method#FlashcardRowTableView#0;class#FlashcardRowTableView#0" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/users/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="115" lean-forward="true" selection-start-line="115" selection-end-line="115" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#0#59#1" expanded="true" />
+            <element signature="e#0#45#1" expanded="true" />
+            <element signature="e#3871#3872#0" expanded="true" />
+            <element signature="e#3906#3907#0" expanded="true" />
+            <element signature="e#3968#3969#0" expanded="true" />
+            <element signature="e#4016#4017#0" expanded="true" />
+            <element signature="e#4047#4048#0" expanded="true" />
+            <element signature="e#4076#4077#0" expanded="true" />
+            <element signature="e#4118#4119#0" expanded="true" />
+            <element signature="e#4154#4155#0" expanded="true" />
+            <element signature="e#4188#4189#0" expanded="true" />
+            <element signature="e#4219#4220#0" expanded="true" />
+            <element signature="e#4267#4268#0" expanded="true" />
+            <element signature="e#4307#4308#0" expanded="true" />
+            <element signature="e#4342#4343#0" expanded="true" />
+            <element signature="e#4373#4374#0" expanded="true" />
+            <element signature="e#4421#4422#0" expanded="true" />
+            <element signature="e#4461#4462#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Test/MainCoordinatorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="54" column="9" lean-forward="true" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
+        <state relative-caret-position="105">
+          <caret line="7" column="73" selection-start-line="7" selection-start-column="73" selection-end-line="7" selection-end-column="73" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#wordPatternNormal#0;class#MainCoordinatorTest#0" />
             <element signature="method#wordPatternWithSpecialCharacter#0;class#MainCoordinatorTest#0" />
-            <element signature="method#passwordPatternTooLong#0;class#MainCoordinatorTest#0" />
-            <element signature="e#1678#1679#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gui/learningSelfcontrolController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-27">
+          <caret line="221" column="90" selection-start-line="221" selection-start-column="90" selection-end-line="221" selection-end-column="90" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#initialize#0;class#learningSelfcontrolController#0" />
+            <element signature="method#check#0;class#learningSelfcontrolController#0" />
+            <element signature="method#goodAnswerAction#0;class#learningSelfcontrolController#0" />
+            <element signature="method#wrongAnswerAction#0;class#learningSelfcontrolController#0" />
+            <element signature="e#0#83#1" expanded="true" />
+            <element signature="e#0#54#1" expanded="true" />
+            <element signature="e#0#74#1" expanded="true" />
+            <element signature="e#9076#9077#0" expanded="true" />
+            <element signature="e#9125#9126#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gui/learningWriteAndCheck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="23" column="39" lean-forward="true" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+          <folding>
+            <element signature="method#initialize#0;class#learningWriteAndCheck#0" />
+            <element signature="method#check#0;class#learningWriteAndCheck#0" />
+            <element signature="method#next#0;class#learningWriteAndCheck#0" />
+            <element signature="e#0#83#1" expanded="true" />
+            <element signature="e#0#54#1" expanded="true" />
+            <element signature="e#0#74#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/users/MainCoordinator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="23" column="21" lean-forward="true" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1107,7 +1193,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>10</last-edited>
+          <last-edited>1.8.0_201</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

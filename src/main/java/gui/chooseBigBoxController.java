@@ -27,7 +27,9 @@ import java.util.ResourceBundle;
 
 import static gui.ControllersCoordinator.*;
 import static users.MainCoordinator.loggedUser;
-
+/**
+ * Kontroler sceny, na ktorej wybieramy Pudelko, ktore chcemy przegladac
+ */
 public class chooseBigBoxController implements Initializable {
     Map<String, Long> uniqueCategory = new HashMap<>();
 
@@ -38,11 +40,12 @@ public class chooseBigBoxController implements Initializable {
     private ChoiceBox<String> bigBoxChoiceBox;
     @FXML
     private Text errorMessage;
-
+    /**
+     * Metoda inicjalizacyjna, w ktorej wykonowyane sa czynnosci przygotowawcze do wygenerowania sceny
+     */
     @SuppressWarnings("Duplicates")
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        //tutaj ustawiam choice boxy i listenera na zmianę w categoryChoiceBox
         ObservableList<String>  categoriesOL = FXCollections.observableArrayList();
         categoryChoiceBox.setItems(categoriesOL);
         bigBoxChoiceBox.setOpacity(0.4);
@@ -58,7 +61,7 @@ public class chooseBigBoxController implements Initializable {
         });
         ChangeListener<String> changeListener = new ChangeListener<String>() {
             @Override
-            public void changed(ObservableValue<? extends String> observable, //
+            public void changed(ObservableValue<? extends String> observable,
                                 String oldValue, String newValue) {
                 if (newValue != null && !newValue.equals("<Kategorie>")) {
                     bigBoxChoiceBox.getItems().remove(0, bigBoxChoiceBox.getItems().size());
@@ -85,9 +88,7 @@ public class chooseBigBoxController implements Initializable {
                 List<BigBox> result = query.getResultList();
                 em.getTransaction().commit();
                 em.close();
-                //System.out.println("Przekazuje id rowne: " + result.get(0).getBigBoxId());
 
-                //changeScreenFlashcardsFromBigBox(FLASHCARDS_FROM_BIGBOX_FXML, result.get(0).getBigBoxId());
                 FCfromBBController.bigBoxId = result.get(0).getBigBoxId();
                 changeScreen(FLASHCARDS_FROM_BIGBOX_FXML);
 

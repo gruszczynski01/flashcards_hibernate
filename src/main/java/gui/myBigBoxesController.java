@@ -26,7 +26,9 @@ import java.util.ResourceBundle;
 
 import static gui.ControllersCoordinator.*;
 import static users.MainCoordinator.*;
-
+/**
+ * Kontroler sceny, na ktorej wyswietlamy wszystkie pudelka zalogowanego uzytkownika
+ */
 public class myBigBoxesController implements Initializable {
     ObservableList<BigBoxRowTableView> rowTableViewObservableList = FXCollections.observableArrayList();
 
@@ -49,13 +51,11 @@ public class myBigBoxesController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        //PRZYGOTOWANIE TABELI
         loggedUser.getUserBigBoxes().stream().forEach(BigBox -> {
             BigBoxRowTableView tmp = new BigBoxRowTableView(BigBox.getBigBoxId(), BigBox.getTitle(), BigBox.getCategory());
             rowTableViewObservableList.add(tmp);
         });
 
-        //MAPUJEMY TABELE
         nameColumn.setCellValueFactory(new PropertyValueFactory<BigBoxRowTableView, String>("title"));
         categoryColumn.setCellValueFactory(new PropertyValueFactory<BigBoxRowTableView, String>("category"));
         boxesTable.setItems(rowTableViewObservableList);
@@ -128,9 +128,7 @@ public class myBigBoxesController implements Initializable {
     void editButton(ActionEvent event) {
         errorMessage.setVisible(false);
 
-        //System.out.println("KLIKNIETO EDIT");
         ObservableList<BigBoxRowTableView> bigBoxSelected = boxesTable.getSelectionModel().getSelectedItems();
-        //System.out.println("ROZMIAR: " + bigBoxSelected.size());
 
         if (bigBoxSelected.size() != 0) {
             bigBoxSelected.stream().forEach(BigBox -> {

@@ -10,7 +10,9 @@ import users.User;
 import javax.persistence.EntityManager;
 import static gui.ControllersCoordinator.*;
 import static users.MainCoordinator.*;
-
+/**
+ * Kontroler sceny, z glownym meny aplikacji
+ */
 public class welcomeScreenController {
 
     @FXML
@@ -28,7 +30,6 @@ public class welcomeScreenController {
 
     @FXML
     void deleteAccount(ActionEvent event) {
-        //USUWAM PROFIL UZYTKOWNIKA WRAZ Z JEGO PUDEŁKAMI I FISZKAMI
         EntityManager em =  DB.getInstance().getConnection();
         em.getTransaction().begin();
         em.remove(em.find(User.class, loggedUser.getUserId()));
@@ -59,7 +60,6 @@ public class welcomeScreenController {
         changeScreen(CHOOSE_BIG_BOX_TO_LEARN_FXML);
     }
 
-    //PORUSZANIE SIĘ PO MENU GŁÓWNYM
     @FXML
     void buttonDown(ActionEvent event) {
         TranslateTransition transition = new TranslateTransition();

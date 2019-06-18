@@ -26,7 +26,9 @@ import java.util.ResourceBundle;
 
 import static gui.ControllersCoordinator.*;
 import static users.MainCoordinator.wordPattern;
-
+/**
+ * Kontroler sceny, na ktorej wyswietlamy wszystkie wiszki z wybranego pudelka
+ */
 public class FCfromBBController implements Initializable {
     ObservableList<FlashcardRowTableView> flashcardObservableList = FXCollections.observableArrayList();
     public static Long bigBoxId;
@@ -59,7 +61,6 @@ public class FCfromBBController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        //System.out.println("DOSTAŁEM ID: " + bigBoxId);
         EntityManager em =  DB.getInstance().getConnection();
         em.getTransaction().begin();
         bigBox = em.find(BigBox.class, bigBoxId);
@@ -70,17 +71,14 @@ public class FCfromBBController implements Initializable {
 
         bigBoxTitleText.setText(bigBox.getTitle());
 
-        //DODANIE DO LISTY WIERSZY
         result.forEach(Flashcard -> {
             flashcardObservableList.add(new FlashcardRowTableView(Flashcard.getFlascardId(), Flashcard.getFrontSide(), Flashcard.getBackSide(), Long.toString(Flashcard.getSmallBoxNumber())));
         });
 
-        //MAPOWANIE TABELI
         frontsideColumn.setCellValueFactory(new PropertyValueFactory<>("frontSide"));
         backsideColumn.setCellValueFactory(new PropertyValueFactory<>("backSide"));
         smallboxNumberColumn.setCellValueFactory(new PropertyValueFactory<>("smallBoxNumber"));
 
-        //DODANIE LISTY WIERSZY DO TABELI
         flashcardTable.setItems(flashcardObservableList);
     }
 
@@ -115,11 +113,9 @@ public class FCfromBBController implements Initializable {
             EntityManager em =  DB.getInstance().getConnection();
             em.getTransaction().begin();
             flashcardSelected.stream().forEach( Flashcard -> {
-                //USUWAM FISZKĘ Z PRZEGLĄDANEGO PUDEŁKA
                 bigBox.removeFlashcard(Flashcard.getFlashcardId());
             });
 
-            //USUWAM Z LISTY WSZYSTKICH FISZEK TĘ KTORA BYŁA ZAZNACZONA
             flashcardSelected.forEach(allFlashcards::remove);
             em.getTransaction().commit();
             em.close();

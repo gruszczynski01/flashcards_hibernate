@@ -11,7 +11,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static users.MainCoordinator.loggedUser;
-
+/**
+ * Klasa definiujaca pudelko nalezace do uzytkownika i zawierajace zbior fiszek.
+ */
 @Entity
 @Table(name = "fc_bigboxes")
 public class BigBox {
@@ -29,13 +31,18 @@ public class BigBox {
     private String title;
 
     @Column(name = "category")
-    private String category; // enum?
+    private String category;
 
     @OneToMany(mappedBy = "bigBoxMother", orphanRemoval = true, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Flashcard> flashcards = new ArrayList<Flashcard>();
 
-    //***************************************************************
 
+    /**
+     * Metoda dodajaca fiszke do pudelka
+     * @param frontSide frontalna strona fiszki
+     * @param backSide rewrs fiszki
+     * @return Zracana jest nowodoana do pudelka fiszka
+     */
     public Flashcard addFlashcard(String frontSide, String backSide){
         Flashcard tmp = new Flashcard(this, frontSide, backSide);
         flashcards.add(tmp);
@@ -46,7 +53,10 @@ public class BigBox {
         em.close();
         return tmp;
     }
-
+    /**
+     * Metoda usuwajaca fiszke o zadanym id z pudelka
+     * @param id - id fiszki do usuniecia z pudelka
+     */
     public void removeFlashcard(long id){
         EntityManager em =  DB.getInstance().getConnection();
         em.getTransaction().begin();
@@ -59,7 +69,9 @@ public class BigBox {
         em.close();
 
     }
-
+    /**
+     * Metoda usuwajaca wysztkie fiszki z pudelka
+     */
     public void deleteAllFlashcards(){
         EntityManager em =  DB.getInstance().getConnection();
         em.getTransaction().begin();
@@ -84,7 +96,12 @@ public class BigBox {
         em.close();
         return result;
     }
-
+    /**
+     * Konstruktor klasy BigBox
+     * @param ownerId id uzytkownika, ktory jest wlasicielem pudelka
+     * @param title tytul pudelka
+     * @param category kategoria pudelka
+     */
     public BigBox(User ownerId, String title, String category){
 
 
@@ -92,7 +109,9 @@ public class BigBox {
         this.title = title;
         this.category = category;
     }
-
+    /**
+     * Konstruktor domylsny pudelka
+     */
     public BigBox() {}
 
     public void setFlashcards(List<Flashcard> flashcards) {

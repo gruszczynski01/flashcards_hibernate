@@ -6,7 +6,10 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-
+/**
+ * Klasa zawierajaca wskazania na pliki html kolejnych scen, wskazanie na glowna Scene aplikacji oraz aktualny dla sceny
+ * glowny root
+ */
 public class ControllersCoordinator {
     public static Stage stage;
     public static Pane root;
@@ -23,7 +26,9 @@ public class ControllersCoordinator {
     public static final String LEARNING_SELFCONTROL_FXML = "/FXML/learningSelfcontrol.fxml";
     public static final String LEARNING_WRITE_AND_CHECK_FXML = "/FXML/learningWriteAndCheck.fxml";
     public static final String AFTER_LEARNING_FXML = "/FXML/afterLearning.fxml";
-
+    /**
+     * Metoda sluzaca do zmiany sceny
+     */
     public static void changeScreen(String FXMLpath){
         try {
             root = FXMLLoader.load(ControllersCoordinator.class.getResource(FXMLpath));

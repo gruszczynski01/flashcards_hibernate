@@ -22,7 +22,9 @@ import static gui.ControllersCoordinator.*;
 import static gui.ControllersCoordinator.stage;
 import static users.MainCoordinator.loggedUser;
 import static users.MainCoordinator.wordPattern;
-
+/**
+ * Kontroler sceny, na ktorej edytujemy wlasciwosci Fiszki
+ */
 public class editFlashcardController implements Initializable {
     public static long flashcardId;
 

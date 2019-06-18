@@ -29,7 +29,9 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 import static gui.ControllersCoordinator.*;
-
+/**
+ * Kontroler sceny, na ktorej uczymy sie w trybie wpisywania i sprawdzania
+ */
 public class learningWriteAndCheck implements Initializable {
     public static Long chosenBigBoxId;
     RotateTransition rtAnimation;
@@ -96,13 +98,11 @@ public class learningWriteAndCheck implements Initializable {
 
 
         textOn = new FadeTransition(Duration.seconds(1),flashcardText);
-        //flascardText.rotateProperty()//
         textOn.setFromValue(0);
         textOn.setToValue(1);
 
         textOff.setOnFinished( (x) -> {
             flashcardText.setText(textToInsert);
-            //fadeAnimationON.play();
         });
         textOff_On = new SequentialTransition(
                 textOff,
@@ -127,7 +127,6 @@ public class learningWriteAndCheck implements Initializable {
     @FXML
     void check(ActionEvent event) {
         if (answerField.getText().equals(currentFlashcard.getBackSide())){
-            //System.out.println("DOBRA ODP: 1-" + currentFlashcard.getBackSide() + " 2-" + answerField.getText());
             textToInsert = currentFlashcard.getBackSide();
             answerField.clear();
             checkButton.setDisable(true);
@@ -144,7 +143,6 @@ public class learningWriteAndCheck implements Initializable {
             allFlashcards.remove(currentFlashcard);
 
         }else {
-            //System.out.println("ZŁA ODP: 1-" + currentFlashcard.getBackSide() + " 2-" + answerField.getText());
 
             textToInsert = currentFlashcard.getBackSide();
             answerField.clear();
@@ -193,8 +191,6 @@ public class learningWriteAndCheck implements Initializable {
     }
 
     public void updateBigbox() {
-//        System.out.println("GOOD SIZE: " + goodAnsweredList.size());
-//        System.out.println("wrong SIZE: " + wrongAnsweredList.size());
         goodAnsweredList.stream().forEach(Flashcard -> {
             if (Flashcard.getSmallBoxNumber() < 4) {
 
@@ -205,7 +201,6 @@ public class learningWriteAndCheck implements Initializable {
                 query.setParameter("newNumber", Flashcard.getSmallBoxNumber() + 1);
                 query.setParameter("FCID", Flashcard.getFlascardId());
                 query.executeUpdate();
-                //System.out.println("HQL: " + query.executeUpdate());
                 em.getTransaction().commit();
                 em.close();
 

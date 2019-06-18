@@ -26,10 +26,12 @@ import java.util.ResourceBundle;
 
 import static gui.ControllersCoordinator.*;
 import static users.MainCoordinator.loggedUser;
-
+/**
+ * Kontroler sceny, na ktorej wybieramy Pudelko, z ktorego chcemy sie uczyc
+ */
 public class chooseBigBoxToLearnController implements Initializable {
     Map<String, Long> uniqueCategory = new HashMap<>();
-    public static boolean learnMode; //if false - selfcontrol | if true - write and check
+    public static boolean learnMode;
 
     @FXML
     private ChoiceBox<String> categoryChoiceBox;
@@ -38,7 +40,9 @@ public class chooseBigBoxToLearnController implements Initializable {
     private ChoiceBox<String> bigBoxChoiceBox;
     @FXML
     private Text errorMessage;
-
+    /**
+     * Metoda inicjalizacyjna, w ktorej wykonowyane sa czynnosci przygotowawcze do wygenerowania sceny
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         ObservableList<String> categoriesOL = FXCollections.observableArrayList();
@@ -57,7 +61,7 @@ public class chooseBigBoxToLearnController implements Initializable {
         ChangeListener<String> changeListener = new ChangeListener<String>() {
 
             @Override
-            public void changed(ObservableValue<? extends String> observable, //
+            public void changed(ObservableValue<? extends String> observable,
                                 String oldValue, String newValue) {
                 if (newValue != null && !newValue.equals("<Kategorie>")) {
                     bigBoxChoiceBox.getItems().remove(0, bigBoxChoiceBox.getItems().size());
@@ -72,6 +76,10 @@ public class chooseBigBoxToLearnController implements Initializable {
         categoryChoiceBox.getSelectionModel().selectedItemProperty().addListener(changeListener);
     }
 
+    /**
+     * Metoda rozpoczynajaca gre w wybranym uprrzednio trybie. Metoda sprawdza czy gra na wybranym pudelku jest mozliwa
+     * oraz czy w ogole wybrano pudelko
+     */
     @FXML
     void play(ActionEvent event) {
         try{
@@ -84,7 +92,6 @@ public class chooseBigBoxToLearnController implements Initializable {
             em.getTransaction().commit();
             em.close();
 
-            //System.out.println("Przekazuje id rowne: " + result.get(0).getBigBoxId());
             if (result.get(0).getFlashcards().size() == 0){
                 errorMessage.setText("W tym pudełku nie ma fiszek!");
                 errorMessage.setVisible(true);
@@ -98,7 +105,6 @@ public class chooseBigBoxToLearnController implements Initializable {
                 }
             }
         }catch (Exception ex){
-            System.out.println("wyjatek - nic nie wybrano");
             errorMessage.setText("Nie wybrano pudełka");
             errorMessage.setVisible(true);
         }

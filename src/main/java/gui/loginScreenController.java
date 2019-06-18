@@ -22,7 +22,9 @@ import java.util.List;
 import static gui.ControllersCoordinator.*;
 import static users.MainCoordinator.*;
 import static users.MainCoordinator.loggedUser;
-
+/**
+ * Kontroler sceny, na ktorej logujemy sie lub rejestrujemy
+ */
 public class loginScreenController {
 
     @FXML

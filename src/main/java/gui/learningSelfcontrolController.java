@@ -28,7 +28,9 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 import static gui.ControllersCoordinator.*;
-
+/**
+ * Kontroler sceny, na ktorej uczymy sie w trybie samokontroli
+ */
 public class learningSelfcontrolController implements Initializable {
     public static Long chosenBigBoxId;
     RotateTransition rtAnimation;
@@ -72,8 +74,6 @@ public class learningSelfcontrolController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        //System.out.println("new id: " + chosenBigBoxId);
-        //zdefiniowanie animacji
         Color myYellow = Color.web("0xf2e830");
         yellowMaterial = new PhongMaterial();
         yellowMaterial.setSpecularColor(Color.ORANGE);
@@ -100,7 +100,6 @@ public class learningSelfcontrolController implements Initializable {
                 new PauseTransition(Duration.millis(700)),
                 fadeAnimationON
         );
-        //---------------
         checkButtonOFF = new FadeTransition(Duration.seconds(0.7), checkButton);
         checkButtonOFF.setFromValue(1);
         checkButtonOFF.setToValue(0);
@@ -143,6 +142,10 @@ public class learningSelfcontrolController implements Initializable {
         smallBoxNumberField.setText(Integer.toString(currentFlashcard.getSmallBoxNumber()));
     }
 
+    /**
+     * Metoda wywolujaca animacje pokazania poprawnej odpowiedzi po drugiej stroni fiszki
+     * @param event
+     */
     @FXML
     void check(ActionEvent event) {
         checkButton.setDisable(true);
@@ -156,6 +159,10 @@ public class learningSelfcontrolController implements Initializable {
         sequentialTransitionON_OFF.play();
     }
 
+    /**
+     * Metoda zawierajaca zbior akcji wykonywanych po uznaniu odpowidzi za poprawna
+     * @param event
+     */
     @SuppressWarnings("Duplicates")
     @FXML
     void goodAnswerAction(MouseEvent event) {
@@ -164,11 +171,10 @@ public class learningSelfcontrolController implements Initializable {
         goodAnsweredList.add(currentFlashcard);
         allFlashcards.remove(currentFlashcard);
 
-        //JEZELI NIE MA WIECEJ FISZEK, TO:
         if(allFlashcards.size() == 0){
             updateBigbox();
             changeScreen(AFTER_LEARNING_FXML);
-        }else{//JEŻELI SĄ
+        }else{
             currentFlashcard = allFlashcards.get(0);
             textToInsert = currentFlashcard.getFrontSide();
             rtAnimation.setOnFinished( x ->{
@@ -183,7 +189,10 @@ public class learningSelfcontrolController implements Initializable {
             smallBoxNumberField.setText(Integer.toString(currentFlashcard.getSmallBoxNumber()));
         }
     }
-
+    /**
+     * Metoda zawierajaca zbior akcji wykonywanych po uznaniu odpowidzi za bledna
+     * @param event
+     */
     @SuppressWarnings("Duplicates")
     @FXML
     void wrongAnswerAction(MouseEvent event) {
@@ -209,7 +218,9 @@ public class learningSelfcontrolController implements Initializable {
         }
 
     }
-
+    /**
+     * Metoda aktualizujaca stan fiszek po przejsciu przez wyszystkie fiszki danym pudelku
+     */
     @SuppressWarnings("Duplicates")
     public void updateBigbox(){
         System.out.println("GOOD SIZE: " + goodAnsweredList.size());
@@ -223,7 +234,6 @@ public class learningSelfcontrolController implements Initializable {
                 query.setParameter("newNumber", Flashcard.getSmallBoxNumber()+1);
                 query.setParameter("FCID", Flashcard.getFlascardId());
                 query.executeUpdate();
-                //System.out.println("HQL: " + query.executeUpdate());
                 em.getTransaction().commit();
                 em.close();
             }

@@ -4,7 +4,9 @@ import org.junit.jupiter.api.Test;
 import users.MainCoordinator;
 
 import static org.junit.jupiter.api.Assertions.*;
-
+/**
+ * Klasa zawierajaca testy jednostkowe do metod walidujacych ciag znakow.
+ */
 class MainCoordinatorTest {
     @Test
     void wordPatternNormal() {
