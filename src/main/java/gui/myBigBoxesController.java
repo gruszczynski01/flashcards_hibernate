@@ -16,6 +16,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
+import users.User;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
@@ -105,6 +106,17 @@ public class myBigBoxesController implements Initializable {
         bigBoxSelected = boxesTable.getSelectionModel().getSelectedItems();
 
         if (bigBoxSelected.size() != 0){
+//            EntityManager em =  DB.getInstance().getConnection();
+//            em.getTransaction().begin();
+//            bigBoxSelected.stream().forEach( BigBox -> {
+//                //loggedUser.getUserBigBoxes().remove(BigBox);
+//                em.remove(em.find(BigBox.class, BigBox.getBigBoxId()));
+//            });
+//            bigBoxSelected.forEach(allBigBoxes::remove);
+//            loggedUser = em.find(User.class, loggedUser.getUserId());
+//            ///em.merge(loggedUser);
+//            em.getTransaction().commit();
+//            em.close();
             EntityManager em =  DB.getInstance().getConnection();
             em.getTransaction().begin();
             bigBoxSelected.stream().forEach( BigBox -> {

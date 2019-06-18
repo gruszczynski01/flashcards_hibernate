@@ -1,5 +1,8 @@
 package gui;
 
+import boxes.BigBox;
+import database.DB;
+import flashcards.Flashcard;
 import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -7,6 +10,10 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.util.Duration;
 import users.MainCoordinator;
+import users.User;
+
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
 
 import static gui.ControllersCoordinator.*;
 import static users.MainCoordinator.*;
@@ -32,9 +39,25 @@ public class welcomeScreenController {
 
 
     @FXML
-    void addBigBox(ActionEvent event) {
+    void deleteAccount(ActionEvent event) {
+
+        EntityManager em =  DB.getInstance().getConnection();
+        em.getTransaction().begin();
+        em.remove(em.find(User.class, loggedUser.getUserId()));
+        em.getTransaction().commit();
+        em.close();
+        changeScreen(LOGINSCREEN);
 
     }
+//        EntityManager em =  DB.getInstance().getConnection();
+//        em.getTransaction().begin();
+//        String hql = "DELETE FROM User user where user.userId = :userID";
+//        Query query =em.createQuery(hql);
+//        query.setParameter("userID", loggedUser.getUserId());
+//        query.executeUpdate();
+//        loggedUser = null;
+//        em.getTransaction().commit();
+//        em.close();
 
     @FXML
     void showIrregularVerbsBox(ActionEvent event) {

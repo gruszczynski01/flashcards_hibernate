@@ -17,7 +17,7 @@
                   <Image url="@../image/welcomeBG.jpg" />
                </image>
             </ImageView>
-            <Button layoutX="372.0" layoutY="555.0" mnemonicParsing="false" onAction="#buttonDown" text="Button" />
+            <Button disable="true" layoutX="372.0" layoutY="555.0" mnemonicParsing="false" onAction="#buttonDown" text="Button" visible="false" />
             <Button layoutX="372.0" layoutY="620.0" mnemonicParsing="false" onAction="#buttonDownBack" text="Button" />
             <Button fx:id="myBigBoxes" layoutX="-744.0" layoutY="82.0" lineSpacing="2.0" mnemonicParsing="false" onAction="#showMyBoxes" prefHeight="65.0" prefWidth="279.0" style="-fx-background-color: #f7ee42; -fx-background-radius: 40;" text="Moje&#10;pudełka" textAlignment="CENTER">
                <font>
@@ -28,7 +28,7 @@
                   <Font name="Copperplate Bold" size="17.0" />
                </font>
             </Button>
-            <Button fx:id="addBigBox" layoutX="-382.0" layoutY="83.0" lineSpacing="2.0" mnemonicParsing="false" onAction="#addBigBox" prefHeight="65.0" prefWidth="284.0" style="-fx-background-color: #f7ee42; -fx-background-radius: 40;" text="Moje&#10;czasowniki nieregularne" textAlignment="CENTER">
+            <Button layoutX="1298.0" layoutY="403.0" lineSpacing="2.0" mnemonicParsing="false" onAction="#deleteAccount" prefHeight="65.0" prefWidth="284.0" style="-fx-background-color: #f7ee42; -fx-background-radius: 40;" text="Usuń konto&#10;" textAlignment="CENTER">
                <font>
                   <Font name="Copperplate Bold" size="17.0" />
                </font>
@@ -153,7 +153,7 @@
                </effect>
             </Text>
             <Button layoutX="236.0" layoutY="-61.0" mnemonicParsing="false" onAction="#buttonUpBack" opacity="0.0" prefHeight="54.0" prefWidth="150.0" text="Button" />
-            <Button layoutX="1298.0" layoutY="301.0" lineSpacing="2.0" mnemonicParsing="false" onAction="#modifyAccount" prefHeight="65.0" prefWidth="284.0" style="-fx-background-color: #f7ee42; -fx-background-radius: 40;" text="modyfikuj konto" textAlignment="CENTER">
+            <Button layoutX="1298.0" layoutY="268.0" lineSpacing="2.0" mnemonicParsing="false" onAction="#modifyAccount" prefHeight="65.0" prefWidth="284.0" style="-fx-background-color: #f7ee42; -fx-background-radius: 40;" text="modyfikuj konto" textAlignment="CENTER">
                <font>
                   <Font name="Copperplate Bold" size="17.0" />
                </font>

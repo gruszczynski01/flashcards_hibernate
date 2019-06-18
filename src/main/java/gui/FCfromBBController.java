@@ -29,6 +29,7 @@ import java.util.ResourceBundle;
 import static gui.ControllersCoordinator.*;
 import static gui.ControllersCoordinator.stage;
 import static users.MainCoordinator.loggedUser;
+import static users.MainCoordinator.wordPattern;
 
 public class FCfromBBController implements Initializable {
     ObservableList<FlashcardRowTableView> flashcardObservableList = FXCollections.observableArrayList();
@@ -78,13 +79,22 @@ public class FCfromBBController implements Initializable {
     private TextField backsideField;
 
     @FXML
+    private Text errorMessage;
+
+    @FXML
     void addFlashcard(ActionEvent event) {
-        String frontSide = frontsideField.getText();
-        String backSide = backsideField.getText();
-        frontsideField.clear();
-        backsideField.clear();
-        Flashcard newFlashcard = bigBox.addFlashcard(frontSide, backSide);
-        flashcardObservableList.add(new FlashcardRowTableView(newFlashcard.getFlascardId(), newFlashcard.getFrontSide(), newFlashcard.getBackSide(), "0"));
+        errorMessage.setVisible(false);
+        if (wordPattern(frontsideField.getText()) && wordPattern(backsideField.getText())) {
+            String frontSide = frontsideField.getText();
+            String backSide = backsideField.getText();
+            frontsideField.clear();
+            backsideField.clear();
+            Flashcard newFlashcard = bigBox.addFlashcard(frontSide, backSide);
+            flashcardObservableList.add(new FlashcardRowTableView(newFlashcard.getFlascardId(), newFlashcard.getFrontSide(), newFlashcard.getBackSide(), "0"));
+        }else{
+            errorMessage.setText("Obydwie strony fiszki muszą zawierać od 2 do 20 znaków, bez znaków specjalnych");
+            errorMessage.setVisible(true);
+        }
     }
 
     @FXML
@@ -97,22 +107,36 @@ public class FCfromBBController implements Initializable {
         ObservableList<FlashcardRowTableView> flashcardSelected, allFlashcards;
         allFlashcards = flashcardTable.getItems();
         flashcardSelected = flashcardTable.getSelectionModel().getSelectedItems();
-        EntityManager em =  DB.getInstance().getConnection();
-        em.getTransaction().begin();
-        flashcardSelected.stream().forEach( Flashcard -> {
-            bigBox.removeFlashcard(Flashcard.getFlashcardId());
-        });
-        flashcardSelected.forEach(allFlashcards::remove);
-        em.getTransaction().commit();
-        em.close();
+
+        if (flashcardSelected.size() != 0){
+            EntityManager em =  DB.getInstance().getConnection();
+            em.getTransaction().begin();
+            flashcardSelected.stream().forEach( Flashcard -> {
+                bigBox.removeFlashcard(Flashcard.getFlashcardId());
+            });
+            flashcardSelected.forEach(allFlashcards::remove);
+            em.getTransaction().commit();
+            em.close();
+        }else{
+            errorMessage.setText("Nie wybrano fiszki");
+            errorMessage.setVisible(true);
+        }
+
     }
 
     @FXML
     void editButton(ActionEvent event) {
+        errorMessage.setVisible(false);
         ObservableList<FlashcardRowTableView> flashcardSelected = flashcardTable.getSelectionModel().getSelectedItems();
-        flashcardSelected.stream().forEach( Flashcard ->
-            changeScreenEditBigBox(EDITFLASHCARD, Flashcard.getFrontSide(), Flashcard.getBackSide(), Flashcard.getFlashcardId())
-        );
+
+        if (flashcardSelected.size() != 0) {
+            flashcardSelected.stream().forEach(Flashcard ->
+                    changeScreenEditBigBox(EDITFLASHCARD, Flashcard.getFrontSide(), Flashcard.getBackSide(), Flashcard.getFlashcardId())
+            );
+        }else{
+            errorMessage.setText("Nie wybrano fiszki");
+            errorMessage.setVisible(true);
+        }
 
     }
     public void changeScreenEditBigBox(String FXMLpath, String frontSideOLD, String backSideOLD, long flashcardId){

@@ -41,7 +41,7 @@
             <Font name="Copperplate Bold" size="19.0" />
          </font>
       </Button>
-      <Text fx:id="errorMessage" fill="#d00d0d" layoutX="507.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nazwa pudełka i kategoria muszą zawierać od 2 do 20 znaków" wrappingWidth="204.9999918937683">
+      <Text fx:id="errorMessage" fill="#d00d0d" layoutX="507.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nazwa pudełka i kategoria muszą zawierać od 2 do 20 znaków" visible="false" wrappingWidth="204.9999918937683">
          <font>
             <Font name="Copperplate" size="17.0" />
          </font>
