@@ -2,27 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b317588-d94b-4d51-b3dd-9e7cbebe9e3f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/gui/editUserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/gui/learningWriteAndCheck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/flashcards_hibernate.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/flashcards_hibernate.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Test/MainCoordinatorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/ControllersCoordinator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/ControllersCoordinator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/FCfromBBController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/FCfromBBController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/chooseBigBoxToLearnController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/chooseBigBoxToLearnController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/learningSelfcontrolController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/learningSelfcontrolController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/loginScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/loginScreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/welcomeScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/welcomeScreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/editFlashcard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/editFlashcard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/welcomeScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/welcomeScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/FXML/editFlashcard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FXML/editFlashcard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/FXML/welcomeScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FXML/welcomeScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/ControllersCoordinator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/ControllersCoordinator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/FCfromBBController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/FCfromBBController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/chooseBigBoxToLearnController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/chooseBigBoxToLearnController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/chooseBigBoxToLearnController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/chooseBigBoxToLearnController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/learningSelfcontrolController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/learningSelfcontrolController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/loginScreenController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/loginScreenController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/welcomeScreenController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/welcomeScreenController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/editUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/editUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/users/MainCoordinator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/users/MainCoordinator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/editUserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/editUserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/users/MainCoordinator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/users/MainCoordinator.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -76,11 +62,11 @@
                     </provider>
                   </entry>
                 </file>
-                <file pinned="false" current-in-tab="true">
+                <file pinned="false" current-in-tab="false">
                   <entry file="file://$PROJECT_DIR$/src/main/java/gui/loginScreenController.java">
                     <provider selected="true" editor-type-id="text-editor">
-                      <state relative-caret-position="235">
-                        <caret line="36" column="82" lean-forward="true" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="82" />
+                      <state relative-caret-position="118">
+                        <caret line="36" column="82" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="82" />
                         <folding>
                           <element signature="imports" expanded="true" />
                           <element signature="e#0#58#1" expanded="true" />
@@ -114,18 +100,6 @@
                           <element signature="imports" expanded="true" />
                           <element signature="e#510#511#0" expanded="true" />
                           <element signature="e#550#551#0" expanded="true" />
-                        </folding>
-                      </state>
-                    </provider>
-                  </entry>
-                </file>
-                <file pinned="false" current-in-tab="false">
-                  <entry file="file://$PROJECT_DIR$/src/main/java/gui/FCfromBBController.java">
-                    <provider selected="true" editor-type-id="text-editor">
-                      <state relative-caret-position="289">
-                        <caret line="49" column="37" selection-start-line="49" selection-start-column="37" selection-end-line="49" selection-end-column="37" />
-                        <folding>
-                          <element signature="imports" expanded="true" />
                         </folding>
                       </state>
                     </provider>
@@ -173,18 +147,6 @@
                   </entry>
                 </file>
                 <file pinned="false" current-in-tab="false">
-                  <entry file="file://$PROJECT_DIR$/src/main/java/gui/editFlashcardController.java">
-                    <provider selected="true" editor-type-id="text-editor">
-                      <state relative-caret-position="660">
-                        <caret line="61" column="9" selection-start-line="61" selection-start-column="9" selection-end-line="61" selection-end-column="9" />
-                        <folding>
-                          <element signature="imports" expanded="true" />
-                        </folding>
-                      </state>
-                    </provider>
-                  </entry>
-                </file>
-                <file pinned="false" current-in-tab="false">
                   <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
                     <provider selected="true" editor-type-id="text-editor">
                       <state relative-caret-position="527">
@@ -192,6 +154,15 @@
                         <folding>
                           <element signature="imports" expanded="true" />
                         </folding>
+                      </state>
+                    </provider>
+                  </entry>
+                </file>
+                <file pinned="false" current-in-tab="true">
+                  <entry file="file://$PROJECT_DIR$/src/main/java/users/MainCoordinator.java">
+                    <provider selected="true" editor-type-id="text-editor">
+                      <state relative-caret-position="225">
+                        <caret line="15" column="94" selection-start-line="15" selection-start-column="94" selection-end-line="15" selection-end-column="94" />
                       </state>
                     </provider>
                   </entry>
@@ -226,11 +197,43 @@
     <splitter split-orientation="horizontal" split-proportion="0.7317283">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/users/MainCoordinator.java">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/Test/MainCoordinatorTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="45">
-                  <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+                <state relative-caret-position="406">
+                  <caret line="62" column="68" selection-start-line="62" selection-start-column="68" selection-end-line="62" selection-end-column="68" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#427#428#0" expanded="true" />
+                    <element signature="e#502#503#0" expanded="true" />
+                    <element signature="e#551#552#0" expanded="true" />
+                    <element signature="e#642#643#0" expanded="true" />
+                    <element signature="e#681#682#0" expanded="true" />
+                    <element signature="e#770#771#0" expanded="true" />
+                    <element signature="e#683#684#0" expanded="true" />
+                    <element signature="e#774#775#0" expanded="true" />
+                    <element signature="e#809#810#0" expanded="true" />
+                    <element signature="e#888#889#0" expanded="true" />
+                    <element signature="e#1050#1051#0" expanded="true" />
+                    <element signature="e#1127#1128#0" expanded="true" />
+                    <element signature="e#1185#1186#0" expanded="true" />
+                    <element signature="e#1266#1267#0" expanded="true" />
+                    <element signature="e#1491#1492#0" expanded="true" />
+                    <element signature="e#1572#1573#0" expanded="true" />
+                    <element signature="e#1489#1490#0" expanded="true" />
+                    <element signature="e#1570#1571#0" expanded="true" />
+                    <element signature="e#1721#1722#0" expanded="true" />
+                    <element signature="e#1817#1818#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pom.xml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="121">
+                  <caret line="35" column="33" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
                 </state>
               </provider>
             </entry>
@@ -249,11 +252,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/gui/editUserController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="364">
-                  <caret line="46" column="37" lean-forward="true" selection-start-line="46" selection-start-column="37" selection-end-line="46" selection-end-column="37" />
+                <state relative-caret-position="703">
+                  <caret line="60" column="42" selection-start-line="60" selection-start-column="42" selection-end-line="60" selection-end-column="42" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#351#352#0" expanded="true" />
@@ -337,8 +340,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/users/User.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="315">
-                  <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+                <state relative-caret-position="240">
+                  <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#0#59#1" expanded="true" />
@@ -358,6 +361,7 @@
         <option value="FxmlFile" />
         <option value="CSS File" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -386,7 +390,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/FXML/login_screen.fxml" />
         <option value="$PROJECT_DIR$/src/main/resources/FXML/loginScreen.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/MainCoordinator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/users/MainCoordinator.java" />
         <option value="$PROJECT_DIR$/src/main/java/boxes/BigBoxRowTableView.java" />
         <option value="$PROJECT_DIR$/src/main/java/gui/editBigBoxController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/FXML/chooseBigBox.fxml" />
@@ -410,6 +413,9 @@
         <option value="$PROJECT_DIR$/src/main/java/gui/ControllersCoordinator.java" />
         <option value="$PROJECT_DIR$/src/main/java/gui/welcomeScreenController.java" />
         <option value="$PROJECT_DIR$/src/main/java/gui/editUserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/users/MainCoordinatorTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/users/MainCoordinator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Test/MainCoordinatorTest.java" />
       </list>
     </option>
   </component>
@@ -511,7 +517,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
+              <item name="Test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="flashcards_hibernate" type="b2602c69:ProjectViewProjectNode" />
@@ -519,14 +525,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flashcards_hibernate" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flashcards_hibernate" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="FXML" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="flashcards_hibernate" type="b2602c69:ProjectViewProjectNode" />
@@ -548,6 +546,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554145392236" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -560,6 +561,13 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="Test" />
+      <recent name="users" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/boxes" />
       <recent name="$PROJECT_DIR$/src/main/resources/fxml" />
@@ -578,7 +586,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.MainCoordinatorTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="1.8.0_201" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -588,8 +596,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MainCoordinatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="flashcards_hibernate" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Test" />
+      <option name="MAIN_CLASS_NAME" value="Test.MainCoordinatorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainCoordinatorTest.wordPattern" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="flashcards_hibernate" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Test" />
+      <option name="MAIN_CLASS_NAME" value="Test.MainCoordinatorTest" />
+      <option name="METHOD_NAME" value="wordPattern" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MainCoordinatorTest" />
+        <item itemvalue="JUnit.MainCoordinatorTest.wordPattern" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -615,12 +656,44 @@
       <workItem from="1560081352348" duration="31577000" />
       <workItem from="1560354717864" duration="25601000" />
       <workItem from="1560610457378" duration="36481000" />
-      <workItem from="1560796775811" duration="10629000" />
+      <workItem from="1560796775811" duration="14519000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="MainCoordinatorTest - 2019.06.18 at 11h 22m 48s.xml">
+      <configuration name="MainCoordinatorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainCoordinatorTest - 2019.06.18 at 11h 24m 01s.xml">
+      <configuration name="MainCoordinatorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainCoordinatorTest - 2019.06.18 at 11h 24m 08s.xml">
+      <configuration name="MainCoordinatorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainCoordinatorTest - 2019.06.18 at 11h 24m 20s.xml">
+      <configuration name="MainCoordinatorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainCoordinatorTest - 2019.06.18 at 11h 24m 32s.xml">
+      <configuration name="MainCoordinatorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainCoordinatorTest - 2019.06.18 at 11h 25m 28s.xml">
+      <configuration name="MainCoordinatorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainCoordinatorTest - 2019.06.18 at 11h 25m 37s.xml">
+      <configuration name="MainCoordinatorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainCoordinatorTest - 2019.06.18 at 11h 26m 01s.xml">
+      <configuration name="MainCoordinatorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainCoordinatorTest - 2019.06.18 at 11h 26m 11s.xml">
+      <configuration name="MainCoordinatorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainCoordinatorTest - 2019.06.18 at 11h 52m 20s.xml">
+      <configuration name="MainCoordinatorTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="153982000" />
+    <option name="totallyTimeSpent" value="157872000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -682,16 +755,6 @@
     <SUITE FILE_PATH="coverage/flashcards_hibernate$Main.ic" NAME="Main Coverage Results" MODIFIED="1560185369787" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/flashcards.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../kingaFiszki/Fiszki/flashcardsProject.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/64e3addc-2648-4368-a26e-50716629e540/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -715,13 +778,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/FXML/login_screen.fxml" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="33" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home/src.zip!/java/lang/Thread.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="302">
@@ -883,13 +939,6 @@
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/users/MainCoordinator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/boxes/BigBox.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1031,18 +1080,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/users/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="60" selection-start-line="60" selection-end-line="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#0#59#1" expanded="true" />
-            <element signature="e#0#45#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/gui/welcomeScreenController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-172">
@@ -1075,10 +1112,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gui/loginScreenController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="36" column="82" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="82" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#0#58#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/gui/editUserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="46" column="37" lean-forward="true" selection-start-line="46" selection-start-column="37" selection-end-line="46" selection-end-column="37" />
+        <state relative-caret-position="703">
+          <caret line="60" column="42" selection-start-line="60" selection-start-column="42" selection-end-line="60" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#351#352#0" expanded="true" />
@@ -1090,13 +1138,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/gui/loginScreenController.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="36" column="82" lean-forward="true" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="82" />
+        <state relative-caret-position="121">
+          <caret line="35" column="33" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/users/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="60" selection-start-line="60" selection-end-line="60" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#0#58#1" expanded="true" />
+            <element signature="e#0#59#1" expanded="true" />
+            <element signature="e#0#45#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/users/MainCoordinatorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/users/MainCoordinator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="94" selection-start-line="15" selection-start-column="94" selection-end-line="15" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Test/MainCoordinatorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="62" column="68" selection-start-line="62" selection-start-column="68" selection-end-line="62" selection-end-column="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#427#428#0" expanded="true" />
+            <element signature="e#502#503#0" expanded="true" />
+            <element signature="e#551#552#0" expanded="true" />
+            <element signature="e#642#643#0" expanded="true" />
+            <element signature="e#681#682#0" expanded="true" />
+            <element signature="e#770#771#0" expanded="true" />
+            <element signature="e#683#684#0" expanded="true" />
+            <element signature="e#774#775#0" expanded="true" />
+            <element signature="e#809#810#0" expanded="true" />
+            <element signature="e#888#889#0" expanded="true" />
+            <element signature="e#1050#1051#0" expanded="true" />
+            <element signature="e#1127#1128#0" expanded="true" />
+            <element signature="e#1185#1186#0" expanded="true" />
+            <element signature="e#1266#1267#0" expanded="true" />
+            <element signature="e#1491#1492#0" expanded="true" />
+            <element signature="e#1572#1573#0" expanded="true" />
+            <element signature="e#1489#1490#0" expanded="true" />
+            <element signature="e#1570#1571#0" expanded="true" />
+            <element signature="e#1721#1722#0" expanded="true" />
+            <element signature="e#1817#1818#0" expanded="true" />
           </folding>
         </state>
       </provider>

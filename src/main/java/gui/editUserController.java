@@ -47,7 +47,7 @@ public class editUserController implements Initializable {
         em.getTransaction().commit();
         em.close();
         if (result.size() == 0 || loggedUser.getUserName().equals(loginField.getText())){
-            if (passwordField.equals(repeatPasswordField))
+            if (passwordField.getText().equals(repeatPasswordField.getText()))
             {
 
                 System.out.println("HASLA OKAY");
@@ -55,9 +55,10 @@ public class editUserController implements Initializable {
                 em.getTransaction().begin();
                 loggedUser = em.find(User.class, loggedUser.getUserId());
                 loggedUser.setPassword(BCrypt.hashpw(passwordField.getText(), BCrypt.gensalt()));
-                em.merge(loginField);
+                em.merge(loggedUser);
                 em.getTransaction().commit();
                 em.close();
+                changeScreen(WELCOMESCREEN);
             }else{
                 System.out.println("Hasla sie roznia");
             }
