@@ -14,6 +14,8 @@ public class MainCoordinator {
      * Metoda sprawdzajaca forme stringa. Waliduje czy argument sklada sie ze znakow a-z, A-Z, 0-9, _,
      * oraz od 2 do 20 znakow
      * @param toCheck obiekt klasy String przechowujacy ciag znakow do zwalidowania
+     * @return zwracana wartosc true, jezeli podany ciag jest zgodny z wymaganiami i false jezeli
+     * nie jest zgodny z wymaganiami
      */
     public static boolean wordPattern(String toCheck){
         System.out.println("wordPattern: \""+toCheck+"\"");
@@ -24,6 +26,8 @@ public class MainCoordinator {
      * Metoda sprawdzajaca forme stringa. Od 8 do 20 znakow, musi zawierac, mala litere, duza litere, cyfre, oraz
      * znak specjalny.
      * @param toCheck obiekt klasy String przechowujacy ciag znakow do zwalidowania
+     * @return zwracana wartosc true, jezeli podany ciag jest zgodny z wymaganiami i false jezeli
+     * nie jest zgodny z wymaganiami
      */
     public static boolean passwordPattern(String toCheck){
         System.out.println("passwordPattern: \""+toCheck+"\"");

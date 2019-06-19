@@ -14,6 +14,11 @@ public class Main extends Application {
         launch(args);
     }
 
+    /**
+     * Metoda w ktorej ladujemy pierwsza scene naszej aplikacji.
+     * @param primaryStage
+     * @throws Exception
+     */
     @Override
     public void start(Stage primaryStage) throws Exception {
         stage = primaryStage;

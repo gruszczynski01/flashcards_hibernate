@@ -13,6 +13,8 @@ import static users.MainCoordinator.loggedUser;
 
 /**
  * Klasa definiujaca uzytkownika, uzytkownik posiada pudelka, w ktorych znajduja sie fiszki.
+ * Atrybuty klasy zmapowane sa z baza danych. Komunikacja do bazy danych odbywa sie za posrednictwem technologii
+ * Hibernate.
  */
 @Entity
 @Table(name = "fc_users")
@@ -36,7 +38,9 @@ public class User {
 
 
     /**
-     * Konstruktor tworzacy nowego uzytkownika, podane haslo jest odrazu hashowane motoda hashpw z klasy BCrypt
+     * Konstruktor tworzacy nowego uzytkownika, podane haslo jest odrazu hashowane motoda 'hashpw' z klasy BCrypt
+     * @param userName nazwa uzytkownika
+     * @param password haslo do zahashowania
      */
     public User(String userName, String password) {
         this.userName = userName;
